@@ -17,12 +17,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Nav />
-        <Header />
-        {children}
-      </body>
-    </html>
+    <>
+      <html lang="en">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+        <body className={inter.className}>
+          <Nav />
+          <Header />
+          {children}
+        </body>
+      </html>
+    </>
   )
 }

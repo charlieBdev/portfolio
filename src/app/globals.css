@@ -32,6 +32,7 @@ body {
 }
 
 .active-link {
-  --tw-text-opacity: 1;
-  color: rgb(216 180 254 / var(--tw-text-opacity))
+  
+  color: rgb(244 114 182);
+  border-bottom: 2px solid rgb(244 114 182);
 }

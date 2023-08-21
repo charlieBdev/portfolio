@@ -7,7 +7,7 @@ export default function Nav() {
   const currentRoute = usePathname()
     return (
         <nav>
-          <ul className="flex flex-row space-x-2 mt-3 mb-3 justify-center text-pink-500">
+          <ul className="flex flex-row space-x-2 mt-3 mb-3 justify-center text-purple-300">
             <Link href="/" className={currentRoute === "/" ? "active-link" : ""}>home</Link>
             <Link href="/about" className={currentRoute === "/about" ? "active-link" : ""}>about</Link>
             <Link href="/projects" className={currentRoute === "/projects" ? "active-link" : ""}>projects</Link>
