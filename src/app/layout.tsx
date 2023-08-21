@@ -1,10 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Nav from './Components/Nav'
 import Header from './Components/Header'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Charlie B - Jnr Web Dev',
@@ -20,7 +18,7 @@ export default function RootLayout({
     <>
       <html lang="en">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-        <body className={inter.className}>
+        <body className='flex flex-col'>
           <Nav />
           <Header />
           {children}

@@ -1,6 +1,7 @@
 export default function Projects() {
     return (
-			<main>
-			</main>
+		<main>
+            
+		</main>
     )
 }
