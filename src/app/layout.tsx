@@ -18,12 +18,13 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+      {/* <link rel="preload" href="http://localhost:3000/_next/static/css/app/layout.css?v=1692705175269" as="style" onLoad="this.onload=null;this.rel='stylesheet'" /> */}
+      {/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" /> */}
         <body className="flex flex-col h-screen">
           <Nav />
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </body>
       </html>
     </>
