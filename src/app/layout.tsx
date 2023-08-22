@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Nav from './Components/Nav'
 import Header from './Components/Header'
-import Footer from './Components/Footer'
 
 
 export const metadata: Metadata = {
@@ -22,7 +21,6 @@ export default function RootLayout({
       {/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" /> */}
         <body className="flex flex-col h-screen">
           <Nav />
-          <Header />
           {children}
           {/* <Footer /> */}
         </body>

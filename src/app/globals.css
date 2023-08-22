@@ -33,11 +33,5 @@ body {
 
 .active-link {
   color: rgb(244 114 182);
-  border-bottom: 2px solid rgb(244 114 182);
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure at least viewport height */
+  /* border-bottom: px solid rgb(244 114 182); */
 }
