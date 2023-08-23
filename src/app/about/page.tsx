@@ -1,12 +1,14 @@
-import Image from "next/image"
-import about from "../../../public/about.png"
+// import Image from "next/image"
+// import about from "../../../public/about.png"
+
+import Link from "next/link"
 
 export default function About() {
     return (
       <main className="flex flex-col justify-between">
-        <div className="p-3 text-sm lg:text-center xl:text-md">
-          <p className="mb-1">Hey, I have just finished a bootcamp with <span className="text-neutral-400 animate-pulse">Northcoders</span> and am looking for <span className="text-neutral-400 animate-pulse">junior</span> or entry-level roles in <span className="text-neutral-400 animate-pulse">Sheffield</span> or remote.</p>
-          <p>Check out my <span className="text-neutral-400 animate-pulse">projects</span> or send a message via the <span className="text-neutral-400 animate-pulse">contact</span> page if you'd like a chat.</p>
+        <div className="p-3 ml-3 mr-3 text-sm lg:text-center xl:text-md">
+          <p className="mb-1">Hey, I have just finished a Software Engineering Bootcamp with <span className="text-neutral-400 animate-pulse">Northcoders</span> and am looking for <span className="text-neutral-400 animate-pulse">Junior</span> or Entry-level roles in <span className="text-neutral-400 animate-pulse">Sheffield</span> or Remote.</p>
+          <p>Check out my <Link href="/projects" className="border-b border-purple-300 text-purple-300">projects</Link> or send a message via the <Link href="/about" className="border-b border-purple-300 text-purple-300">contact</Link> page if you'd like a chat.</p>
         </div>
         <div className="flex flex-row flex-wrap justify-center text-center gap-2 m-3 lg:gap-6 xl:gap-9">
           <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm xl:w-40 xl:text-md shadow-inner shadow-neutral-600 hover:shadow-neutral-300">

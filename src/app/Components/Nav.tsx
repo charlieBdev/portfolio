@@ -12,11 +12,11 @@ export default function Nav() {
 
   return (
     <div 
-      className="flex ml-3 items-center justify-between border-b border-neutral-600 py-8"
+      className="flex ml-3 mr-3 items-center justify-between border-b border-neutral-600 py-6"
     >
-      <div>
+      <div className="ml-3">
         <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
-        <h2 className="text-emerald-300">Junior<span className="text-yellow-300"> Full Stack Developer</span></h2>
+        <h2 className="text-emerald-300">Junior<span className="text-yellow-300"> Full Stack Web Developer</span></h2>
       </div>
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
@@ -35,7 +35,7 @@ export default function Nav() {
               onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 text-neutral-300"
+                className="h-8 w-8 first-line:text-neutral-300"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -64,7 +64,7 @@ export default function Nav() {
           </div>
         </section>
 
-        <ul className="DESKTOP-MENU hidden mr-3 space-x-8 lg:flex text-purple-300">
+        <ul className="DESKTOP-MENU hidden mr-3 space-x-8 xl:space-x-12 lg:flex text-purple-300">
           <li>
             <Link href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
           </li>
