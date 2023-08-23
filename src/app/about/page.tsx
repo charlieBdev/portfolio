@@ -7,7 +7,7 @@ export default function About() {
     return (
       <main className="flex flex-col justify-between">
         <div className="p-3 ml-3 mr-3 text-sm lg:text-center xl:text-md">
-          <p className="mb-1">Hey, I have just finished a Software Engineering Bootcamp with <span className="text-neutral-400 animate-pulse">Northcoders</span> and am looking for <span className="text-neutral-400 animate-pulse">Junior</span> or Entry-level roles in <span className="text-neutral-400 animate-pulse">Sheffield</span> or Remote.</p>
+          <p className="mb-1">Hey, I have just finished a Software Engineering Bootcamp with <span className="text-neutral-400 animate-pulse">Northcoders</span> and am looking for <span className="text-neutral-400 animate-pulse">Junior</span> or <span className="text-neutral-400 animate-pulse">Entry-level</span> roles in <span className="text-neutral-400 animate-pulse">Sheffield</span> or Remote.</p>
           <p>Check out my <Link href="/projects" className="border-b border-purple-300 text-purple-300">projects</Link> or send a message via the <Link href="/about" className="border-b border-purple-300 text-purple-300">contact</Link> page if you'd like a chat.</p>
         </div>
         <div className="flex flex-row flex-wrap justify-center text-center gap-2 m-3 lg:gap-6 xl:gap-9">
