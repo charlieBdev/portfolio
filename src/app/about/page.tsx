@@ -3,14 +3,14 @@ import about from "../../../public/about.png"
 
 export default function About() {
     return (
-      <main>
-        <div className="p-3 text-sm lg:text-center">
-          <p className="mb-1">Hey, I have just finished a bootcamp with <span className="text-neutral-400">Northcoders</span> and am looking for <span className="text-neutral-400">junior</span> or entry-level roles in <span className="text-neutral-400">Sheffield</span> or remote.</p>
-          <p>Check out my <span className="text-neutral-400">projects</span> or send a message via the <span className="text-neutral-400">contact</span> page if you'd like a chat.</p>
+      <main className="flex flex-col justify-between">
+        <div className="p-3 text-sm lg:text-center xl:text-md">
+          <p className="mb-1">Hey, I have just finished a bootcamp with <span className="text-neutral-400 animate-pulse">Northcoders</span> and am looking for <span className="text-neutral-400 animate-pulse">junior</span> or entry-level roles in <span className="text-neutral-400 animate-pulse">Sheffield</span> or remote.</p>
+          <p>Check out my <span className="text-neutral-400 animate-pulse">projects</span> or send a message via the <span className="text-neutral-400 animate-pulse">contact</span> page if you'd like a chat.</p>
         </div>
-        <div className="flex flex-row flex-wrap justify-center align-center text-center gap-2">
-          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm">
-            <p className="text-green-500">Frontend</p>
+        <div className="flex flex-row flex-wrap justify-center text-center gap-2 m-3 lg:gap-6 xl:gap-9">
+          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm xl:w-40 xl:text-md shadow-inner shadow-neutral-600 hover:shadow-neutral-300">
+            <p className="text-green-500 animate-pulse">Frontend</p>
             <ul>
               <li>HTML</li>
               <li>CSS</li>
@@ -19,8 +19,8 @@ export default function About() {
               <li>Next.js</li>
             </ul>
           </div>
-          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm">
-            <p className="text-green-500">Backend</p>
+          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm xl:w-40 xl:text-md shadow-inner shadow-neutral-600 hover:shadow-neutral-300">
+            <p className="text-green-500 animate-pulse">Backend</p>
             <ul>
               <li>Express</li>
               <li>Postgres</li>
@@ -28,30 +28,30 @@ export default function About() {
               <li className="text-neutral-400">Flask</li>
             </ul>
           </div>
-          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm">
-            <p className="text-green-500">Languages</p>
+          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm xl:w-40 xl:text-md shadow-inner shadow-neutral-600 hover:shadow-neutral-300">
+            <p className="text-green-500 animate-pulse">Languages</p>
             <ul>
               <li>JavaScript</li>
               <li className="text-neutral-400">Python</li>
               <li className="text-neutral-400">C#</li>
             </ul>
           </div>
-          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm">
-            <p className="text-green-500">Qualities</p>
+          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm xl:w-40 xl:text-md shadow-inner shadow-neutral-600 hover:shadow-neutral-300">
+            <p className="text-green-500 animate-pulse">Qualities</p>
             <ul>
-              <li>Super team player</li>
+              <li>Team player</li>
               <li>Detail orientated</li>
               <li>Goes the extra mile</li>
             </ul>
           </div>
-          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm">
-            <p className="text-green-500">Others</p>
+          <div className="bg-neutral-900 rounded-md p-3 w-32 text-sm xl:w-40 xl:text-md shadow-inner shadow-neutral-600 hover:shadow-neutral-300">
+            <p className="text-green-500 animate-pulse">Others</p>
             <ul>
+              <li>Pair Programming</li>
+              <li>Git / Github</li>
+              <li>VS Code</li>
               <li>MVC</li>
               <li>TDD</li>
-              <li>Pair Programming</li>
-              <li>Git/Github</li>
-              <li>VS Code</li>
             </ul>
           </div>
         </div>  

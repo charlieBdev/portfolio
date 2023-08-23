@@ -4,87 +4,81 @@ import Link from "next/link"
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
 
+
 export default function Nav() {
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
   const currentRoute = usePathname()
-    return (
-      <nav className="bg-neutral-900 p-3 h-24">
-        
-        {/* <div className="hidden space-x-8 lg:flex text-purple-300">
-          <Link href="/" className={currentRoute === "/" ? "active-link" : ""}>home</Link>
-          <Link href="/about" className={currentRoute === "/about" ? "active-link" : ""}>about</Link>
-          <Link href="/projects" className={currentRoute === "/projects" ? "active-link" : ""}>projects</Link>
-          <Link href="/contact" className={currentRoute === "/contact" ? "active-link" : ""}>contact</Link>
-        </div> */}
+  const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
-        {isDropdownOpen ? (
-          <div className="flex justify-between align-middle">
-            <Link href="/" className={currentRoute === "/" ? "active-link" : "text-purple-300"}>home</Link>
-            <Link href="/about" className={currentRoute === "/about" ? "active-link" : "text-purple-300"}>about</Link>
-            <Link href="/projects" className={currentRoute === "/projects" ? "active-link" : "text-purple-300"}>projects</Link>
-            <Link href="/contact" className={currentRoute === "/contact" ? "active-link" : "text-purple-300"}>contact</Link>
-            <button
-              onClick={toggleDropdown}
-              aria-expanded={isDropdownOpen}
-              aria-haspopup="true"
+  return (
+    <div 
+      className="flex ml-3 items-center justify-between border-b border-neutral-600 py-8"
+    >
+      <div>
+        <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
+        <h2 className="text-emerald-300">Junior<span className="text-yellow-300"> Full Stack Developer</span></h2>
+      </div>
+      <nav>
+        <section className="MOBILE-MENU flex lg:hidden">
+          <div
+            className="HAMBURGER-ICON space-y-2 mr-3"
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            <span className="block h-0.5 w-8 animate-pulse bg-neutral-300"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-neutral-300"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-neutral-300"></span>
+          </div>
+
+          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+            <div
+              className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
+              onClick={() => setIsNavOpen(false)}
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`w-6 h-6 transform ${
-                  isDropdownOpen ? "rotate-180" : ""
-                } transition-transform`}
-                fill="none"
+                className="h-8 w-8 text-neutral-300"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="3"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
-            </button>
-          </div>
-        )
-        :
-        (
-          <div className="flex justify-between align-center">
-            <div>
-              <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
-              <h2 className="text-emerald-300 lg:self-end">Junior<span className="text-yellow-300"> Full Stack Developer</span></h2>
             </div>
-            <button
-              onClick={toggleDropdown}
-              aria-expanded={isDropdownOpen}
-              aria-haspopup="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`w-6 h-6 transform ${
-                  isDropdownOpen ? "rotate-180" : ""
-                } transition-transform`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                strokeWidth="3"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-              </svg>
-            </button>
+            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] text-purple-300">
+              <li className="my-8">
+                <Link onClick={() => setIsNavOpen(false)} href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
+              </li>
+              <li className="my-8">
+                <Link onClick={() => setIsNavOpen(false)} href="/about" className={currentRoute === "/about" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>about</Link>
+              </li>
+              <li className="my-8">
+                <Link onClick={() => setIsNavOpen(false)} href="/projects" className={currentRoute === "/projects" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>projects</Link>
+              </li>
+              <li className="my-8">
+                <Link onClick={() => setIsNavOpen(false)} href="/contact" className={currentRoute === "/contact" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>contact</Link>
+              </li>
+            </ul>
           </div>
-        )
-        }
+        </section>
+
+        <ul className="DESKTOP-MENU hidden mr-3 space-x-8 lg:flex text-purple-300">
+          <li>
+            <Link href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
+          </li>
+          <li>
+            <Link href="/about" className={currentRoute === "/about" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>about</Link>
+          </li>
+          <li>
+            <Link href="/projects" className={currentRoute === "/projects" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>projects</Link>
+          </li>
+          <li>
+            <Link href="/contact" className={currentRoute === "/contact" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>contact</Link>
+          </li>
+        </ul>
       </nav>
-    )
+    </div>
+  );
 }
