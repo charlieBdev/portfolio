@@ -4,7 +4,7 @@ import bg from "../../public/bg.jpg"
 export default function Home() {
 
   return (
-    <main className="flex flex-col h-screen justify-center overflow-hidden">
+    <main className="flex flex-col h-screen justify-center bg-neutral-950">
       <Image
         src={bg}
         // width={500}
