@@ -3,16 +3,6 @@
 @tailwind utilities;
 
 
-body {
-  background-color: black;
-  color: white;
-}
-
-/* .active-link {
-  color: rgb(244 114 182);
-  border-bottom: 1px solid rgb(244 114 182);
-} */
-
 .hideMenuNav {
   display: none;
 }

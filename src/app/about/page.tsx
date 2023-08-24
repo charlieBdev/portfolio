@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function About() {
     return (
-      <main className="flex flex-col bg-neutral-950">
+      <section className="flex flex-col align-center bg-neutral-950">
         <section className="p-6 space-y-1">
           <h2 className="text-lg text-pink-400">About</h2>
           <p>Hey, I have just finished a Software Engineering Bootcamp with <span className="text-neutral-400">Northcoders</span> and am looking for <span className="text-neutral-400">Junior</span> or <span className="text-neutral-400">Entry-level</span> roles in <span className="text-neutral-400">Sheffield</span> or Remote.</p>
@@ -68,7 +68,7 @@ export default function About() {
             <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Interests</p>
               <ul className="space-y-1">
-                <li>Current affairs podcasts - The News Agents</li>
+                <li>Current affairs podcasts - News Agents</li>
                 <li>Making beats / Scratching</li>
                 <li>Video games - Zelda</li>
                 <li>Reading non-fiction</li>
@@ -87,6 +87,6 @@ export default function About() {
           placeholder = 'blur'
           height='500'
         /> */}
-      </main>
+      </section>
     )
 }

@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Nav from './Components/Nav'
-import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 
 export const metadata: Metadata = {
@@ -17,12 +17,15 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-      {/* <link rel="preload" href="http://localhost:3000/_next/static/css/app/layout.css?v=1692705175269" as="style" onLoad="this.onload=null;this.rel='stylesheet'" /> */}
-      {/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" /> */}
-        <body className="flex flex-col h-screen">
-          <Nav />
-          {children}
-          {/* <Footer /> */}
+        <head>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+        </head>
+        <body className="mb-12 pb-4 bg-neutral-950 text-neutral-50">
+          <div>
+            <Nav />
+            {children}
+            <Footer />
+          </div>
         </body>
       </html>
     </>
