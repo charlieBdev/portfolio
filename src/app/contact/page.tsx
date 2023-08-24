@@ -1,25 +1,29 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import emailjs from 'emailjs-com'
-// import { useForm } from 'react-hook-form'
 
+// rhf
+import { useForm } from 'react-hook-form';
 
-interface FormData {
-  user_name: string
-  user_email: string
-  message: string
-}
+// interface FormData {
+//   user_name: string
+//   user_email: string
+//   message: string
+// }
+
 
 export default function Contact() {
 
-  const form = useRef<HTMLFormElement | null>(null)
-  const [isSendError, setIsSendError] = useState<boolean>(false)
-  const [isSuccess, setIsSuccess] = useState<boolean>(false)
+  // rhf
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = (data) => {
+    sendEmail(data)
+  }
+  console.log(errors)
 
-  const [user_name, setUser_name] = useState<string>('')
-  const [user_email, setUser_email] = useState<string>('')
-  const [message, setMessage] = useState<string>('')
+  // emailjs
+  const form = useRef<HTMLFormElement | null>(null)
 
   const sendEmail = () => {
     
@@ -30,20 +34,13 @@ export default function Contact() {
     // console.log('Form data:', new FormData(form.current));
 
     // make sure to make first an env variable and hidden
-    if (form.current && user_name && user_email && message) {
-      emailjs.sendForm(serviceID, templateID, form.current, userID)
-      .then((result) => {
-          console.log('Email sent: ', result.text)
-          setIsSuccess(true)
-          setUser_name('')
-          setUser_email('')
-          setMessage('')
-      })
-      .catch((error) => {
-          console.log('Email error: ', error.text)
-          setIsSendError(true)
-      })
-    }
+    emailjs.sendForm(serviceID, templateID, form.current, userID)
+    .then((result) => {
+        console.log('Email sent: ', result.text)
+    })
+    .catch((error) => {
+        console.log('Email error: ', error.text)
+    })
   }
 
   return (
@@ -54,7 +51,8 @@ export default function Contact() {
         <form
           className="w-5/6 max-w-lg ml-auto mr-auto mt-3 mb-3"
           ref={form}
-          onSubmit={sendEmail}
+          // emailjs was sendEmail
+          onSubmit={handleSubmit(onSubmit)}
           >
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full px-2">
@@ -67,15 +65,16 @@ export default function Contact() {
               <input
                 className="autofocus appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
                 id="user_name"
+                // emailjs
                 name="user_name"
                 type="text"
                 placeholder="What's your name?"
-                value={user_name}
-                onChange={(e) => setUser_name(e.target.value)}
+                // rhf
+                {...register("user_name", {required: true, maxLength: 50})}
               />
-              {user_name.length < 1 && (
+              {/* {user_name.length < 1 && (
                 <p className="text-pink-400 text-xs italic">Please enter your name.</p>
-              )}
+              )} */}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-5">
@@ -89,15 +88,16 @@ export default function Contact() {
               <input
                 className="appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
                 id="user_email"
+                // emailjs
                 name="user_email"
-                type="email"
+                type="text"
                 placeholder="What's your e-mail?"
-                value={user_email}
-                onChange={(e) => setUser_email(e.target.value)}
+                // rhf
+                {...register("user_email", {required: true, pattern: /^\S+@\S+$/i})}
               />
-              {user_email.length < 1 && (
+              {/* {user_email.length < 1 && (
                 <p className="text-pink-400 text-xs italic">Please check your e-mail address.</p>
-              )}
+              )} */}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-5">
@@ -111,15 +111,16 @@ export default function Contact() {
               <textarea
                 className=" no-resize appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
                 id="message"
+                // emailjs
                 name="message"
                 placeholder="What's your message?"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                // rhf
+                {...register("message", {required: true, maxLength: 200})}
               >
               </textarea>
-              {message.length < 1 && (
+              {/* {message.length < 1 && (
                 <p className="text-pink-400 text-xs italic">Please enter a message.</p>
-              )}
+              )} */}
             </div>
           </div>
           <div className="md:flex md:items-center -mx-3 mb-5">
@@ -130,12 +131,12 @@ export default function Contact() {
               >
                 Send
               </button>
-              {isSendError ? (
-                <p className="text-pink-400 text-xs italic">Oops! Please try again.</p>
-              ) : isSuccess ? (
-                <p className="text-green-500 text-xs italic">Message sent!</p>
-              ) : null
-            }
+              {/* {isSendError ? (
+                  <p className="text-pink-400 text-xs italic">Oops! Please try again.</p>
+                ) : isSuccess ? (
+                  <p className="text-green-500 text-xs italic">Message sent!</p>
+                ) : null
+              } */}
             </div>
           </div>
         </form>
