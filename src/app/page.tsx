@@ -15,7 +15,7 @@ export default function Home() {
         priority={true}
         placeholder = 'blur'
       />
-      <p className="text-sm text-right text-neutral-700 mr-3">
+      <p className="text-sm text-right text-neutral-700 mr-6">
         Photo by <Link href="https://unsplash.com/@synkevych?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
           Roman Synkevych
         </Link>
