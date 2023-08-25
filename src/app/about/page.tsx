@@ -8,8 +8,8 @@ export default function About() {
       <section className="flex flex-col bg-neutral-950">
         <section className="p-6 space-y-1">
           <h2 className="text-lg text-pink-400">About</h2>
-          <p>Hey, I have just finished a <span className="text-neutral-400">Software Engineering</span> Bootcamp with <span className="text-neutral-400">Northcoders</span> and am looking for <span className="text-neutral-400">Junior</span> or <span className="text-neutral-400">Entry-level</span> roles in <span className="text-neutral-400">Sheffield</span> or Remote.</p>
-          <p>Check out my <Link href="/projects" className="underline decoration-purple-300 text-purple-300">projects</Link> or send a message via the <Link href="/about" className="underline decoration-purple-300 text-purple-300">contact</Link> page if you would like a chat.</p>
+          <p>Hey, I have just finished a <span className="text-neutral-400">Software Engineering</span> Bootcamp with <span className="text-neutral-400">Northcoders</span> and am looking for <span className="text-neutral-400">Junior</span> or <span className="text-neutral-400">Entry-level</span> roles in <span className="text-neutral-400">Sheffield</span> or <span className="text-neutral-400">Remote</span>.</p>
+          <p>Check out my <Link href="/projects" className="underline decoration-purple-300 text-purple-300">projects</Link> or send a message via the <Link href="/about" className="underline decoration-purple-300 text-purple-300">contact</Link> page if you'd just like a chat.</p>
         </section>
         {/* <div className="flex flex-row flex-wrap justify-center text-center gap-2 m-3 lg:gap-6 xl:gap-9"> */}
         <section className="flex flex-col justify-center gap-3 mt-0 m-3">
