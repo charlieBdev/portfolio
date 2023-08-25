@@ -1,32 +1,45 @@
 "use client"
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com'
 
 // rhf
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import Spinner from '../Components/Spinner';
+import Link from 'next/link';
 
-// interface FormData {
-//   user_name: string
-//   user_email: string
-//   message: string
-// }
+// rhf
+interface IFormInput {
+  user_name: string
+  user_email: string
+  message: string
+}
 
 
 export default function Contact() {
 
+  const [isSent, setIsSent] = useState<boolean>(false)
+  const [isSending, setIsSending] = useState<boolean>(false)
+
   // rhf
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = (data) => {
-    sendEmail(data)
+  const { reset, register, handleSubmit, formState: { errors } } = useForm();
+  // console.log(useForm(), '<<< useForm')
+  // can I take out data?
+  const onSubmit: SubmitHandler<IFormInput> = () => {
+    // console.log(data, '<<< data')
+    setIsSending(true)
+    sendEmail()
   }
-  console.log(errors)
+  // remove log and comment!
+  console.log(errors, '<<< errors')
 
   // emailjs
   const form = useRef<HTMLFormElement | null>(null)
-
+  console.dir(form.current, '<<< form.current')
   const sendEmail = () => {
     
+    // e.preventDefault();
+
     const serviceID = 'service_9r37mup'
     const templateID = 'template_e9avqw4'
     const userID = 'ax2EtnNRhWQkWQJmN'
@@ -36,20 +49,28 @@ export default function Contact() {
     // make sure to make first an env variable and hidden
     emailjs.sendForm(serviceID, templateID, form.current, userID)
     .then((result) => {
-        console.log('Email sent: ', result.text)
+      console.log('Email sent: ', result.text)
+      setIsSent(true)
+      reset()
     })
     .catch((error) => {
-        console.log('Email error: ', error.text)
+      console.log('Email error: ', error.text)
+    })
+    .finally(() => {
+      setIsSending(false)
     })
   }
 
   return (
-    <main className="flex flex-col bg-neutral-950 h-screen">
+    <main className="flex flex-col">
         <div className="p-6 space-y-1">
           <h2 className="text-lg text-pink-400">Contact</h2>
+          <p>Feel free to drop a message. I'd <span className="text-neutral-400">love</span> to hear from you <span className="text-neutral-400">regardless</span> of what it's about!</p>
+          <p>If you have any <span className="text-neutral-400">accessibility issues</span> with the site, please let me know.</p>
+          <p>I used <Link href="https://www.emailjs.com/" className="underline decoration-purple-300 text-purple-300">email.js</Link> to send this form to my email address without a backend. I also used <Link href="/https://react-hook-form.com/" className="underline decoration-purple-300 text-purple-300">React Hook Form</Link> for form validation.</p>
         </div>
         <form
-          className="w-5/6 max-w-lg ml-auto mr-auto mt-3 mb-3"
+          className="w-full p-6 max-w-lg ml-auto mr-auto"
           ref={form}
           // emailjs was sendEmail
           onSubmit={handleSubmit(onSubmit)}
@@ -57,7 +78,7 @@ export default function Contact() {
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full px-2">
               <label
-                className="block tracking-wide text-xs font-bold mb-2"
+                className="text-neutral-300 block tracking-wide text-xs font-bold mb-2"
                 htmlFor="user_name"
               >
                 Name
@@ -66,21 +87,21 @@ export default function Contact() {
                 className="autofocus appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
                 id="user_name"
                 // emailjs
-                name="user_name"
+                // name="user_name"
                 type="text"
                 placeholder="What's your name?"
                 // rhf
                 {...register("user_name", {required: true, maxLength: 50})}
               />
-              {/* {user_name.length < 1 && (
-                <p className="text-pink-400 text-xs italic">Please enter your name.</p>
-              )} */}
+              {errors.user_name && (
+                <p className="text-pink-400 text-xs italic">Please check your name. Max length is 50 chars.</p>
+              )}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full px-2">
               <label
-                className="block tracking-wide text-xs font-bold mb-2"
+                className="text-neutral-300 block tracking-wide text-xs font-bold mb-2"
                 htmlFor="user_email"
               >
                 e-mail
@@ -89,55 +110,54 @@ export default function Contact() {
                 className="appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
                 id="user_email"
                 // emailjs
-                name="user_email"
+                // name="user_email"
                 type="text"
                 placeholder="What's your e-mail?"
-                // rhf
-                {...register("user_email", {required: true, pattern: /^\S+@\S+$/i})}
+                // rhf /^\S+@\S+$/i
+                {...register("user_email", {required: true, pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i})}
               />
-              {/* {user_email.length < 1 && (
+              {errors.user_email && (
                 <p className="text-pink-400 text-xs italic">Please check your e-mail address.</p>
-              )} */}
+              )}
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full px-2">
               <label
-                className="block tracking-wide text-xs font-bold mb-2"
+                className="text-neutral-300 block tracking-wide text-xs font-bold mb-2"
                 htmlFor="message"
               >
                 Message
               </label>
               <textarea
-                className=" no-resize appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
+                className="no-resize appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
                 id="message"
                 // emailjs
-                name="message"
+                // name="message"
                 placeholder="What's your message?"
                 // rhf
                 {...register("message", {required: true, maxLength: 200})}
               >
               </textarea>
-              {/* {message.length < 1 && (
-                <p className="text-pink-400 text-xs italic">Please enter a message.</p>
-              )} */}
+              {errors.message && (
+                <p className="text-pink-400 text-xs italic">Please check your message. Max length is 200 chars.</p>
+              )}
             </div>
           </div>
-          <div className="md:flex md:items-center -mx-3 mb-5">
-            <div className="md:w-1/3 px-2">
-              <button
-                className="shadow bg-cyan-400 hover:bg-cyan-600 focus:shadow-outline focus:outline-none text-neutral-100 font-bold py-2 px-4 mb-2 rounded"
-                type="submit"
-              >
-                Send
-              </button>
-              {/* {isSendError ? (
-                  <p className="text-pink-400 text-xs italic">Oops! Please try again.</p>
-                ) : isSuccess ? (
-                  <p className="text-green-500 text-xs italic">Message sent!</p>
-                ) : null
-              } */}
-            </div>
+          <div className="mb-5 -mx-1">
+            <button
+              className="text-center mx-auto w-1/4 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-500 font-medium py-2 px-4 mb-2 rounded"
+              type="submit"
+            >
+              {/* <Spinner /> */}
+              {isSending ? <Spinner /> : "Send"}
+            </button>
+            {errors.user_name || errors.user_email || errors.message ? (
+                <p className="text-pink-400 text-xs italic">Oops! Please try again.</p>
+              ) : isSent ? (
+                <p className="text-green-500 text-xs italic">Message sent! Thanks and I'll be in touch as soon as possible.</p>
+              ) : null
+            }
           </div>
         </form>
     </main>

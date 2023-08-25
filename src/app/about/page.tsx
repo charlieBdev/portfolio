@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function About() {
     return (
-      <section className="flex flex-col align-center bg-neutral-950">
+      <section className="flex flex-col bg-neutral-950">
         <section className="p-6 space-y-1">
           <h2 className="text-lg text-pink-400">About</h2>
           <p>Hey, I have just finished a Software Engineering Bootcamp with <span className="text-neutral-400">Northcoders</span> and am looking for <span className="text-neutral-400">Junior</span> or <span className="text-neutral-400">Entry-level</span> roles in <span className="text-neutral-400">Sheffield</span> or Remote.</p>
