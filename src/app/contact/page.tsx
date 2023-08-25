@@ -66,7 +66,7 @@ export default function Contact() {
     <main className="flex flex-col">
         <div className="p-6 space-y-1">
           <h2 className="text-lg text-pink-400">Contact</h2>
-          <p>Feel free to drop a message. I'd <span className="text-neutral-400">love</span> to hear from you <span className="text-neutral-400">regardless</span> of what it's about!</p>
+          <p>Please feel free to leave a message. I'd <span className="text-neutral-400">love</span> to hear from you <span className="text-neutral-400">regardless</span> of what it's about!</p>
           <p>If you have any <span className="text-neutral-400">accessibility issues</span> with the site, please let me know.</p>
           {/* <p>I used <Link href="https://www.emailjs.com/" target="_blank" className="underline decoration-purple-300 text-purple-300">email.js</Link> to send this form to my email address without a backend and <Link href="/https://react-hook-form.com/" target="_blank" className="underline decoration-purple-300 text-purple-300">React Hook Form</Link> for form validation.</p> */}
         </div>
