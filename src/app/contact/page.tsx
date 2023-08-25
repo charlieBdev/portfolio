@@ -4,16 +4,16 @@ import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com'
 
 // rhf
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
 import Spinner from '../Components/Spinner';
 import Link from 'next/link';
 
 // rhf
-interface IFormInput {
-  user_name: string
-  user_email: string
-  message: string
-}
+// interface IFormInput {
+//   user_name: string
+//   user_email: string
+//   message: string
+// }
 
 
 export default function Contact() {
@@ -25,7 +25,7 @@ export default function Contact() {
   const { reset, register, handleSubmit, formState: { errors } } = useForm();
   // console.log(useForm(), '<<< useForm')
   // can I take out data?
-  const onSubmit: SubmitHandler<IFormInput> = () => {
+  const onSubmit: SubmitHandler<FieldValues> = () => {
     // console.log(data, '<<< data')
     setIsSending(true)
     sendEmail()
@@ -39,26 +39,27 @@ export default function Contact() {
   const sendEmail = () => {
     
     // e.preventDefault();
-
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICEID
-    const templateID = 'template_e9avqw4'
-    const userID = 'ax2EtnNRhWQkWQJmN'
-
-    // console.log('Form data:', new FormData(form.current));
-
-    // make sure to make first an env variable and hidden
-    emailjs.sendForm(serviceID, templateID, form.current, userID)
-    .then((result) => {
-      console.log('Email sent: ', result.text)
-      setIsSent(true)
-      reset()
-    })
-    .catch((error) => {
-      console.log('Email error: ', error.text)
-    })
-    .finally(() => {
-      setIsSending(false)
-    })
+    if (form.current) {
+      const serviceID: string | undefined = process.env.NEXT_PUBLIC_EMAILJS_SERVICEID
+      const templateID = 'template_e9avqw4'
+      const userID = 'ax2EtnNRhWQkWQJmN'
+  
+      // console.log('Form data:', new FormData(form.current));
+  
+      // make sure to make first an env variable and hidden
+      emailjs.sendForm(serviceID!, templateID, form.current, userID)
+      .then((result) => {
+        console.log('Email sent: ', result.text)
+        setIsSent(true)
+        reset()
+      })
+      .catch((error) => {
+        console.log('Email error: ', error.text)
+      })
+      .finally(() => {
+        setIsSending(false)
+      })
+    }
   }
 
   return (
@@ -71,7 +72,10 @@ export default function Contact() {
         </div>
         <form
           className="w-full p-6 max-w-lg ml-auto mr-auto"
+          // old
           ref={form}
+          // new
+          // ref={(element) => form.current = element}
           // emailjs was sendEmail
           onSubmit={handleSubmit(onSubmit)}
           >
@@ -149,7 +153,6 @@ export default function Contact() {
               className="text-center mx-auto w-1/4 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-500 font-medium py-2 px-4 mb-2 rounded"
               type="submit"
             >
-              {/* <Spinner /> */}
               {isSending ? <Spinner /> : "Send"}
             </button>
             {errors.user_name || errors.user_email || errors.message ? (
