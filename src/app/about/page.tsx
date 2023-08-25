@@ -27,7 +27,7 @@ export default function About() {
             </div>
             <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Backend</p>
-              <ul className="space-y-1">
+              <ul className="text-md space-y-1">
                 <li>RESTful APIs</li>
                 <li>Postgres</li>
                 <li>Express</li>
@@ -37,7 +37,7 @@ export default function About() {
             </div>
             <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Languages</p>
-              <ul className="space-y-1">
+              <ul className="text-md space-y-1">
                 <li>JavaScript</li>
                 <li>SQL</li>
                 <li className="text-neutral-400">Python</li>
@@ -47,7 +47,7 @@ export default function About() {
             </div>
             <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Qualities</p>
-              <ul className="space-y-1">
+              <ul className="text-md space-y-1">
                 <li>Goes the extra mile</li>
                 <li>Detail orientated</li>
                 <li>Always learning</li>
@@ -57,7 +57,7 @@ export default function About() {
             </div>
             <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Others</p>
-              <ul className="space-y-1">
+              <ul className="text-md space-y-1">
                 <li>Pair Programming</li>
                 <li>TDD with Jest</li>
                 <li>Git / Github</li>
@@ -67,7 +67,7 @@ export default function About() {
             </div>
             <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Interests</p>
-              <ul className="space-y-1">
+              <ul className="text-md space-y-1">
                 <li>Current affairs podcasts - News Agents</li>
                 <li>Making beats / Scratching</li>
                 <li>Video games - Zelda</li>
