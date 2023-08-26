@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
+import ThemeChanger from "./ThemeChanger";
 
 
 export default function Nav() {
@@ -12,39 +13,31 @@ export default function Nav() {
 
   return (
     <div 
-      className="p-6 flex items-center justify-between border-b border-neutral-600 sticky top-0 z-40 bg-neutral-950"
+      className="p-6 flex items-center justify-between border-b border-neutral-500 sticky top-0 z-50"
     >
       <div>
         <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
-        <p className="text-lg text-emerald-300">Junior<span className="text-yellow-300"> Full Stack Web Developer</span></p>
+        <p className="text-lg text-emerald-400">Junior<span className="text-yellow-300"> Full Stack Web Developer</span></p>
       </div>
-      <nav>
+      <nav className="flex space-x-3 lg:space-x-12">
+        <ThemeChanger />
         <section className="MOBILE-MENU flex lg:hidden">
           <div
-            className="HAMBURGER-ICON space-y-2"
+            className="HAMBURGER-ICON"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-neutral-300"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-neutral-300"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-neutral-300"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
-              className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
+              className="CROSS-ICON absolute top-0 right-0 px-6 py-10"
               onClick={() => setIsNavOpen(false)}
             >
-              <svg
-                className="h-8 w-8 first-line:text-neutral-300"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] text-purple-300 text-lg">

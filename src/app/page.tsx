@@ -5,17 +5,14 @@ import Link from "next/link";
 export default function Home() {
 
   return (
-    <main className="flex flex-col bg-white">
+    <main className="flex flex-col">
       <Image
         src={bg}
-        // width={500}
-        // height={500}
         alt="Luminous Eat Sleep Code Repeat text displayed on a phone being held in a dark room"
-        className=""
         priority={true}
         placeholder = 'blur'
       />
-      <p className="text-sm text-right text-neutral-700 mr-6">
+      <p className="text-sm text-right text-neutral-500 mr-6">
         Photo by <Link href="https://unsplash.com/@synkevych?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
           Roman Synkevych
         </Link>
