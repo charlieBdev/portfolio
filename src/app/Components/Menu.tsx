@@ -9,6 +9,7 @@ export default function Menu() {
     const currentRoute = usePathname()
 
     return (
+        <>
         <div className="MOBILE-MENU flex lg:hidden">
           <div
             className="HAMBURGER-ICON"
@@ -43,7 +44,7 @@ export default function Menu() {
               </li>
             </ul>
           </div>
-
+        </div>
           <ul className="DESKTOP-MENU hidden mr-3 space-x-12 lg:flex text-purple-300">
             <li>
               <Link href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
@@ -58,6 +59,6 @@ export default function Menu() {
               <Link href="/contact" className={currentRoute === "/contact" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>contact</Link>
             </li>
           </ul>
-        </div>
+        </>
     )
 }
