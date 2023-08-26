@@ -18,9 +18,9 @@ export default function About() {
             <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Frontend</p>
               <ul className="text-md space-y-1">
-                <li>Semantic HTML5</li>
-                <li>CSS3 & Tailwind</li>
+                <li>Semantic HTML</li>
                 <li>React & Next.js</li>
+                <li>CSS & Tailwind</li>
                 <li>Accessibility</li>
                 <li>UX & UI</li>
               </ul>
@@ -42,7 +42,7 @@ export default function About() {
                 <li>SQL</li>
                 <li className="text-neutral-400">Python</li>
                 <li className="text-neutral-400">C#</li>
-                <li className="text-neutral-400">C</li>
+                {/* <li className="text-neutral-400">C</li> */}
               </ul>
             </div>
             <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
@@ -51,8 +51,8 @@ export default function About() {
                 <li>Goes the extra mile</li>
                 <li>Detail orientated</li>
                 <li>Always learning</li>
+                <li>Persivilience</li>
                 <li>Team player</li>
-                <li>Persivilient</li>
               </ul>
             </div>
             <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
@@ -60,7 +60,7 @@ export default function About() {
               <ul className="text-md space-y-1">
                 <li>Pair Programming</li>
                 <li>TDD with Jest</li>
-                <li>Git / Github</li>
+                <li>Git & Github</li>
                 <li>VS Code</li>
                 <li>MVC</li>
               </ul>
@@ -69,10 +69,10 @@ export default function About() {
               <p className="text-center text-lg text-green-500 p-1">Interests</p>
               <ul className="text-md space-y-1">
                 <li>Current affairs podcasts - News Agents</li>
-                <li>Making beats / Scratching</li>
-                <li>Video games - Zelda</li>
+                <li>Music Production & Turntablism</li>
+                <li>Video games - Zelda currently</li>
+                <li>BJJ - Brown Belt of 8 years</li>
                 <li>Reading non-fiction</li>
-                <li>BJJ - brown belt</li>
               </ul>
             </div>
           </div>

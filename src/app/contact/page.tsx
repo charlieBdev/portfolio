@@ -87,7 +87,7 @@ export default function Contact() {
                 Name
               </label>
               <input
-                className="autofocus appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                className="autofocus appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="user_name"
                 // emailjs
                 // name="user_name"
@@ -110,7 +110,7 @@ export default function Contact() {
                 e-mail
               </label>
               <input
-                className="appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                className="appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="user_email"
                 // emailjs
                 // name="user_email"
@@ -133,7 +133,7 @@ export default function Contact() {
                 Message
               </label>
               <textarea
-                className="no-resize appearance-none block w-full h-40 bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                className="no-resize appearance-none block w-full h-40 bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="message"
                 // emailjs
                 // name="message"

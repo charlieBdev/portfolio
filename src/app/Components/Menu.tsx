@@ -1,32 +1,20 @@
-"use client"
-
 import Link from "next/link"
+import { useState } from "react"
 import { usePathname } from 'next/navigation';
-import { useState } from "react";
-import ThemeChanger from "./ThemeChanger";
 
 
-export default function Nav() {
+export default function Menu() {
 
-  const currentRoute = usePathname()
-  const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
+    const [isNavOpen, setIsNavOpen] = useState(false)
+    const currentRoute = usePathname()
 
-  return (
-    <div 
-      className="p-6 flex items-center justify-between border-b border-neutral-500 sticky top-0 z-50"
-    >
-      <Link href="/">
-        <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
-        <p className="text-lg text-emerald-400">Junior<span className="text-yellow-300"> Full Stack Web Developer</span></p>
-      </Link>
-      <nav className="flex space-x-3 lg:space-x-12">
-        <ThemeChanger />
-        <section className="MOBILE-MENU flex lg:hidden">
+    return (
+        <div className="MOBILE-MENU flex lg:hidden">
           <div
             className="HAMBURGER-ICON"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </div>
@@ -55,23 +43,21 @@ export default function Nav() {
               </li>
             </ul>
           </div>
-        </section>
 
-        <ul className="DESKTOP-MENU hidden mr-3 space-x-12 lg:flex text-purple-300">
-          <li>
-            <Link href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
-          </li>
-          <li>
-            <Link href="/about" className={currentRoute === "/about" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>about</Link>
-          </li>
-          <li>
-            <Link href="/projects" className={currentRoute === "/projects" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>projects</Link>
-          </li>
-          <li>
-            <Link href="/contact" className={currentRoute === "/contact" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>contact</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
+          <ul className="DESKTOP-MENU hidden mr-3 space-x-12 lg:flex text-purple-300">
+            <li>
+              <Link href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
+            </li>
+            <li>
+              <Link href="/about" className={currentRoute === "/about" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>about</Link>
+            </li>
+            <li>
+              <Link href="/projects" className={currentRoute === "/projects" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>projects</Link>
+            </li>
+            <li>
+              <Link href="/contact" className={currentRoute === "/contact" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>contact</Link>
+            </li>
+          </ul>
+        </div>
+    )
 }
