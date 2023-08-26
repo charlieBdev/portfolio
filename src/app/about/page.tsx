@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function About() {
     return (
-      <section className="flex flex-col bg-neutral-950">
+      <section className="flex flex-col">
         <section className="p-6 space-y-1">
           <h2 className="text-lg text-pink-400">About</h2>
           <p>Hey, I have just finished a <span className="text-neutral-400">Software Engineering</span> Bootcamp with <span className="text-neutral-400">Northcoders</span> and am looking for <span className="text-neutral-400">Junior</span> or <span className="text-neutral-400">Entry-level</span> roles in <span className="text-neutral-400">Sheffield</span> or <span className="text-neutral-400">Remote</span>.</p>
@@ -15,17 +15,17 @@ export default function About() {
         <section className="flex flex-col justify-center gap-3 mt-0 m-3">
           <h3 className="ml-3 text-lg text-pink-400">Skills</h3>
           <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
+            <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Frontend</p>
               <ul className="text-md space-y-1">
-                <li>Semantic HTML5</li>
-                <li>CSS3 & Tailwind</li>
+                <li>Semantic HTML</li>
                 <li>React & Next.js</li>
+                <li>CSS & Tailwind</li>
                 <li>Accessibility</li>
                 <li>UX & UI</li>
               </ul>
             </div>
-            <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
+            <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Backend</p>
               <ul className="text-md space-y-1">
                 <li>RESTful APIs</li>
@@ -35,44 +35,44 @@ export default function About() {
                 <li className="text-neutral-400">Flask</li>
               </ul>
             </div>
-            <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
+            <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Languages</p>
               <ul className="text-md space-y-1">
                 <li>JavaScript</li>
                 <li>SQL</li>
                 <li className="text-neutral-400">Python</li>
                 <li className="text-neutral-400">C#</li>
-                <li className="text-neutral-400">C</li>
+                {/* <li className="text-neutral-400">C</li> */}
               </ul>
             </div>
-            <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
+            <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Qualities</p>
               <ul className="text-md space-y-1">
                 <li>Goes the extra mile</li>
                 <li>Detail orientated</li>
                 <li>Always learning</li>
+                <li>Persivilience</li>
                 <li>Team player</li>
-                <li>Persivilient</li>
               </ul>
             </div>
-            <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
+            <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Others</p>
               <ul className="text-md space-y-1">
                 <li>Pair Programming</li>
                 <li>TDD with Jest</li>
-                <li>Git / Github</li>
+                <li>Git & Github</li>
                 <li>VS Code</li>
                 <li>MVC</li>
               </ul>
             </div>
-            <div className="bg-neutral-900 rounded-md p-3 w-full h-44 text-sm sm:w-auto">
+            <div className="rounded-md border border-neutral-500 p-3 w-full h-44 text-sm sm:w-auto">
               <p className="text-center text-lg text-green-500 p-1">Interests</p>
               <ul className="text-md space-y-1">
                 <li>Current affairs podcasts - News Agents</li>
-                <li>Making beats / Scratching</li>
-                <li>Video games - Zelda</li>
+                <li>Music Production & Turntablism</li>
+                <li>Video games - Zelda currently</li>
+                <li>BJJ - Brown Belt of 8 years</li>
                 <li>Reading non-fiction</li>
-                <li>BJJ - brown belt</li>
               </ul>
             </div>
           </div>

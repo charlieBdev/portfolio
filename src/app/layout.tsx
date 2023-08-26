@@ -1,7 +1,8 @@
-import './globals.css'
 import type { Metadata } from 'next'
-import Nav from './Components/Nav'
+import './globals.css'
+import Header from './Components/Header'
 import Footer from './Components/Footer'
+import { Providers } from './Providers'
 
 
 export const metadata: Metadata = {
@@ -16,16 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <head>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
         </head>
-        <body className="mb-12 pb-4 bg-neutral-950 text-neutral-50">
-          <div>
-            <Nav />
-            {children}
-            <Footer />
-          </div>
+        <body className="flex flex-col min-h-screen">
+            <Providers>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </Providers>
         </body>
       </html>
     </>

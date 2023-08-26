@@ -63,15 +63,14 @@ export default function Contact() {
   }
 
   return (
-    <main className="flex flex-col">
-        <div className="p-6 space-y-1">
+    <section className="flex flex-col lg:flex-row p-6 space-y-6">
+        <div className="space-y-1">
           <h2 className="text-lg text-pink-400">Contact</h2>
-          <p>Please <span className="text-neutral-400">feel free</span> to leave a message. I'd <span className="text-neutral-400">love</span> to hear from you <span className="text-neutral-400">regardless</span> of what it's about!</p>
-          <p>If you have any <span className="text-neutral-400">accessibility issues</span> with the site, please <span className="text-neutral-400">let me know</span>.</p>
-          {/* <p>I used <Link href="https://www.emailjs.com/" target="_blank" className="underline decoration-purple-300 text-purple-300">email.js</Link> to send this form to my email address without a backend and <Link href="/https://react-hook-form.com/" target="_blank" className="underline decoration-purple-300 text-purple-300">React Hook Form</Link> for form validation.</p> */}
+          <p>Please <span className="text-neutral-500">feel free</span> to leave a message. I'd <span className="text-neutral-500">love</span> to hear from you <span className="text-neutral-500">regardless</span> of what it's about!</p>
+          <p>If you have any <span className="text-neutral-500">accessibility issues</span> with the site, please <span className="text-neutral-500">let me know</span>.</p>
         </div>
         <form
-          className="w-full p-6 max-w-lg ml-auto mr-auto"
+          className="w-full max-w-xl mx-auto px-1 lg:mr-0 lg:ml-8"
           // old
           ref={form}
           // new
@@ -82,13 +81,13 @@ export default function Contact() {
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full px-2">
               <label
-                className="text-neutral-300 block tracking-wide text-xs font-bold mb-2"
+                className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
                 htmlFor="user_name"
               >
                 Name
               </label>
               <input
-                className="autofocus appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
+                className="autofocus appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="user_name"
                 // emailjs
                 // name="user_name"
@@ -105,13 +104,13 @@ export default function Contact() {
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full px-2">
               <label
-                className="text-neutral-300 block tracking-wide text-xs font-bold mb-2"
+                className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
                 htmlFor="user_email"
               >
                 e-mail
               </label>
               <input
-                className="appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
+                className="appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="user_email"
                 // emailjs
                 // name="user_email"
@@ -128,13 +127,13 @@ export default function Contact() {
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full px-2">
               <label
-                className="text-neutral-300 block tracking-wide text-xs font-bold mb-2"
+                className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
                 htmlFor="message"
               >
                 Message
               </label>
               <textarea
-                className="no-resize appearance-none block w-full bg-neutral-300 text-neutral-900 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
+                className="no-resize appearance-none block w-full h-40 bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="message"
                 // emailjs
                 // name="message"
@@ -163,6 +162,6 @@ export default function Contact() {
             }
           </div>
         </form>
-    </main>
+    </section>
   )
 }

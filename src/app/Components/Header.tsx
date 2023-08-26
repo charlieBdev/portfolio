@@ -1,12 +1,23 @@
+"use client"
+
+import Link from "next/link"
+import ThemeChanger from "./ThemeChanger";
+import Menu from "./Menu";
+
 export default function Header() {
-    return (
-        <header className="p-3">
-            <div className="flex flex-row">
-                <div className="flex flex-col lg:flex-row lg:align-end">
-                    <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
-                    <h2 className="text-emerald-300 lg:self-end">Junior<span className="text-yellow-300"> Full Stack Developer</span></h2>
-                </div>
-            </div>
-        </header>
-    )
+
+  return (
+    <div 
+      className="p-6 flex items-center justify-between border-b border-neutral-500 sticky top-0 z-10"
+    >
+      <Link href="/">
+        <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
+        <p className="text-lg text-emerald-400">Junior<span className="text-yellow-300"> Full Stack Web Developer</span></p>
+      </Link>
+      <nav className="flex space-x-3 lg:space-x-12">
+        <ThemeChanger />
+        <Menu />
+      </nav>
+    </div>
+  );
 }
