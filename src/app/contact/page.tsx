@@ -70,7 +70,7 @@ export default function Contact() {
           <p>If you have any <span className="text-neutral-500">accessibility issues</span> with the site, please <span className="text-neutral-500">let me know</span>.</p>
         </div>
         <form
-          className="w-full max-w-lg mx-auto px-1"
+          className="w-full max-w-lg mx-auto px-1 lg:mr-0 lg:ml-8"
           // old
           ref={form}
           // new
