@@ -3,12 +3,17 @@
 import Link from "next/link"
 import ThemeChanger from "./ThemeChanger";
 import Menu from "./Menu";
+import { useTheme } from "next-themes";
+
 
 export default function Header() {
 
+  const { theme } = useTheme()
+  const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
+
   return (
-    <div 
-      className="p-6 flex items-center justify-between border-b border-neutral-500 sticky top-0 z-10"
+    <header 
+      className={`${bgClass} px-6 py-3 flex items-center justify-between border-b border-neutral-500 sticky top-0`}
     >
       <Link href="/">
         <h1 className="text-3xl font-bold text-cyan-400">CHARLIE BISHOP</h1>
@@ -18,6 +23,6 @@ export default function Header() {
         <ThemeChanger />
         <Menu />
       </nav>
-    </div>
+    </header>
   );
 }

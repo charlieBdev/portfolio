@@ -70,7 +70,7 @@ export default function Contact() {
           <p>If you have any <span className="text-neutral-500">accessibility issues</span> with the site, please <span className="text-neutral-500">let me know</span>.</p>
         </div>
         <form
-          className="w-full max-w-xl mx-auto px-1 lg:mr-0 lg:ml-8"
+          className="w-full max-w-xl mx-auto px-1 lg:mr-0 lg:ml-8 space-y-3"
           // old
           ref={form}
           // new
@@ -78,7 +78,7 @@ export default function Contact() {
           // emailjs was sendEmail
           onSubmit={handleSubmit(onSubmit)}
           >
-          <div className="flex flex-wrap -mx-3 mb-5">
+          <div className="flex flex-wrap -mx-3">
             <div className="w-full px-2">
               <label
                 className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
@@ -101,7 +101,7 @@ export default function Contact() {
               )}
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-5">
+          <div className="flex flex-wrap -mx-3">
             <div className="w-full px-2">
               <label
                 className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
@@ -124,7 +124,7 @@ export default function Contact() {
               )}
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-5">
+          <div className="flex flex-wrap -mx-3">
             <div className="w-full px-2">
               <label
                 className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
@@ -147,7 +147,7 @@ export default function Contact() {
               )}
             </div>
           </div>
-          <div className="mb-5 -mx-1">
+          <div className="-mx-1">
             <button
               className="text-center mx-auto w-1/4 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-500 font-medium py-2 px-4 mb-2 rounded"
               type="submit"

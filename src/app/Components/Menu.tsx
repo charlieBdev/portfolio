@@ -1,6 +1,9 @@
+"use client"
+
 import Link from "next/link"
 import { useState } from "react"
 import { usePathname } from 'next/navigation';
+import { useTheme } from "next-themes";
 
 
 export default function Menu() {
@@ -8,9 +11,12 @@ export default function Menu() {
     const [isNavOpen, setIsNavOpen] = useState(false)
     const currentRoute = usePathname()
 
+    const { theme } = useTheme()
+    const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
+
     return (
         <>
-        <div className="MOBILE-MENU flex lg:hidden">
+        <div className={`MOBILE-MENU flex lg:hidden`}>
           <div
             className="HAMBURGER-ICON"
             onClick={() => setIsNavOpen((prev) => !prev)}
@@ -20,9 +26,9 @@ export default function Menu() {
             </svg>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+          <div className={isNavOpen ? `showMenuNav ${bgClass}` : "hideMenuNav"}>
             <div
-              className="CROSS-ICON absolute top-0 right-0 px-6 py-10"
+              className="CROSS-ICON absolute top-0 right-0 px-6 py-7"
               onClick={() => setIsNavOpen(false)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">

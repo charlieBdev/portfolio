@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
 
   return (
-    <main className="flex flex-col">
+    <section className="flex flex-col">
       <Image
         src={bg}
         alt="Luminous Eat Sleep Code Repeat text displayed on a phone being held in a dark room"
@@ -20,6 +20,6 @@ export default function Home() {
           Unsplash
         </Link>
       </p>
-    </main>
+    </section>
   )
 }
