@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser'
 
 // rhf
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
-import Spinner from '../components/Spinner'
+import Spinner from '../Components/Spinner'
 // import Link from 'next/link';
 
 // rhf
