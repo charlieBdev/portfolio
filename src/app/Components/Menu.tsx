@@ -28,7 +28,7 @@ export default function Menu() {
 
           <div className={isNavOpen ? `showMenuNav ${bgClass}` : "hideMenuNav"}>
             <div
-              className="CROSS-ICON absolute top-0 right-0 px-6 py-7"
+              className="CROSS-ICON absolute top-0 right-0 px-6 py-8"
               onClick={() => setIsNavOpen(false)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
