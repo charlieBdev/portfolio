@@ -19,8 +19,8 @@ export default function Navbar() {
         <h1 className="text-2xl font-medium text-cyan-400">CHARLIE BISHOP</h1>
         <p className="text-lg text-emerald-400">Junior<span className="text-yellow-300"> Web Developer</span></p>
       </Link>
-      <div className="flex items-center space-x-3 lg:space-x-12">
-        {bgClass === 'bg-white' && <p className="text-xs text-neutral-500">You sure?</p>}
+      <div className="flex items-center justify-center space-x-3 lg:space-x-12">
+        {bgClass === 'bg-white' && <p className="text-xs text-neutral-500">Sure?</p>}
         <ThemeChanger />
         <Menu />
       </div>
