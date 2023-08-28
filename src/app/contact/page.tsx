@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
-import emailjs from 'emailjs-com'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 // rhf
-import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
-import Spinner from '../components/Spinner';
+import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
+import Spinner from '../components/Spinner'
 // import Link from 'next/link';
 
 // rhf
