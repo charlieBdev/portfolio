@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function About() {
     return (
-      <div className="flex flex-col p-6 space-y-3">
+      <div className="flex flex-col p-6 space-y-3 min-h-screen">
           <section className="space-y-1">
             <h2 className="text-lg text-pink-400">About</h2>
             <p>I have just finished a ten-week intensive <span className="text-neutral-500">Software Engineering</span> Bootcamp with <span className="text-neutral-500">Northcoders</span> and am looking for <span className="text-neutral-500">Junior</span> or <span className="text-neutral-500">Entry-level</span> roles in <span className="text-neutral-500">Sheffield</span> or <span className="text-neutral-500">Remote</span>.</p>

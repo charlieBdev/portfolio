@@ -7,7 +7,7 @@ export default function ThemeChanger() {
 
     return (
         <div className="space-x-3">
-            <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>{theme === 'light' ? <Dark /> : <Light />}</button>
+            <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>{theme === 'light' ? <Light /> : <Dark />}</button>
         </div>
     )
 }
