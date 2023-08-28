@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`${bgClass} px-6 flex items-center justify-between border-b border-neutral-500 fixed w-full h-24 shadow-xl z-[100]`}
+      className={`${bgClass} px-6 flex items-center justify-between border-b border-neutral-500 sticky top-0 h-24 shadow-xl z-[100]`}
     >
       <Link href="/">
         <h1 className="text-2xl font-medium text-cyan-400">CHARLIE BISHOP</h1>

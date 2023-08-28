@@ -79,16 +79,6 @@ export default function About() {
               </div>
             </div>
           </section>
-          {/* <Image
-            src={about}
-            // width={500}
-            // height={500}
-            alt="Lots of things Charlie likes: coding, games, space, coffee, music, nature, peace, and love."
-            className="max-h-full object-scale-down mx-auto"
-            priority={true}
-            placeholder = 'blur'
-            height='500'
-          /> */}
       </div>
     )
 }
