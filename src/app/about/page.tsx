@@ -1,6 +1,3 @@
-// import Image from "next/image"
-// import about from "../../../public/about.png"
-
 import Link from "next/link"
 
 export default function About() {
