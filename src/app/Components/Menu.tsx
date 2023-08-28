@@ -16,7 +16,7 @@ export default function Menu() {
 
     return (
         <>
-        <div className={`MOBILE-MENU flex lg:hidden`}>
+        <div className={`MOBILE-MENU flex lg:hidden ${bgClass}`}>
           <div
             className="HAMBURGER-ICON"
             onClick={() => setIsNavOpen((prev) => !prev)}
@@ -28,14 +28,14 @@ export default function Menu() {
 
           <div className={isNavOpen ? `showMenuNav ${bgClass}` : "hideMenuNav"}>
             <div
-              className="CROSS-ICON absolute top-0 right-0 px-6 py-7"
+              className="CROSS-ICON absolute top-0 right-0 px-6 py-8"
               onClick={() => setIsNavOpen(false)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
-            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] text-purple-300 text-lg">
+            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] text-purple-300 text-lg ${bgClass} z-50">
               <li className="my-8">
                 <Link onClick={() => setIsNavOpen(false)} href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
               </li>
