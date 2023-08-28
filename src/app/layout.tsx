@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import { Providers } from './Providers'
 import  { Inter } from 'next/font/google'
-
 const inter = Inter({ subsets: ["latin"]})
+
 
 export const metadata: Metadata = {
   title: 'Charlie B - Jnr Web Dev',
@@ -19,7 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <html lang="en" className="light" style={{ colorScheme: 'light' }}>
+      <html lang="en" suppressHydrationWarning>
+      {/* <html lang="en" className="light" style={{ colorScheme: 'light' }}> */}
         <head>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
           <link rel="apple-touch-icon" sizes="180x180" href="src/app/apple-touch-icon.png" />
@@ -29,8 +30,8 @@ export default function RootLayout({
         </head>
         <body className={inter.className}>
             <Providers>
-              <Header />
-              <main className="min-h-screen">{children}</main>
+              <Navbar />
+              {children}
               <Footer />
             </Providers>
         </body>

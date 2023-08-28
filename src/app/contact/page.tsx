@@ -5,7 +5,7 @@ import emailjs from 'emailjs-com'
 
 // rhf
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
-import Spinner from '../Components/Spinner';
+import Spinner from '../components/Spinner';
 // import Link from 'next/link';
 
 // rhf
@@ -31,11 +31,11 @@ export default function Contact() {
     sendEmail()
   }
   // remove log and comment!
-  console.log(errors, '<<< errors')
+  // console.log(errors, '<<< errors')
 
   // emailjs
   const form = useRef<HTMLFormElement | null>(null)
-  console.dir(form.current, '<<< form.current')
+  // console.dir(form.current, '<<< form.current')
   const sendEmail = () => {
     
     // e.preventDefault();
@@ -63,7 +63,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="flex flex-col lg:flex-row p-6 space-y-6">
+    <section className="flex flex-col lg:flex-row p-6 space-y-6 min-h-screen">
         <div className="space-y-1">
           <h2 className="text-lg text-pink-400">Contact</h2>
           <p>Please <span className="text-neutral-500">feel free</span> to leave a message. I'd <span className="text-neutral-500">love</span> to hear from you <span className="text-neutral-500">regardless</span> of what it's about!</p>

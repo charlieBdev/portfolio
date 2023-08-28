@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Aldrich
-- Font Author: Copyright (c) Matthew Desmond, 2011. All rights reserved.
-- Font Source: http://fonts.gstatic.com/s/aldrich/v21/MCoTzAn-1s3IGyJMZaAS3pP5H_E.ttf
+- Font Title: Splash
+- Font Author: Copyright 2017-2021 The Splash Project Authors (https://github.com/googlefonts/splash)
+- Font Source: http://fonts.gstatic.com/s/splash/v6/KtksAL2RZoDkbU6hpPPGNdS6wg.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
