@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Splash
-- Font Author: Copyright 2017-2021 The Splash Project Authors (https://github.com/googlefonts/splash)
-- Font Source: http://fonts.gstatic.com/s/splash/v6/KtksAL2RZoDkbU6hpPPGNdS6wg.ttf
+- Font Title: Bungee
+- Font Author: Copyright 2008 The Bungee Project Authors (david@djr.com)
+- Font Source: http://fonts.gstatic.com/s/bungee/v13/N0bU2SZBIuF2PU_ECn50Kd_PmA.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
