@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  height: 100%;
-}
 
-:root {
-  /* Your default theme */
+/* :root {
   --background: white;
   --foreground: black;
 }
@@ -15,7 +11,7 @@ html {
 [data-theme='dark'] {
   --background: black;
   --foreground: white;
-}
+} */
 
 .hideMenuNav {
   display: none;
@@ -27,7 +23,6 @@ html {
   height: 100vh;
   top: 0;
   left: 0;
-  /* background: black; */
   z-index: 50;
   display: flex;
   flex-direction: column;

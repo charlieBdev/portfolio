@@ -2,10 +2,10 @@ import Link from "next/link"
 
 export default function About() {
     return (
-      <div className="flex flex-col p-6 space-y-3 min-h-screen">
+      <div className="flex flex-col p-6 space-y-3 min-h-screen xl:items-center">
           <section className="space-y-1">
             <h2 className="text-lg text-pink-400">About</h2>
-            <p>I have just finished a ten-week intensive <span className="text-neutral-500">Software Engineering</span> Bootcamp with <span className="text-neutral-500">Northcoders</span> and am looking for <span className="text-neutral-500">Junior</span> or <span className="text-neutral-500">Entry-level</span> roles in <span className="text-neutral-500">Sheffield</span> or <span className="text-neutral-500">Remote</span>.</p>
+            <p>I have just finished a ten-week intensive <span className="">Software Engineering</span> Bootcamp with <span className="">Northcoders</span> and am looking for <span className="">Junior</span> or <span className="">Entry-level</span> roles in <span className="">Sheffield</span> or <span className="">Remote</span>.</p>
             <p>Before reigniting my interest in tech, I was mostly an English language teacher abroad and in the UK.</p>
             <p>Check out my <Link href="/projects" className="underline decoration-purple-300 text-purple-300">projects</Link> or send a message via the <Link href="/about" className="underline decoration-purple-300 text-purple-300">contact</Link> page if you'd just like a chat.</p>
           </section>
@@ -31,7 +31,7 @@ export default function About() {
                   <li>Postgres</li>
                   <li>Express</li>
                   <li>Axios</li>
-                  <li className="text-neutral-400">Flask</li>
+                  <li className="">Flask</li>
                 </ul>
               </div>
               <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
@@ -39,9 +39,9 @@ export default function About() {
                 <ul className="text-md space-y-1">
                   <li>JavaScript</li>
                   <li>SQL</li>
-                  <li className="text-neutral-400">Python</li>
-                  <li className="text-neutral-400">C#</li>
-                  {/* <li className="text-neutral-400">C</li> */}
+                  <li className="">Python</li>
+                  <li className="">C#</li>
+                  {/* <li className="">C</li> */}
                 </ul>
               </div>
               <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">

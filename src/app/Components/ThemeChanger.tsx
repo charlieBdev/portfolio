@@ -1,14 +1,35 @@
+"use client"
+
 import { useTheme } from "next-themes";
 import Light from "./Light"
 import Dark from "./Dark"
-
+import { useEffect, useState } from "react";
 
 export default function ThemeChanger() {
     const { theme, setTheme } = useTheme()
-console.log(theme, '<<< theme')
+    const [mounted, setMounted] = useState<boolean>(false)
+
+    // useEffect(() => {
+    //     setMounted(true)
+    // }, [])
+
+    // if (!mounted) {
+    //     return null
+    // }
+
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light')
+    }
+
     return (
         <div className="">
-            <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>{theme === 'light' ? <Light /> : <Dark />}</button>
+            <button
+                onClick={toggleTheme}
+                aria-label={`Toggle ${theme === 'light' ? 'Dark' : 'Light'} Theme`}
+                className="flex items-center rounded-lg transition delay-100 duration-300 ease-in-out"
+            >
+                {theme === 'light' ? <Light /> : <Dark />}
+            </button>
         </div>
     )
 }

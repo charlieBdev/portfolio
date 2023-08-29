@@ -1,17 +1,17 @@
 "use client"
 
 import React from 'react'
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 
 
 export default function Home() {
 
-  const { theme } = useTheme()
-  const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
+  // const { theme } = useTheme()
+  // const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
 
   return (
-    <section className={` flex flex-col items-center h-screen w-full relative`}>
-        <div className="flex flex-col lg:flex-row lg:space-x-6 mt-36 lg:mt-56">
+    <section className={`flex flex-col items-center h-screen w-full`}>
+        <div className="flex flex-col lg:flex-row lg:space-x-6 mt-64">
             <p className="text-6xl animate-pulse text-center">eat</p>
             <p className="text-6xl animate-pulse text-center">sleep</p>
             <p className="text-6xl animate-pulse text-center">code</p>
