@@ -12,7 +12,7 @@ export default function Footer() {
     // const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
     
     return (
-        <footer className={`flex justify-between items-center px-6 xl:px-24 text-3xl border-t border-neutral-600 sticky bottom-0 h-12`}>
+        <footer className={`mt-auto flex justify-between items-center py-3 px-6 xl:px-24 text-3xl border-t border-neutral-600`}>
             <div className="flex space-x-4">
                 <Link href="https://github.com/charlieBdev" target="_blank"><AiFillLinkedin /></Link>
                 <Link href="https://www.linkedin.com/in/charlie-bishop-4a897314a/" target="_blank"><AiFillGithub /></Link>

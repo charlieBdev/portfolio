@@ -28,12 +28,12 @@ export default function RootLayout({
           <link rel="manifest" href="src/app/site.webmanifest" />
         </Head>
           <Providers>
-            <body>
+            <body className="flex flex-col h-screen">
               <Navbar />
-              <main>
+              <main className="flex-grow-1">
                 {children}
               </main>
-              <Footer />
+              <Footer/>
             </body>
           </Providers>
       </html>

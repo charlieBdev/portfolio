@@ -16,7 +16,7 @@ export default function Navbar() {
       <nav 
         className={`px-6 flex items-center justify-between xl:px-24 border-b border-neutral-500 sticky top-0 h-24 shadow-xl z-[100]`}
       >
-        <Link href="/" className="lg:flex lg:items-center lg:space-x-3">
+        <Link href="/" className="md:flex md:items-center md:space-x-3">
           <h1 className="text-2xl font-medium text-cyan-400">CHARLIE BISHOP</h1>
           <p className="text-lg text-emerald-400">Junior<span className="text-yellow-300"> Web Developer</span></p>
         </Link>
