@@ -18,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <>
-      {/* <html lang="en" suppressHydrationWarning> */}
-      <html lang="en" className="light" style={{ colorScheme: 'light' }}>
+      <html lang="en" suppressHydrationWarning>
+      {/* <html lang="en" className="light" style={{ colorScheme: 'light' }}> */}
         <Head>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
           <link rel="apple-touch-icon" sizes="180x180" href="src/app/apple-touch-icon.png" />
