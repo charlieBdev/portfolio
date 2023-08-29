@@ -4,7 +4,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { usePathname } from 'next/navigation';
 import { useTheme } from "next-themes";
-
+import { AiFillLinkedin } from 'react-icons/ai'
+import { AiFillGithub } from 'react-icons/ai'
 
 export default function Menu() {
 
@@ -12,7 +13,8 @@ export default function Menu() {
     const currentRoute = usePathname()
 
     const { theme } = useTheme()
-    const bgClass = theme === 'light' ? 'bg-neutral-50' : 'bg-neutral-900'
+    const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
+    const txtClass = theme === 'light' ? 'text-black' : 'text-white'
 
     return (
         <>
@@ -47,6 +49,12 @@ export default function Menu() {
               </li>
               <li className="my-8">
                 <Link onClick={() => setIsNavOpen(false)} href="/contact" className={currentRoute === "/contact" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>contact</Link>
+              </li>
+              <li className={`my-8 ${txtClass} text-3xl`}>
+                <div className={`flex space-x-4`}>
+                  <Link href="https://github.com/charlieBdev" target="_blank"><AiFillLinkedin /></Link>
+                  <Link href="https://www.linkedin.com/in/charlie-bishop-4a897314a/" target="_blank"><AiFillGithub /></Link>
+                </div>
               </li>
             </ul>
           </div>

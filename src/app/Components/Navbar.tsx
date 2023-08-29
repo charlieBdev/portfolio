@@ -3,13 +3,13 @@
 import Link from "next/link"
 import ThemeChanger from "./ThemeChanger"
 import Menu from "./Menu"
-// import { useTheme } from "next-themes"
+import { useTheme } from "next-themes"
 
 
 export default function Navbar() {
 
-  // const { theme } = useTheme()
-  // const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
+  const { theme } = useTheme()
+  const bgClass = theme === 'light' ? 'bg-white' : 'bg-black'
 
   return (
     <footer>
@@ -21,7 +21,7 @@ export default function Navbar() {
           <p className="text-lg text-emerald-400">Junior<span className="text-yellow-300"> Web Developer</span></p>
         </Link>
         <div className="flex items-center justify-center space-x-3 lg:space-x-12">
-          {/* {bgClass === 'bg-white' && <p className="text-xs">Sure?</p>} */}
+          {bgClass === 'bg-white' && <p className="text-xs text-orange-400">Yikes!</p>}
           <ThemeChanger />
           <Menu />
         </div>

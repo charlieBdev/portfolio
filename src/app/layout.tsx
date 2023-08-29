@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className="h-full">
       {/* <html lang="en" className="light" style={{ colorScheme: 'light' }}> */}
         <Head>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
@@ -28,9 +28,9 @@ export default function RootLayout({
           <link rel="manifest" href="src/app/site.webmanifest" />
         </Head>
           <Providers>
-            <body className="flex flex-col h-screen">
+            <body className="flex flex-col min-h-full">
               <Navbar />
-              <main className="flex-grow-1">
+              <main className="w-full">
                 {children}
               </main>
               <Footer/>

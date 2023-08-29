@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 import Spinner from '../Components/Spinner'
