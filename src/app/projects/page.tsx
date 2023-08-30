@@ -1,4 +1,5 @@
 import Link from "next/link"
+import ProjectsList from "../Components/ProjectsList"
 
 
 export default function Projects() {
@@ -10,7 +11,7 @@ export default function Projects() {
           <p>In the meantime, while I build this page, please check out <Link href="https://charliebdev.github.io/" target="_blank" className="underline decoration-purple-300 text-purple-300">my old portfolio</Link> made pre-Bootcamp.</p>
           <p>There you can find my latest projects such as <Link href="https://aa-sound-waves.vercel.app/" target="_blank" className="underline decoration-purple-300 text-purple-300">SoundWaves</Link>, which was a team project, and <Link href="https://euphonious-scone-36cbae.netlify.app/" target="_blank" className="underline decoration-purple-300 text-purple-300">NC News</Link>.</p>
         </section>
+        <ProjectsList />
       </div>
-      
     )
 }
