@@ -19,10 +19,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btn
         <h2 className="text-green-400">{name}</h2>
         <Image
             src="https://images.unsplash.com/photo-1636654129379-e7ae6f30bfd0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29taW5nJTIwc29vbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-            width={250}
-            height={250}
+            width={300}
+            height={600}
             alt="Project Image"
-            loading="lazy"    
+            loading="lazy"  
+            className="rounded-lg"  
         />
         <p className="text-left px-6">{desc}</p>
         <div>

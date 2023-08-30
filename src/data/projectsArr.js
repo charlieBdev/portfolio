@@ -1,9 +1,9 @@
 const projectsArr = [
   {
     name: "SoundWaves",
-    desc: "A more accessible Twitter experience.",
+    desc: "A more accessible Twitter experience that allows users to record 'waves' which are then transcribed using AssemblyAI. This was a team project while at Northcoders.",
     imgURL: "/SoundWavesOcean.png",
-    tags: ["AssemblyAI", "Next.js", "Supabase", "TypeScript", "Northcoders"],
+    tags: ["Express.js", "Next.js", "Supabase", "TypeScript"],
     btnText: "Use SoundWaves",
     btnLink: "https://aa-sound-waves.vercel.app/waves",
   },
