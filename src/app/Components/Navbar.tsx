@@ -22,6 +22,7 @@ export default function Navbar() {
         </Link>
         <div className="flex items-center justify-center space-x-3 lg:space-x-12">
           {bgClass === 'bg-white' && <p className="text-xs text-orange-400">Yikes!</p>}
+          {bgClass === 'bg-black' && <p className="text-xs">Z-z-z!</p>}
           <ThemeChanger />
           <Menu />
         </div>
