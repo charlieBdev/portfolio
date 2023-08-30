@@ -18,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning className="h-full">
-      {/* <html lang="en" className="light" style={{ colorScheme: 'light' }}> */}
+      {/* <html lang="en" suppressHydrationWarning className="h-full"> */}
+      <html lang="en" className="light" style={{ colorScheme: 'light' }}>
         <Head>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
           <link rel="apple-touch-icon" sizes="180x180" href="src/app/apple-touch-icon.png" />
@@ -28,9 +28,9 @@ export default function RootLayout({
           <link rel="manifest" href="src/app/site.webmanifest" />
         </Head>
           <Providers>
-            <body className="flex flex-col min-h-full">
+            <body className="flex flex-col min-h-full text-black bg-white dark:text-white dark:bg-black">
               <Navbar />
-              <main className="w-full mt-24 text-black bg-white dark:text-white dark:bg-black">
+              <main className="w-full mt-24 mb-16 min-h-screen">
                 {children}
               </main>
               <Footer/>

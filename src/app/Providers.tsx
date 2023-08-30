@@ -20,5 +20,5 @@ export function Providers({ children }: ProvidersProps) {
     //     return <>{children}</>
     // }
 
-    return <ThemeProvider attribute='class'>{children}</ThemeProvider>
+    return <ThemeProvider attribute="class">{children}</ThemeProvider>
 }

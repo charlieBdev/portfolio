@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Projects() {
     return (
       <div className="p-6 space-y-1 min-h-screen xl:flex xl:flex-col xl:items-center">
-        <section className="">
+        <section>
           <h2 className="text-lg text-pink-400">Projects</h2>
           <p>Don't panic! Projects <span className="">incoming...</span></p>
           <p>In the meantime, while I build this page, please check out <Link href="https://charliebdev.github.io/" target="_blank" className="underline decoration-purple-300 text-purple-300">my old portfolio</Link> made pre-Bootcamp.</p>
