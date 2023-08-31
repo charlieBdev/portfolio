@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Projects() {
     return (
-      <div className="p-6 space-y-1 min-h-screen xl:flex xl:flex-col xl:items-center">
+      <div className="mt-24 mb-16 p-6 space-y-1 xl:flex xl:flex-col xl:items-center">
         <section>
           <h2 className="text-lg text-pink-400">Projects</h2>
           <p>Don't panic! Projects <span className="">incoming...</span></p>
