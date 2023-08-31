@@ -25,7 +25,7 @@ export default function ThemeChanger() {
         <button
             onClick={toggleTheme}
             aria-label={`Toggle ${theme === 'light' ? 'Dark' : 'Light'} Theme`}
-            className="flex items-center rounded-lg transition delay-100 duration-300 ease-in-out"
+            className="flex items-center rounded-lg transition delay-100 duration-300 ease-in-out hover:animate-pulse"
         >
             {theme === 'light' ? <Light /> : <Dark />}
         </button>
