@@ -9,7 +9,7 @@ import Link from "next/link"
 export default function Home() {
 
   return (
-      <section className="flex flex-col justify-center center-items min-h-screen">
+      <section className="flex flex-col justify-center items-center min-h-screen">
         <p className="text-6xl animate-pulse text-center">e<Link href="/about" className="text-purple-300 animate-pulse">a</Link>t</p>
         <p className="text-6xl animate-pulse text-center">sleep</p>
         <p className="text-6xl animate-pulse text-center"><Link href="/contact" className="text-purple-300 animate-pulse">c</Link>ode</p>

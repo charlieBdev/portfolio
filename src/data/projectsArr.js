@@ -1,7 +1,7 @@
 const projectsArr = [
   {
     name: "SoundWaves",
-    desc: "A full stack team project made in under two weeks. SoundWaves is a more accessible Twitter experience that allows users to record 'waves' which are then transcribed. We spiked the project before commencing and made wireframes and component trees as part of our planning. We also held standups daily and tracked progress using Trello.",
+    desc: "A full stack team project made in under two weeks. SoundWaves is a more accessible Twitter experience that allows users to record 'waves', which are then transcribed. We spiked the project before commencing and made wireframes and component trees as part of our planning. We also held standups daily and tracked progress using Trello.",
     imgURL: "/SoundWaves/SoundWaves.png",
     tags: [
       "AssemblyAI",
@@ -20,7 +20,7 @@ const projectsArr = [
   },
   {
     name: "NC News",
-    desc: "A full stack solo project made in two weeks. NC News is a minimal Reddit clone. The backend was developed using Test-Driven Development with Jest and Supertest and the Model View Controller design pattern. A few more features I'd like to add if time allows are user accounts, the ability to up or down vote articles and comments, and the ability to post an article.",
+    desc: "A full stack solo project made in two weeks. NC News is a minimalistic Reddit clone. The backend was developed using Test-Driven Development with Jest and Supertest and the Model View Controller design pattern. A few more features I'd like to add if time allows are user accounts, the ability to up or down vote articles and comments, and the ability to post an article.",
     imgURL: "/NCNews/NCNews.png",
     tags: [
       "Express.js",
@@ -40,7 +40,7 @@ const projectsArr = [
   },
   {
     name: "Meteorites App",
-    desc: "A solo frontend project that connects to the NASA Meteorite Landings API to get data on meteorites in a given year. I hope to add visualisation perhaps of a world map showing where each meteor hit and also a single meteor page. This was my first experience with React, connecting to an API, and using pagination. Times misspelt meteroites - 42,000,001!",
+    desc: "A solo frontend project that connects to the NASA Meteorite Landings API to get data on meteorites in a given year. I hope to add a visualisation of a world map showing where each meteor hit and also a single meteor page. This was my first experience with React, connecting to an API, and using pagination. Times misspelt meteroites - 42,000,001!",
     imgURL: "/Meteorites/Meteorites.png",
     tags: [
       "Axios",
@@ -66,7 +66,7 @@ const projectsArr = [
   },
   {
     name: "Sunny Surfboards",
-    desc: "This was a solo project made while on my first part-time Software Development bootcamp at Sheffield College. Prior to this I hadn't used VS Code or C# and loved the opportunity to work on a simulation of a real-world project. I managed the project using Monday. The app is a calculator of sorts, which helps staff calculate the costs of surfoard and wetsuit rentals.",
+    desc: "This was a solo project made while on my first part-time Software Development bootcamp at Sheffield College. Prior to this I hadn't used VS Code or C# and loved the opportunity to work on a simulation of a real-world project. I managed the project using Monday. The app is a calculator of sorts, which helps staff calculate the costs of surfboard and wetsuit rentals.",
     imgURL: "/FillerGoodVibesSign.png",
     tags: [
       "C#",

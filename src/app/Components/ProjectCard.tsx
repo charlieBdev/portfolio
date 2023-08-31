@@ -14,30 +14,28 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btnText, btnLink }) => {
-    console.log(imgURL, '<<< imgURL')
   return (
-    <article className="mt-3 border border-neutral-600 rounded-lg flex flex-col items-center align-start p-3 space-y-3 m-w-xl">
-        <h2 className="text-green-400">{name}</h2>
+    <article className="rounded-lg flex flex-col items-center p-3 space-y-3 shadow-lg">
+        <h3 className="text-green-500 text-lg p1">{name}</h3>
         <Image
             src={imgURL}
             width={200}
             height={400}
             alt={name}
             loading="lazy"  
-            className="rounded-lg"  
+            className="rounded-lg shadow-lg"
         />
         <p className="text-left">{desc}</p>
-        <div className="flex flex-col items-center space-y-3">
-            <ul className="flex flex-wrap gap-1 justify-start">
+        <div className="flex flex-col space-y-3 items-center">
+            <ul className="flex flex-wrap gap-1">
                 {tags.map(tag => (
-                    <li key={tag} className="border border-neutral-600 rounded-lg text-neutral-600 px-1 hover:animate-pulse">{tag}</li>
+                    <li key={tag} className="border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1 hover:animate-pulse">{tag}</li>
                 ))}
             </ul>
-            <Link href={btnLink} target="_blank">
+            <Link href={btnLink} target="_blank" className="items-center">
                 <Button btnText={btnText}/>
             </Link>
         </div>
-        
     </article>
   )
 }

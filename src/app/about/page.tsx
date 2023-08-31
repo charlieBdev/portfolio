@@ -10,11 +10,12 @@ export default function About() {
             <p>Check out my <Link href="/projects" className="underline decoration-purple-300 text-purple-300">projects</Link> or send a message via the <Link href="/about" className="underline decoration-purple-300 text-purple-300">contact</Link> page if you'd just like a chat.</p>
           </section>
           {/* <div className="flex flex-row flex-wrap justify-center text-center gap-2 m-3 lg:gap-6 xl:gap-9"> */}
-          <section className="flex flex-col justify-center mt-3">
-            {/* <h3 className="text-lg text-pink-400">Skills</h3> */}
-            {/* <p>Here are some of the technologies I have used and hope to keep learning more about.</p> */}
+          <section className="flex flex-col justify-center">
+            <h3 className="text-lg text-pink-400">Skills</h3>
+            <p>Here are some of the technologies I have used and hope to keep learning more about.</p>
+
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
-              <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Frontend</p>
                 <ul className="text-md space-y-1">
                   <li>Semantic HTML</li>
@@ -24,7 +25,7 @@ export default function About() {
                   <li>UX & UI</li>
                 </ul>
               </div>
-              <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Backend</p>
                 <ul className="text-md space-y-1">
                   <li>RESTful APIs</li>
@@ -34,7 +35,7 @@ export default function About() {
                   <li className="">Flask</li>
                 </ul>
               </div>
-              <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Languages</p>
                 <ul className="text-md space-y-1">
                   <li>JavaScript</li>
@@ -44,7 +45,7 @@ export default function About() {
                   {/* <li className="">C</li> */}
                 </ul>
               </div>
-              <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Qualities</p>
                 <ul className="text-md space-y-1">
                   <li>Goes the extra mile</li>
@@ -54,7 +55,7 @@ export default function About() {
                   <li>Team player</li>
                 </ul>
               </div>
-              <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Others</p>
                 <ul className="text-md space-y-1">
                   <li>Pair Programming</li>
@@ -64,7 +65,7 @@ export default function About() {
                   <li>MVC</li>
                 </ul>
               </div>
-              <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Interests</p>
                 <ul className="text-md space-y-1">
                   <li>Current affairs podcasts & James O'Brien</li>

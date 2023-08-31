@@ -42,7 +42,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="p-6 xl:px-24 mt-24 mb-16 flex flex-col lg:flex-row lg:justify-between space-y-6">
+    <section className="p-6 xl:px-24 mt-24 mb-16 flex flex-col lg:flex-row xl:flex-col lg:justify-between xl:mx-auto space-y-6">
         <div className="space-y-1">
           <h2 className="text-lg text-pink-400">Contact</h2>
           <p>Please <span className="">feel free</span> to leave a message. I'd <span className="">love</span> to hear from you <span className="">regardless</span> of what it's about!</p>
@@ -115,7 +115,8 @@ export default function Contact() {
           </div>
           <div className="-mx-1">
             <button
-              className="text-center mx-auto w-1/4 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-500 font-medium py-2 px-4 mb-2 rounded"
+              // className="text-center mx-auto w-1/4 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-500 font-medium py-2 px-4 mb-2 rounded"
+              className="text-center border border-6 border-cyan-400 py-2 px-4 mb-2 rounded-full shadow hover:shadow-lg"
               type="submit"
             >
               {isSending ? <Spinner /> : "Send"}

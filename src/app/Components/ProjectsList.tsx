@@ -13,7 +13,8 @@ const ProjectsList = () => {
   }, [])
 
   return (
-    <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4 justify-center w-lg">
+    // <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4 justify-center w-lg">
+    <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
         {projectsArr.map(project => (
           <ProjectCard
             key={project.name}
