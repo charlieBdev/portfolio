@@ -18,10 +18,10 @@ export default function Menu() {
 
     return (
         <>
-        <div className={`MOBILE-MENU text-black bg-white dark:text-white dark:bg-black flex lg:hidden`}>
+        <div className={`MOBILE-MENU bg-white dark:text-white dark:bg-black flex lg:hidden`}>
             
 
-          <div className={isNavOpen ? `showMenuNav text-black bg-white dark:text-white dark:bg-black` : "hideMenuNav"}>
+          <div className={isNavOpen ? `showMenuNav text-neutral-700 bg-white dark:text-white dark:bg-black` : "hideMenuNav"}>
             <div
               className="CROSS-ICON absolute top-0 right-0 px-6 py-8 rounded-lg"
               onClick={() => setIsNavOpen(false)}
@@ -30,7 +30,7 @@ export default function Menu() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
-            <ul className={`MENU-LINK-MOBILE-OPEN text-purple-300 text-center space-y-12 text-md`}>
+            <ul className={`MENU-LINK-MOBILE-OPEN text-purple-300 text-center space-y-12 text-xl`}>
               <li className="">
                 <Link onClick={() => setIsNavOpen(false)} href="/" className={currentRoute === "/" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>home</Link>
               </li>
@@ -46,7 +46,7 @@ export default function Menu() {
             </ul>
           </div>
           <button
-            className="HAMBURGER-ICON rounded-lg text-black bg-white dark:text-white dark:bg-black"
+            className="HAMBURGER-ICON rounded-lg text-neutral-700 bg-white dark:text-white dark:bg-black"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
               <svg

@@ -2,10 +2,10 @@ import Link from "next/link"
 
 export default function About() {
     return (
-      <div className="flex flex-col mt-24 p-6 space-y-3 xl:items-center">
+      <div className="flex flex-col mt-24 mb-16 space-y-3 p-6 xl:px-24">
           <section className="space-y-1">
             <h2 className="text-lg text-pink-400">About</h2>
-            <p>I have just finished a ten-week intensive <span className="">Software Engineering</span> Bootcamp with <span className="">Northcoders</span> and am looking for <span className="">Junior</span> or <span className="">Entry-level</span> roles in <span className="">Sheffield</span> or <span className="">Remote</span>.</p>
+            <p>Ola! I have just finished a ten-week intensive <span className="">Software Engineering</span> bootcamp with <span className="">Northcoders</span> and am looking for <span className="">Junior</span> or <span className="">Entry-level</span> roles in <span className="">Sheffield</span> or <span className="">Remote</span>.</p>
             <p>Before reigniting my interest in tech, I was mostly an English language teacher abroad and in the UK.</p>
             <p>Check out my <Link href="/projects" className="underline decoration-purple-300 text-purple-300">projects</Link> or send a message via the <Link href="/about" className="underline decoration-purple-300 text-purple-300">contact</Link> page if you'd just like a chat.</p>
           </section>

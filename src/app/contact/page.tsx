@@ -42,7 +42,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="flex flex-col mt-24 lg:flex-row p-6 xl:justify-center space-y-6">
+    <section className="p-6 xl:px-24 mt-24 mb-16 flex flex-col lg:flex-row lg:justify-between space-y-6">
         <div className="space-y-1">
           <h2 className="text-lg text-pink-400">Contact</h2>
           <p>Please <span className="">feel free</span> to leave a message. I'd <span className="">love</span> to hear from you <span className="">regardless</span> of what it's about!</p>

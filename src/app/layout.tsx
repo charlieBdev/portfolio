@@ -28,10 +28,10 @@ export default function RootLayout({
           <link rel="manifest" href="src/app/site.webmanifest" />
         </Head>
           <Providers>
-            <body className="flex flex-col text-black bg-white dark:text-white dark:bg-black">
+            <body className="flex flex-col text-neutral-700 bg-white dark:text-white dark:bg-black">
               {children}
               <Navbar />
-              <main className="mb-16 text-black bg-white dark:text-white dark:bg-black">
+              <main className="text-neutral-700 bg-white dark:text-white dark:bg-black">
               </main>
               <Footer/>
             </body>
