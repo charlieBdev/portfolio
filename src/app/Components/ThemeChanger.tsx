@@ -9,27 +9,25 @@ export default function ThemeChanger() {
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState<boolean>(false)
 
-    // useEffect(() => {
-    //     setMounted(true)
-    // }, [])
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
-    // if (!mounted) {
-    //     return null
-    // }
+    if (!mounted) {
+        return null
+    }
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
     }
 
     return (
-        <div className="">
-            <button
-                onClick={toggleTheme}
-                aria-label={`Toggle ${theme === 'light' ? 'Dark' : 'Light'} Theme`}
-                className="flex items-center rounded-lg transition delay-100 duration-300 ease-in-out"
-            >
-                {theme === 'light' ? <Light /> : <Dark />}
-            </button>
-        </div>
+        <button
+            onClick={toggleTheme}
+            aria-label={`Toggle ${theme === 'light' ? 'Dark' : 'Light'} Theme`}
+            className="flex items-center rounded-lg transition delay-100 duration-300 ease-in-out hover:animate-pulse"
+        >
+            {theme === 'light' ? <Light /> : <Dark />}
+        </button>
     )
 }

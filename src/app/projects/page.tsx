@@ -4,8 +4,8 @@ import ProjectsList from "../Components/ProjectsList"
 
 export default function Projects() {
     return (
-      <div className="p-6 space-y-1 min-h-screen xl:flex xl:flex-col xl:items-center">
-        <section className="">
+      <div className="mt-24 mb-16 p-6 space-y-1 xl:flex xl:flex-col xl:items-center">
+        <section>
           <h2 className="text-lg text-pink-400">Projects</h2>
           <p>Don't panic! Projects <span className="">incoming...</span></p>
           <p>You can also check out <Link href="https://charliebdev.github.io/" target="_blank" className="underline decoration-purple-300 text-purple-300">my old portfolio</Link> made pre-Bootcamp using Bootstrap for the styling.</p>
