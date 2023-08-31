@@ -19,11 +19,9 @@ export default function Menu() {
     return (
         <>
         <div className={`MOBILE-MENU bg-white dark:text-white dark:bg-black flex lg:hidden`}>
-            
-
           <div className={isNavOpen ? `showMenuNav text-neutral-700 bg-white dark:text-white dark:bg-black` : "hideMenuNav"}>
             <div
-              className="CROSS-ICON absolute top-0 right-0 px-6 py-8 rounded-lg"
+              className="CROSS-ICON absolute top-0 right-0 px-6 py-8"
               onClick={() => setIsNavOpen(false)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
@@ -46,7 +44,7 @@ export default function Menu() {
             </ul>
           </div>
           <button
-            className="HAMBURGER-ICON rounded-lg text-neutral-700 bg-white dark:text-white dark:bg-black"
+            className="HAMBURGER-ICON text-neutral-700 bg-white dark:text-white dark:bg-black"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
               <svg
@@ -55,7 +53,7 @@ export default function Menu() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-8 h-8 hover:animate-pulse"
+                className="w-8 h-8"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>

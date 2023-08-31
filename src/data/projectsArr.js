@@ -15,7 +15,7 @@ const projectsArr = [
       "Northcoders",
       "May 2023 Cohort",
     ],
-    btnText: "Use SoundWaves",
+    btnText: "Try SoundWaves",
     btnLink: "https://aa-sound-waves.vercel.app/waves",
   },
   {

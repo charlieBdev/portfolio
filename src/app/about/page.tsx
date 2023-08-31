@@ -15,7 +15,7 @@ export default function About() {
             <p>Here are some of the technologies I have used and hope to keep learning more about.</p>
 
             <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
-              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow hover:shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Frontend</p>
                 <ul className="text-md space-y-1">
                   <li>Semantic HTML</li>
@@ -25,7 +25,7 @@ export default function About() {
                   <li>UX & UI</li>
                 </ul>
               </div>
-              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow hover:shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Backend</p>
                 <ul className="text-md space-y-1">
                   <li>RESTful APIs</li>
@@ -35,7 +35,7 @@ export default function About() {
                   <li className="">Flask</li>
                 </ul>
               </div>
-              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow hover:shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Languages</p>
                 <ul className="text-md space-y-1">
                   <li>JavaScript</li>
@@ -45,7 +45,7 @@ export default function About() {
                   {/* <li className="">C</li> */}
                 </ul>
               </div>
-              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow hover:shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Qualities</p>
                 <ul className="text-md space-y-1">
                   <li>Goes the extra mile</li>
@@ -55,7 +55,7 @@ export default function About() {
                   <li>Team player</li>
                 </ul>
               </div>
-              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow hover:shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Others</p>
                 <ul className="text-md space-y-1">
                   <li>Pair Programming</li>
@@ -65,7 +65,7 @@ export default function About() {
                   <li>MVC</li>
                 </ul>
               </div>
-              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow-lg">
+              <div className="rounded-lg p-3 pt-1 w-full h-44 text-sm sm:w-auto shadow hover:shadow-lg">
                 <p className="text-center text-lg text-green-500 p-1">Interests</p>
                 <ul className="text-md space-y-1">
                   <li>Current affairs podcasts & James O'Brien</li>

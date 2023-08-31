@@ -116,7 +116,7 @@ export default function Contact() {
           <div className="-mx-1">
             <button
               // className="text-center mx-auto w-1/4 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-500 font-medium py-2 px-4 mb-2 rounded"
-              className="text-center border border-6 border-cyan-400 py-2 px-4 mb-2 rounded-full shadow hover:shadow-lg"
+              className="text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg"
               type="submit"
             >
               {isSending ? <Spinner /> : "Send"}
