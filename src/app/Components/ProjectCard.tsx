@@ -14,28 +14,30 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btnText, btnLink }) => {
+    console.log(imgURL, '<<< imgURL')
   return (
-    <article className="border rounded-lg flex flex-col items-center p-3 space-y-3 m-w-xl">
+    <article className="mt-3 border border-neutral-600 rounded-lg flex flex-col items-center align-start p-3 space-y-3 m-w-xl">
         <h2 className="text-green-400">{name}</h2>
         <Image
-            src="https://images.unsplash.com/photo-1636654129379-e7ae6f30bfd0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29taW5nJTIwc29vbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-            width={300}
-            height={600}
-            alt="Project Image"
+            src={imgURL}
+            width={200}
+            height={400}
+            alt={name}
             loading="lazy"  
             className="rounded-lg"  
         />
-        <p className="text-left px-6">{desc}</p>
-        <div>
-            <ul className="flex flex-wrap gap-3">
+        <p className="text-left">{desc}</p>
+        <div className="flex flex-col items-center space-y-3">
+            <ul className="flex flex-wrap gap-1 justify-start">
                 {tags.map(tag => (
-                    <li key={tag}>{tag}</li>
+                    <li key={tag} className="border border-neutral-600 rounded-lg text-neutral-600 px-1 hover:animate-pulse">{tag}</li>
                 ))}
             </ul>
+            <Link href={btnLink} target="_blank">
+                <Button btnText={btnText}/>
+            </Link>
         </div>
-        <Link href={btnLink}>
-            <Button btnText={btnText} />
-        </Link>
+        
     </article>
   )
 }

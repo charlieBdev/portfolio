@@ -67,7 +67,7 @@ export default function About() {
               <div className="rounded-md border border-neutral-500 p-3 pt-1 w-full h-44 text-sm sm:w-auto">
                 <p className="text-center text-lg text-green-500 p-1">Interests</p>
                 <ul className="text-md space-y-1">
-                  <li>Current affairs podcasts - News Agents</li>
+                  <li>Current affairs podcasts & James O'Brien</li>
                   <li>Music Production & Turntablism</li>
                   <li>Video games - Zelda currently</li>
                   <li>BJJ - Brown Belt of 8 years</li>
