@@ -1,5 +1,7 @@
 import Link from "next/link"
 import SkillsList from "../Components/SkillsList"
+import IconsList from "../Components/IconsList"
+
 
 export default function About() {
     return (
@@ -13,6 +15,7 @@ export default function About() {
           <section className="flex flex-col justify-center">
             <h3 className="text-lg text-pink-400">Skills</h3>
             <p>Here are some of the technologies I have used and hope to keep learning more about plus a little more about me.</p>
+            <IconsList />
             <SkillsList />
           </section>
       </div>

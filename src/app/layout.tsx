@@ -27,11 +27,11 @@ export default function RootLayout({
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="manifest" href="/site.webmanifest" />
         </head>
-            <body className="flex flex-col text-neutral-700 bg-white dark:text-white dark:bg-black">
+            <body className="flex flex-col text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950">
               <Providers>
                 {children}
                 <Navbar />
-                <main className="text-neutral-700 bg-white dark:text-white dark:bg-black">
+                <main className="text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950">
                 </main>
                 <Footer/>
               </Providers>

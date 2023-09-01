@@ -5,6 +5,7 @@ import { useState } from "react"
 import { usePathname } from 'next/navigation';
 // import { useTheme } from "next-themes";
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import Burger from "./Burger";
 
 
 export default function Menu() {
@@ -18,8 +19,8 @@ export default function Menu() {
 
     return (
         <>
-        <div className={`MOBILE-MENU bg-white dark:text-white dark:bg-black flex lg:hidden`}>
-          <div className={isNavOpen ? `showMenuNav text-neutral-700 bg-white dark:text-white dark:bg-black` : "hideMenuNav"}>
+        <div className={`MOBILE-MENU text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950 flex lg:hidden`}>
+          <div className={isNavOpen ? `showMenuNav text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950` : "hideMenuNav"}>
             <div
               className="CROSS-ICON absolute top-0 right-0 px-6 py-8"
               onClick={() => setIsNavOpen(false)}
@@ -41,26 +42,17 @@ export default function Menu() {
               <li className="">
                 <Link onClick={() => setIsNavOpen(false)} href="/contact" className={currentRoute === "/contact" ? "text-pink-400 border-b border-pink-400" : "border-b border-purple-300"}>contact</Link>
               </li>
-            <div className="flex space-x-4 text-3xl text-neutral-700 dark:text-white">
+            <div className="flex space-x-4 text-3xl text-neutral-950 dark:text-neutral-50">
                 <Link href="https://github.com/charlieBdev" target="_blank"><AiFillLinkedin /></Link>
                 <Link href="https://www.linkedin.com/in/charlie-bishop-4a897314a/" target="_blank"><AiFillGithub /></Link>
             </div>
             </ul>
           </div>
           <button
-            className="HAMBURGER-ICON text-neutral-700 bg-white dark:text-white dark:bg-black"
+            className="HAMBURGER-ICON text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950 bg-opacity-60 backdrop-blur dark:bg-opacity-60 dark:backdrop-blur"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
+            <Burger />
           </button>
 
         </div>

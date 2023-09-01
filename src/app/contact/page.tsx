@@ -8,6 +8,9 @@ import Spinner from '../Components/Spinner'
 
 export default function Contact() {
 
+  const [name, setName] = useState("")
+  const [msg, setMsg] = useState("")
+
   const [isSent, setIsSent] = useState<boolean>(false)
   const [isSending, setIsSending] = useState<boolean>(false)
 
@@ -55,18 +58,24 @@ export default function Contact() {
           >
           <div className="flex flex-wrap -mx-3">
             <div className="w-full px-2">
-              <label
-                className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
-                htmlFor="user_name"
-              >
-                Name
-              </label>
+              <div className="flex justify-between text-neutral-500 tracking-wide text-xs mb-2">
+                <label
+                  className="font-bold"
+                  htmlFor="user_name"
+                >
+                  Name
+                </label>
+                <p className={name.length > 50 ? 'text-pink-400' : ''}>{50 - name.length}</p>
+              </div>
+              
               <input
                 className="autofocus appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="user_name"
                 type="text"
                 placeholder="What's your name?"
                 {...register("user_name", {required: true, maxLength: 50})}
+                value={name}
+                onChange={e => setName(e.target.value)}
               />
               {errors.user_name && (
                 <p className="text-pink-400 text-xs italic">Please check your name. Max length is 50 chars.</p>
@@ -95,17 +104,22 @@ export default function Contact() {
           </div>
           <div className="flex flex-wrap -mx-3">
             <div className="w-full px-2">
-              <label
-                className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
-                htmlFor="message"
-              >
-                Message
-              </label>
+              <div className="flex justify-between text-neutral-500 tracking-wide text-xs mb-2">
+                <label
+                  className="text-neutral-500 block tracking-wide text-xs font-bold"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+                <p className={msg.length > 200 ? 'text-pink-400' : ''}>{200 - msg.length}</p>
+              </div>
               <textarea
                 className="no-resize appearance-none block w-full h-40 bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
                 id="message"
                 placeholder="What's your message?"
                 {...register("message", {required: true, maxLength: 200})}
+                value={msg}
+                onChange={e => setMsg(e.target.value)}
               >
               </textarea>
               {errors.message && (
@@ -124,7 +138,7 @@ export default function Contact() {
             {errors.user_name || errors.user_email || errors.message ? (
                 <p className="text-pink-400 text-xs italic">Oops! Please try again.</p>
               ) : isSent ? (
-                <p className="text-green-500 text-xs italic">Message sent! Thanks and I'll be in touch as soon as possible.</p>
+                <p className="text-green-500 text-xs italic">Message sent! Thanks and I'll be in touch as soon as possible. Please check your spam for an auto-response.</p>
               ) : null
             }
           </div>

@@ -3,26 +3,27 @@ const skillsArr = [
         topic: "Frontend",
         skills: [
             "Semantic HTML",
-            "React & Next.js",
             "CSS & Tailwind",
-            "Accessibility",
+            "React & Next.js",
             "UX & UI",
+            "Accessibility",
         ],
     },
     {
         topic: "Backend",
         skills: [
-            "RESTful APIs",
             "Postgres",
-            "Express",
+            "REST APIs",
+            "Express.js",
             "Axios",
-            "Flask",
+            "Flask & SQLite",
         ],
     },
     {
         topic: "Languages",
         skills: [
             "JavaScript",
+            "TypeScript",
             "SQL",
             "Python",
             "C#",
@@ -31,31 +32,31 @@ const skillsArr = [
     {
         topic: "Others",
         skills: [
-            "Pair Programming",
             "TDD with Jest",
-            "Git & Github",
+            "MVC & OOP",
+            "Pair Programming",
             "VS Code",
-            "MVC",
+            "Git & Github",
         ],
     },
     {
         topic: "Qualities",
         skills: [
-            "Goes the extra mile",
+            "Team player",
             "Detail-orientated",
             "Always learning",
+            "Goes the extra mile",
             "Persivilience",
-            "Team player",
         ],
     },
     {
         topic: "Interests",
         skills: [
-            "Current affairs podcasts & James O'Brien",
-            "Music Production & Turntablism",
-            "Video games - Zelda currently",
-            "BJJ - Brown Belt of 8 years",
-            "Reading non-fiction",
+            "Non-fiction",
+            "Music Production",
+            "RPG games",
+            "James O'Brien",
+            "BJJ - Brown Belt",
         ],
     }
 ]

@@ -15,7 +15,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btnText, btnLink }) => {
   return (
-    <article className="rounded-lg flex flex-col p-3 space-y-3 shadow hover:shadow-lg">
+    <article className="rounded-lg flex flex-col p-3 space-y-3 shadow hover:shadow-lg dark:border dark:border-neutral-900">
         <div className="space-y-3 flex flex-col items-center">
 					<Image
 							src={imgURL}

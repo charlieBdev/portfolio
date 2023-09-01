@@ -27,7 +27,7 @@ export default function ThemeChanger() {
             aria-label={`Toggle ${theme === 'light' ? 'Dark' : 'Light'} Theme`}
             className="flex items-center rounded-lg transition delay-100 duration-300 ease-in-out"
         >
-            {theme === 'light' ? <Light /> : <Dark />}
+            {theme === 'light' ? <Dark /> : <Light />}
         </button>
     )
 }

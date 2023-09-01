@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <footer>
       <nav 
-        className={`px-6 xl:px-24 text-black bg-white dark:text-white dark:bg-black flex items-center justify-between border-b border-neutral-500 fixed top-0 right-0 left-0 h-24 shadow-xl`}
+        className={`px-6 xl:px-24 text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950 flex items-center justify-between border-b border-neutral-500 fixed top-0 right-0 left-0 h-24 shadow-xl bg-opacity-60 backdrop-blur dark:bg-opacity-60 dark:backdrop-blur`}
       >
         <Link href="/" className="md:flex md:items-center md:space-x-3">
           <h1 className="text-2xl font-medium text-cyan-400">CHARLIE BISHOP</h1>
