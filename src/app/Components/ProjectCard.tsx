@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btn
 							height={400}
 							alt={name}
 							loading="lazy"  
-							className="rounded-lg shadow-lg"
+							className="rounded-lg shadow-lg w-auto h-auto"
 					/>
           <h3 className="text-green-500 text-lg">{name}</h3>
 					<p className="text-left">{desc}</p>
