@@ -5,7 +5,7 @@ interface IconCardProps {
 
 const IconCard: React.FC<IconCardProps> = ({ name, svg }) => {
   return (
-    <div className="text-4xl md:text-5xl lg:text-6xl p-3 rounded-lg hover:shadow-lg">
+    <div className="text-4xl md:text-5xl lg:text-6xl p-3 rounded-lg">
         <i className={svg} aria-label={name}></i>
     </div>
   )

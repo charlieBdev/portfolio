@@ -53,10 +53,10 @@ const skillsArr = [
         topic: "Interests",
         skills: [
             "Non-fiction",
-            "Music Production",
+            "Music production",
             "RPG games",
             "James O'Brien",
-            "BJJ - Brown Belt",
+            "BJJ - Brown belt",
         ],
     }
 ]

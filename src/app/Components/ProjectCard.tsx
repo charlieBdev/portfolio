@@ -15,7 +15,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btnText, btnLink }) => {
   return (
-    <article className="rounded-lg flex flex-col p-3 space-y-3 shadow hover:shadow-lg dark:border dark:border-neutral-900">
+    <article className="rounded-lg flex flex-col p-3 space-y-3 shadow dark:border dark:border-neutral-800">
         <div className="space-y-3 flex flex-col items-center">
 					<Image
 							src={imgURL}
@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btn
 					<p className="text-left">{desc}</p>
 					<ul className="flex flex-wrap gap-1">
 							{tags.map(tag => (
-									<li key={tag} className="border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1 hover:animate-pulse">{tag}</li>
+									<li key={tag} className="border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1">{tag}</li>
 							))}
 					</ul>
         </div>

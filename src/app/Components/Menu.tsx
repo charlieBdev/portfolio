@@ -3,9 +3,9 @@
 import Link from "next/link"
 import { useState } from "react"
 import { usePathname } from 'next/navigation';
-// import { useTheme } from "next-themes";
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import Burger from "./Burger";
+import Cross from "./Cross";
 
 
 export default function Menu() {
@@ -13,21 +13,15 @@ export default function Menu() {
     const [isNavOpen, setIsNavOpen] = useState(false)
     const currentRoute = usePathname()
 
-    // const { theme } = useTheme()
-    // const bgCol = theme === 'light' ? 'bg-white' : 'bg-black'
-    // const textCol = theme === 'light' ? 'text-black' : 'text-white'
-
     return (
         <>
-        <div className={`MOBILE-MENU text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950 flex lg:hidden`}>
-          <div className={isNavOpen ? `showMenuNav text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950` : "hideMenuNav"}>
+        <div className="MOBILE-MENU flex lg:hidden">
+          <div className={isNavOpen ? `showMenuNav text-neutral-900 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-900` : "hideMenuNav"}>
             <div
               className="CROSS-ICON absolute top-0 right-0 px-6 py-8"
               onClick={() => setIsNavOpen(false)}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <Cross />
             </div>
             <ul className={`MENU-LINK-MOBILE-OPEN text-purple-300 text-center space-y-12 text-xl`}>
               <li className="">
@@ -49,7 +43,7 @@ export default function Menu() {
             </ul>
           </div>
           <button
-            className="HAMBURGER-ICON text-neutral-950 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-950 bg-opacity-60 backdrop-blur dark:bg-opacity-60 dark:backdrop-blur"
+            className="HAMBURGER-ICON"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <Burger />

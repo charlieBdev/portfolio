@@ -3,19 +3,19 @@
 import { useTheme } from "next-themes";
 import Light from "./Light"
 import Dark from "./Dark"
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export default function ThemeChanger() {
     const { theme, setTheme } = useTheme()
-    const [mounted, setMounted] = useState<boolean>(false)
+    // const [mounted, setMounted] = useState<boolean>(false)
 
-    useEffect(() => {
-        setMounted(true)
-    }, [])
+    // useEffect(() => {
+    //     setMounted(true)
+    // }, [])
 
-    if (!mounted) {
-        return null
-    }
+    // if (!mounted) {
+    //     return null
+    // }
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')

@@ -65,7 +65,7 @@ export default function Contact() {
                 >
                   Name
                 </label>
-                <p className={name.length > 50 ? 'text-pink-400' : ''}>0/{50 - name.length}</p>
+                <p className={name.length > 50 ? 'text-pink-400' : ''}>{name.length}/{50 - name.length}</p>
               </div>
               
               <input
@@ -111,7 +111,7 @@ export default function Contact() {
                 >
                   Message
                 </label>
-                <p className={msg.length > 200 ? 'text-pink-400' : ''}>0/{200 - msg.length}</p>
+                <p className={msg.length > 200 ? 'text-pink-400' : ''}>{msg.length}/{200 - msg.length}</p>
               </div>
               <textarea
                 className="no-resize appearance-none block w-full h-40 bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
@@ -129,8 +129,7 @@ export default function Contact() {
           </div>
           <div className="-mx-1">
             <button
-              // className="text-center mx-auto w-1/4 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-500 font-medium py-2 px-4 mb-2 rounded"
-              className="text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg"
+              className="text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse"
               type="submit"
             >
               {isSending ? <Spinner /> : "Send"}
