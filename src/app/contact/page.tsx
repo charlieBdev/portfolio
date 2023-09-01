@@ -65,7 +65,7 @@ export default function Contact() {
                 >
                   Name
                 </label>
-                <p className={name.length > 50 ? 'text-pink-400' : ''}>{name.length}/{50 - name.length}</p>
+                <p className={name.length > 50 ? 'text-pink-400' : ''}>{50 - name.length}</p>
               </div>
               
               <input
@@ -111,7 +111,7 @@ export default function Contact() {
                 >
                   Message
                 </label>
-                <p className={msg.length > 200 ? 'text-pink-400' : ''}>{msg.length}/{200 - msg.length}</p>
+                <p className={msg.length > 200 ? 'text-pink-400' : ''}>{200 - msg.length}</p>
               </div>
               <textarea
                 className="no-resize appearance-none block w-full h-40 bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
