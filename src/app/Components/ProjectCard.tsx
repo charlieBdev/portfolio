@@ -17,7 +17,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btn
   return (
     <article className="rounded-lg flex flex-col p-3 space-y-3 shadow hover:shadow-lg">
         <div className="space-y-3 flex flex-col items-center">
-          <h3 className="text-green-500 text-lg p-1">{name}</h3>
 					<Image
 							src={imgURL}
 							width={200}
@@ -26,6 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btn
 							loading="lazy"  
 							className="rounded-lg shadow-lg"
 					/>
+          <h3 className="text-green-500 text-lg">{name}</h3>
 					<p className="text-left">{desc}</p>
 					<ul className="flex flex-wrap gap-1">
 							{tags.map(tag => (

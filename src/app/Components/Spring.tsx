@@ -13,10 +13,13 @@ export default function Spring() {
   })
 
   return (
-    <animated.p
-      style={styles}
-    >
-      _
-    </animated.p>
+    <div className="text-6xl text-center flex">
+      <p>repeat</p>
+      <animated.p
+        style={styles}
+      >
+        _
+      </animated.p>
+    </div>
   )
 }
