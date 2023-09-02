@@ -12,9 +12,9 @@ const skillsArr = [
     {
         topic: "Backend",
         skills: [
-            "Postgres",
             "REST APIs",
             "Express.js",
+            "Postgres",
             "Axios",
             "Flask & SQLite",
         ],
@@ -44,9 +44,9 @@ const skillsArr = [
         skills: [
             "Team player",
             "Detail-orientated",
-            "Always learning",
             "Goes the extra mile",
-            "Persivilience",
+            "Persivilient",
+            "Always learning",
         ],
     },
     {

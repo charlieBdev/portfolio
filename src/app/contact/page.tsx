@@ -9,6 +9,7 @@ import Spinner from '../Components/Spinner'
 export default function Contact() {
 
   const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
   const [msg, setMsg] = useState("")
 
   const [isSent, setIsSent] = useState<boolean>(false)
@@ -44,6 +45,9 @@ export default function Contact() {
     }
   }
 
+  // const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i
+  const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/
+
   return (
     <section className="p-6 xl:px-24 mt-24 flex flex-col lg:flex-row xl:flex-col xl:justify-start lg:justify-between xl:mx-auto space-y-6 min-h-screen">
         <div className="space-y-1">
@@ -69,7 +73,7 @@ export default function Contact() {
               </div>
               
               <input
-                className="autofocus appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
+                className={`${name.length > 0 && name.length < 51 ? 'bg-green-100' : 'bg-neutral-100'} ${name.length === 0 ? 'focus:bg-white' : ''} ${name.length > 50 ? 'bg-pink-100' : ''} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
                 id="user_name"
                 type="text"
                 placeholder="What's your name?"
@@ -91,11 +95,13 @@ export default function Contact() {
                 e-mail
               </label>
               <input
-                className="appearance-none block w-full bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
+                className={`${email.length > 0 && emailRegex.test(email) ? 'bg-green-100' : 'bg-pink-100'} ${email.length === 0 ? 'focus:bg-white' : ''} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
                 id="user_email"
                 type="text"
                 placeholder="What's your e-mail?"
-                {...register("user_email", {required: true, pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i})}
+                {...register("user_email", {required: true, pattern: emailRegex})}
+                value={email}
+                onChange={e => setEmail(e.target.value)}
               />
               {errors.user_email && (
                 <p className="text-pink-400 text-xs italic">Please check your e-mail address.</p>
@@ -114,7 +120,7 @@ export default function Contact() {
                 <p className={msg.length > 200 ? 'text-pink-400' : ''}>{200 - msg.length}</p>
               </div>
               <textarea
-                className="no-resize appearance-none block w-full h-40 bg-neutral-200 text-neutral-900 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
+                className={`no-resize h-36 ${msg.length > 0 && msg.length < 201 ? 'bg-green-100' : 'bg-neutral-100'} ${msg.length === 0 ? 'focus:bg-white' : ''} ${msg.length > 200 ? 'bg-pink-100' : ''} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
                 id="message"
                 placeholder="What's your message?"
                 {...register("message", {required: true, maxLength: 200})}
@@ -127,7 +133,7 @@ export default function Contact() {
               )}
             </div>
           </div>
-          <div className="-mx-1">
+          <div className="-mx-1 space-y-3">
             <button
               className="text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse"
               type="submit"

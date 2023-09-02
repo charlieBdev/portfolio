@@ -29,21 +29,21 @@ const icons = [
     { name: "Jest",
       svg: "devicon-jest-plain colored"
     },
-    { name: "Git",
-    svg: "devicon-git-plain colored"
-    },
-    { name: "VSCode",
-      svg: "devicon-vscode-plain colored"
-    },
-    { name: "Python",
-      svg: "devicon-python-plain colored"
-    },
-    { name: "Flask",
-      svg: "devicon-flask-original"
-    },
-    { name: "SQLite",
-      svg: "devicon-sqlite-plain colored"
-    },
+    // { name: "Git",
+    // svg: "devicon-git-plain colored"
+    // },
+    // { name: "VSCode",
+    //   svg: "devicon-vscode-plain colored"
+    // },
+    // { name: "Python",
+    //   svg: "devicon-python-plain colored"
+    // },
+    // { name: "Flask",
+    //   svg: "devicon-flask-original"
+    // },
+    // { name: "SQLite",
+    //   svg: "devicon-sqlite-plain colored"
+    // },
 ]
 
 export default icons

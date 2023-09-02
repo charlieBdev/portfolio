@@ -5,12 +5,10 @@ export default function getRandomSong() {
         "https://www.youtube.com/watch?v=sgyNTvovQTg",
         "https://www.youtube.com/watch?v=VKF5LCHZREg",
         "https://www.youtube.com/watch?v=NOG3eus4ZSo",
-        "https://www.youtube.com/watch?v=qWEtqglTVK0",
-        "https://www.youtube.com/watch?v=H67uEgRZs2Y",
-        "https://www.youtube.com/watch?v=49FB9hhoO6c",
-        "https://www.youtube.com/watch?v=HYwNM1t9ltI",
-        "https://www.youtube.com/watch?v=Mgfe5tIwOj0",
-        
+        "https://www.youtube.com/watch?v=SH4RnGNBNxo",
+        "https://www.youtube.com/watch?v=Ds0jtuyslbI",
+        "https://www.youtube.com/watch?v=kBOaLjtR4mw",
+        "https://www.youtube.com/watch?v=BI2Et19vDCM"
     ]
     const randomNum = Math.round(Math.random() * songs.length)
     return songs[randomNum]
