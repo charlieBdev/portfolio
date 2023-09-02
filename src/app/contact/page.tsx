@@ -95,7 +95,7 @@ export default function Contact() {
                 e-mail
               </label>
               <input
-                className={`${email.length > 0 && emailRegex.test(email) ? 'bg-green-100' : 'bg-pink-100'} ${email.length === 0 ? 'focus:bg-white' : ''} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
+                className={`${email.length > 0 && emailRegex.test(email) ? 'bg-green-100' : email.length === 0 ? 'bg-neutral-100' : 'bg-pink-100'} ${email.length === 0 ? 'focus:bg-white' : ''} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
                 id="user_email"
                 type="text"
                 placeholder="What's your e-mail?"
