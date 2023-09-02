@@ -15,29 +15,31 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, desc, imgURL, tags, btnText, btnLink }) => {
   return (
-    <article className="rounded-lg flex flex-col p-3 space-y-3 shadow dark:border dark:border-neutral-800">
-        <div className="space-y-3 flex flex-col items-center">
-					<Image
-							src={imgURL}
-							width={200}
-							height={400}
-							alt={name}
-							loading="lazy"  
-							className="rounded-lg shadow-lg w-auto h-auto"
-					/>
+    <article className="space-y-3 rounded-lg flex flex-col align-center p-3 shadow dark:border dark:border-neutral-800">
+      <div className="flex-grow space-y-3">
+        <Image
+          src={imgURL}
+          width={150}
+          height={300}
+          alt={name}
+          loading="lazy"
+          className="rounded-lg shadow-lg w-2/4 mx-auto"
+        />
+        <div className="space-y-3">
           <h3 className="text-green-500 text-lg">{name}</h3>
-					<p className="text-left">{desc}</p>
-					<ul className="flex flex-wrap gap-1">
-							{tags.map(tag => (
-									<li key={tag} className="border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1">{tag}</li>
-							))}
-					</ul>
+          <p className="">{desc}</p>
+          <ul className="flex flex-wrap gap-1">
+            {tags.map(tag => (
+              <li key={tag} className="border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1">{tag}</li>
+            ))}
+          </ul>
         </div>
-        <div className="m-auto">
-            <Link href={btnLink} target="_blank">
-                <Button btnText={btnText}/>
-            </Link>
-        </div>
+      </div>
+      <div className="mx-auto">
+        <Link href={btnLink} target="_blank">
+          <Button btnText={btnText} />
+        </Link>
+      </div>
     </article>
   )
 }

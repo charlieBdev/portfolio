@@ -1,7 +1,7 @@
 const projectsArr = [
   {
     name: "This Portfolio!",
-    desc: "What to say? I made this as my second Next.js app having finished at Northcoders. The icons, skills, and project data are stored in variables and rendered in lists as cards. This makes adding new items easy and the code DRY. I used a frosted navbar and EmailJS for the contact form. Inspiration for the colours was taken from my VS Code theme - oh lucy. Note - there may be a few bugs!",
+    desc: "Made as my second Next.js app having finished at Northcoders. The icons, skills, and project data are stored in variables and rendered in lists as cards. This makes adding new items easy and the code DRY. I used a frosted navbar and EmailJS for the contact form. Inspiration for the colours was taken from my VS Code theme - oh lucy. Note - there may be a few bugs!",
     imgURL: "/FillerGoodVibesSign.png",
     tags: [
       "EmailJS", "Next.js", "next-themes", "react-spring", "Tailwind", "TypeScript"
