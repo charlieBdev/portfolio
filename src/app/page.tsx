@@ -8,9 +8,6 @@ import { useEffect, useState } from "react"
 
 export default function Home() {
 
-  interface Window {
-    open: (url: string, target: string) => void;
-  }
 
   const [songURL, setSongURL] = useState<string>('')
 
