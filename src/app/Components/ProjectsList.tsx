@@ -3,7 +3,7 @@ import projectsArr from "../../data/projectsArr"
 
 const ProjectsList = () => {
   return (
-    <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+    <section className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {projectsArr.map(project => (
           <ProjectCard
             key={project.name}
