@@ -7,13 +7,13 @@ import { useEffect, useState } from "react"
 
 const SkillsList = () => {
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1000)
-  })
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false)
+  //   }, 1000)
+  // })
 
   return (
     // <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">

@@ -8,13 +8,13 @@ import IconCardSkeleton from "./IconCardSkeleton"
 
 const IconsList = () => {
   
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 500)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false)
+  //   }, 500)
+  // }, [])
 
   return (
     <div className="rounded-lg flex flex-wrap justify-center mt-3 shadow dark:border dark:border-neutral-800">
