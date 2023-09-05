@@ -1,7 +1,7 @@
 const projectsArr = [
   {
-    name: "This Portfolio!",
-    desc: "Made as my second Next.js app having finished at Northcoders. The icons, skills, and project data are stored in variables and rendered in lists as cards. This makes adding new items easy and the code DRY. I used a frosted navbar and EmailJS for the contact form. Inspiration for the colours was taken from my VS Code theme - oh lucy. Note - there may be a few bugs!",
+    name: "Portfolio v2",
+    desc: "This is my second Next.js app. The icons, skills, and project data are stored in variables and rendered in lists as cards. This makes adding new items easy and the code DRY. I used a frosted navbar and EmailJS for the contact form. Inspiration for the colours was taken from my VS Code theme - oh lucy. Note - there may be a few bugs and I'll be adding more functionality and projects as time passes!",
     imgURL: "/FillerGoodVibesSign.png",
     tags: [
       "EmailJS", "Next.js", "next-themes", "react-spring", "Tailwind", "TypeScript"
@@ -76,7 +76,7 @@ const projectsArr = [
   },
   {
     name: "Sunny Surfboards",
-    desc: "This was a solo project made while on my first part-time Software Development bootcamp at Sheffield College. Prior to this I hadn't used VS Code or C# and loved the opportunity to work on a simulation of a real-world project. I managed the project using Monday. The app is a calculator of sorts, which helps staff calculate the costs of surfboard and wetsuit rentals.",
+    desc: "This was a solo project made while on my first part-time Software Development bootcamp at Sheffield College. Prior to this I hadn't used VS Code or C# but loved the opportunity to work on a simulation of a real-world project. The project was managed using Monday. The app is a calculator of sorts, which helps staff calculate the costs of surfboard and wetsuit rentals.",
     imgURL: "/FillerGoodVibesSign.png",
     tags: [
       "C#",
