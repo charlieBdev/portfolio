@@ -22,28 +22,28 @@ export default function Home() {
 	return (
 		<section className="flex flex-col justify-center items-center min-h-screen relative">
 			<Bubbles />
-			<p className="text-6xl text-center relative">
+			<p className="text-6xl text-center relative select-none">
 				e
-				<Link href="/about" className="text-purple-300">
+				<Link href="/about" className="animate-pulse">
 					a
 				</Link>
 				t
 			</p>
-			<p className="text-6xl text-center relative">
+			<p className="text-6xl text-center relative select-none">
 				slee
-				<Link href="/projects" className="text-purple-300">
+				<Link href="/projects" className="animate-pulse">
 					p
 				</Link>
 			</p>
-			<p className="text-6xl text-center relative">
-				<Link href="/contact" className="text-purple-300">
+			<p className="text-6xl text-center relative select-none">
+				<Link href="/contact" className="animate-pulse">
 					c
 				</Link>
 				ode
 			</p>
-			<p className="text-6xl text-center relative">
+			<p className="text-6xl text-center relative select-none">
 				rep
-				<Link onClick={handleClick} href="/" className="text-purple-300">
+				<Link onClick={handleClick} href="/" className="animate-pulse">
 					e
 				</Link>
 				at

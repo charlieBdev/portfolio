@@ -63,12 +63,15 @@ const Bubbles = () => {
 			
 				// Set gradient colors based on the random color
 				gradient.addColorStop(0, `rgba(${this.color}, 0.1)`);
-				gradient.addColorStop(0.5, `rgba(${this.color}, 0.5)`);
-				gradient.addColorStop(1, `rgba(${this.color}, 1)`);
+				gradient.addColorStop(0.2, `rgba(${this.color}, 0.2)`);
+				gradient.addColorStop(0.4, `rgba(${this.color}, 0.3)`);
+				gradient.addColorStop(0.6, `rgba(${this.color}, 0.4)`);
+				gradient.addColorStop(0.8, `rgba(${this.color}, 0.5)`);
+				gradient.addColorStop(1, `rgba(${this.color}, 0.6)`);
 			
 				context.fillStyle = gradient;
 				context.shadowBlur = 10;
-				context.shadowColor = `rgba(${this.color}, 1)`;
+				context.shadowColor = `rgba(${this.color}, 0.7)`;
 			
 				context.beginPath();
 				context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
