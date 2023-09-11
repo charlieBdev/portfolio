@@ -24,7 +24,7 @@ const Bubbles = () => {
 					"34, 211, 238",
 					"52, 211, 153",
 					"253, 224, 71",
-					"34, 197, 94"
+					// "34, 197, 94"
 				];
 				this.color = this.getRandomColor();
 				this.creationTime = Date.now();
@@ -62,8 +62,8 @@ const Bubbles = () => {
 				);
 			
 				// Set gradient colors based on the random color
-				gradient.addColorStop(0, `rgba(${this.color}, 1)`);
-				gradient.addColorStop(0.5, `rgba(${this.color}, 0.8)`);
+				gradient.addColorStop(0, `rgba(${this.color}, 0.9)`);
+				gradient.addColorStop(0.5, `rgba(${this.color}, 0.7)`);
 				gradient.addColorStop(1, `rgba(${this.color}, 0.01)`);
 			
 				context.fillStyle = gradient;
