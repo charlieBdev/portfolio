@@ -62,22 +62,22 @@ const Bubbles = () => {
 				);
 			
 				// Set gradient colors based on the random color
-				gradient.addColorStop(0, `rgba(${this.color}, 0.9)`);
-				gradient.addColorStop(0.5, `rgba(${this.color}, 0.7)`);
-				gradient.addColorStop(1, `rgba(${this.color}, 0.01)`);
+				gradient.addColorStop(0, `rgba(${this.color}, 0.1)`);
+				gradient.addColorStop(0.5, `rgba(${this.color}, 0.5)`);
+				gradient.addColorStop(1, `rgba(${this.color}, 1)`);
 			
 				context.fillStyle = gradient;
-				context.shadowBlur = 1;
-				// context.shadowColor = `rgba(${this.color}, 1)`;
+				context.shadowBlur = 10;
+				context.shadowColor = `rgba(${this.color}, 1)`;
 			
 				context.beginPath();
 				context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
 			
 				// Remove the outline color setting
-				// context.strokeStyle = "black"; // or context.strokeStyle = "white";
+				context.strokeStyle = `rgba(${this.color}, 1)`; // or context.strokeStyle = "white";
 			
 				context.lineWidth = 1;
-				// context.stroke(); // Remove this line to remove the outline
+				context.stroke(); // Remove this line to remove the outline
 				context.fill();
 			}
 			
