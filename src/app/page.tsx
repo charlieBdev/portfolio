@@ -24,26 +24,30 @@ export default function Home() {
 			<Bubbles />
 			<p className="text-6xl text-center relative select-none">
 				e
-				<Link href="/about" className="animate-pulse">
+				<Link href="/about" className="animate-pulse text-purple-300">
 					a
 				</Link>
 				t
 			</p>
 			<p className="text-6xl text-center relative select-none">
 				slee
-				<Link href="/projects" className="animate-pulse">
+				<Link href="/projects" className="animate-pulse text-purple-300">
 					p
 				</Link>
 			</p>
 			<p className="text-6xl text-center relative select-none">
-				<Link href="/contact" className="animate-pulse">
+				<Link href="/contact" className="animate-pulse text-purple-300">
 					c
 				</Link>
 				ode
 			</p>
 			<p className="text-6xl text-center relative select-none">
 				rep
-				<Link onClick={handleClick} href="/" className="animate-pulse">
+				<Link
+					onClick={handleClick}
+					href="/"
+					className="animate-pulse text-purple-300"
+				>
 					e
 				</Link>
 				at

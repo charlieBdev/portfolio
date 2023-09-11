@@ -20,10 +20,11 @@ const Bubbles = () => {
 				this.dy = Math.random() * 3; // Random vertical velocity upwards
 				this.colors = [
 					"244, 114, 182",
-					"216, 180, 254",
+					// "216, 180, 254",
 					"34, 211, 238",
 					"52, 211, 153",
 					"253, 224, 71",
+          "251, 146, 60",
 					// "34, 197, 94"
 				];
 				this.color = this.getRandomColor();
@@ -90,7 +91,7 @@ const Bubbles = () => {
       const x = event.pageX;
       const y = event.pageY;
 
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 10; i++) {
         const particle = new Particle(x, y);
         particleArray.push(particle);
       }
@@ -145,7 +146,7 @@ const Bubbles = () => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ background: "inherit", position: "absolute", top: 0, left: 0, cursor: "grab" }}
+      style={{ background: "inherit", position: "absolute", top: 0, left: 0 }}
     ></canvas>
   );
 };
