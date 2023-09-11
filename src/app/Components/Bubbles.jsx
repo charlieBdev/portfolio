@@ -145,7 +145,7 @@ const Bubbles = () => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ background: "inherit", position: "absolute", top: 0, left: 0 }}
+      style={{ background: "inherit", position: "absolute", top: 0, left: 0, cursor: "grab" }}
     ></canvas>
   );
 };
