@@ -20,12 +20,19 @@ export default function Contact() {
 		formState: { errors },
 	} = useForm();
 
+	const clearForm = () => {
+		setName("");
+		setEmail("");
+		setMsg("");
+	};
+
 	const onSubmit: SubmitHandler<FieldValues> = () => {
 		setIsSending(true);
 		sendEmail();
 	};
 
 	const form = useRef<HTMLFormElement | null>(null);
+
 	const sendEmail = () => {
 		if (form.current) {
 			const serviceID: string | undefined =
@@ -38,7 +45,8 @@ export default function Contact() {
 				.then((result) => {
 					console.log("Email sent: ", result.text);
 					setIsSent(true);
-					reset();
+					clearForm();
+					// reset();
 				})
 				.catch((error) => {
 					console.log("Email error: ", error.text);
