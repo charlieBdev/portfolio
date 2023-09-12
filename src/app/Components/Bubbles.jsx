@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useRef, useEffect } from "react";
 
 const Bubbles = () => {
@@ -64,21 +66,18 @@ const Bubbles = () => {
 			
 				// Set gradient colors based on the random color
 				gradient.addColorStop(0, `rgba(${this.color}, 0.1)`);
-				gradient.addColorStop(0.2, `rgba(${this.color}, 0.2)`);
-				gradient.addColorStop(0.4, `rgba(${this.color}, 0.3)`);
-				gradient.addColorStop(0.6, `rgba(${this.color}, 0.4)`);
-				gradient.addColorStop(0.8, `rgba(${this.color}, 0.5)`);
-				gradient.addColorStop(1, `rgba(${this.color}, 0.6)`);
+		
+				gradient.addColorStop(1, `rgba(${this.color}, 0.5)`);
 			
 				context.fillStyle = gradient;
 				context.shadowBlur = 10;
-				context.shadowColor = `rgba(${this.color}, 0.7)`;
+				context.shadowColor = `rgba(${this.color}, 0.5)`;
 			
 				context.beginPath();
 				context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
 			
 				// Remove the outline color setting
-				context.strokeStyle = `rgba(${this.color}, 1)`; // or context.strokeStyle = "white";
+				context.strokeStyle = `rgba(${this.color}, 0.9)`; // or context.strokeStyle = "white";
 			
 				context.lineWidth = 1;
 				context.stroke(); // Remove this line to remove the outline
@@ -147,7 +146,7 @@ const Bubbles = () => {
     <canvas
       ref={canvasRef}
       // style={{ background: "inherit", position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-      className="bg-inherit absolute top-0 left-0 w-full h-full"
+      className="bg-inherit fixed top-0 left-0 w-full h-full"
     ></canvas>
   );
 };
