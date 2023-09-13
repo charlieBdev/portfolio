@@ -47,12 +47,11 @@ const SkillsList = () => {
 					<a
 						key={skill.topic}
 						href={`#item${index + 1}`}
-						className={`border rounded text-center tooltip tooltip-bottom ${
+						className={`border rounded text-center ${
 							activeSlide === index
 								? "text-green-500 shadow-xl border-green-500"
 								: "text-green-500 dark:border-neutral-800"
 						}`}
-						data-tip={skill.topic}
 						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
 					>
 						{skill.svg}
