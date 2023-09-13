@@ -28,7 +28,7 @@ export default function Menu() {
 						<Cross />
 					</div>
 					<ul
-						className={`MENU-LINK-MOBILE-OPEN text-purple-300 text-center space-y-12 text-xl`}
+						className={`MENU-LINK-MOBILE-OPEN text-center space-y-12 text-xl`}
 					>
 						<li className="">
 							<Link
@@ -37,7 +37,7 @@ export default function Menu() {
 								className={
 									currentRoute === "/"
 										? "text-pink-400 border-b border-pink-400"
-										: "border-b border-purple-300"
+										: "border-b border-purple-300 text-purple-300"
 								}
 							>
 								home
@@ -50,7 +50,7 @@ export default function Menu() {
 								className={
 									currentRoute === "/about"
 										? "text-pink-400 border-b border-pink-400"
-										: "border-b border-purple-300"
+										: "border-b border-purple-300 text-purple-300"
 								}
 							>
 								about
@@ -63,7 +63,7 @@ export default function Menu() {
 								className={
 									currentRoute === "/projects"
 										? "text-pink-400 border-b border-pink-400"
-										: "border-b border-purple-300"
+										: "border-b border-purple-300 text-purple-300"
 								}
 							>
 								projects
@@ -76,7 +76,7 @@ export default function Menu() {
 								className={
 									currentRoute === "/contact"
 										? "text-pink-400 border-b border-pink-400"
-										: "border-b border-purple-300"
+										: "border-b border-purple-300 text-purple-300"
 								}
 							>
 								contact

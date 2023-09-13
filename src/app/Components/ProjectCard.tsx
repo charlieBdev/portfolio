@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-// import SoundWavesOcean from "../../../public/SoundWaves/SoundWavesOcean.png"
 import Button from "./Button";
 
 interface ProjectCardProps {

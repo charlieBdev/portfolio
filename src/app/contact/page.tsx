@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
-import Spinner from "../Components/Spinner";
+import emailjs from "@emailjs/browser";
+import { Spinner } from "../Components";
 
 export default function Contact() {
 	const [name, setName] = useState("");
@@ -74,6 +74,7 @@ export default function Contact() {
 					the site, please <span className="">let me know</span>.
 				</p>
 			</div>
+			{/* <ContactForm /> */}
 			<form
 				className="w-full max-w-xl mx-auto px-1 lg:mr-0 lg:ml-8 space-y-3"
 				ref={form}

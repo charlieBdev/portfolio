@@ -20,7 +20,11 @@ export default function Footer() {
 				</Link>
 			</div>
 			<p className="text-xs ml-auto font-light select-none">
-				© 2023 Charlie Bishop
+				© 2023 | <span className="hidden sm:inline-block">Made by </span>{" "}
+				Charlie Bishop{" "}
+				<span className="hidden md:inline-block">with lots of ☕</span>
+				<span className="hidden lg:inline-block">and 🥑</span>
+				<span className="hidden xl:inline-block">but mostly 🍪</span>
 			</p>
 		</footer>
 	);

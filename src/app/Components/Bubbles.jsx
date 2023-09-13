@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 
-const Bubbles = () => {
+export const Bubbles = () => {
   const canvasRef = useRef(null);
   const particleArray = [];
   const particlesToRemove = [];
@@ -150,5 +150,3 @@ const Bubbles = () => {
     ></canvas>
   );
 };
-
-export default Bubbles;
