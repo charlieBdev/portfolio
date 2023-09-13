@@ -42,14 +42,14 @@ const SkillsList = () => {
 					</div>
 				))}
 			</div>
-			<div className="flex justify-center w-full py-2 gap-2 sm:hidden">
+			<div className="flex justify-center w-full py-2 gap-4 sm:hidden">
 				{skillsArr.map((skill, index) => (
 					<a
 						key={skill.topic}
 						href={`#item${index + 1}`}
 						className={`border rounded text-center ${
 							activeSlide === index
-								? "text-green-500 shadow-xl border-green-500"
+								? "text-green-500 shadow-xl border-green-500 border-2"
 								: "text-green-500 dark:border-neutral-800"
 						}`}
 						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
