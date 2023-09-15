@@ -2,10 +2,15 @@
 
 import ProjectCard from "./ProjectCard";
 import projectsArr from "../../data/projectsArr";
-import { useState } from "react";
+import React, { useState } from "react";
+import { String } from "aws-sdk/clients/apigateway";
 
-const ProjectsList = ({ tags, setTags, showFilters }) => {
-	const allTags = projectsArr.reduce((tags, project) => {
+interface ProjectListProps {
+	showFilters: boolean;
+}
+
+const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
+	const allTags = projectsArr.reduce((tags: string[], project) => {
 		return [...tags, ...project.tags];
 	}, []);
 
@@ -13,7 +18,7 @@ const ProjectsList = ({ tags, setTags, showFilters }) => {
 
 	const [selectedTag, setSelectedTag] = useState("");
 
-	const toggleTag = (tag) => {
+	const toggleTag = (tag: string) => {
 		if (selectedTag === tag) {
 			// remove if there
 			setSelectedTag("");

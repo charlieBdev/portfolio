@@ -10,10 +10,8 @@ interface Tags {
 }
 
 export default function Projects() {
-	const [tags, setTags] = useState<Tags["tags"]>([]);
-
 	const [showFilters, setShowFilters] = useState(false);
-	console.log(showFilters);
+
 	return (
 		<div className="mt-24 p-6 xl:px-24 space-y-1 min-h-screen">
 			<section className="flex justify-between items-center">
@@ -28,7 +26,7 @@ export default function Projects() {
 					{showFilters ? <LuFilterX /> : <LuFilter />}
 				</div>
 			</section>
-			<ProjectsList tags={tags} setTags={setTags} showFilters={showFilters} />
+			<ProjectsList showFilters={showFilters} />
 		</div>
 	);
 }
