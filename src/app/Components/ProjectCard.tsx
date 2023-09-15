@@ -11,6 +11,7 @@ interface ProjectCardProps {
 	btnText: string;
 	btnLink: string;
 	selectedTag: string;
+	toggleTag: (tag: string) => void;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -21,6 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	btnText,
 	btnLink,
 	selectedTag,
+	toggleTag,
 }) => {
 	return (
 		<article className="space-y-3 rounded-lg flex flex-col align-center p-3 shadow dark:border dark:border-neutral-800 hover:shadow-xl w-full">
@@ -38,14 +40,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					<p className="">{desc}</p>
 					<ul className="flex flex-wrap gap-1">
 						{tags.map((tag) => (
-							<li
+							<button
 								key={tag}
-								className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1 select-none ${
+								onClick={() => {
+									toggleTag(tag);
+								}}
+								className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1 hover:shadow-lg ${
 									tag === selectedTag ? "selected" : ""
 								}`}
 							>
 								{tag}
-							</li>
+							</button>
 						))}
 					</ul>
 				</div>

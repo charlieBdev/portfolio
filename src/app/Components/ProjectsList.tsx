@@ -67,6 +67,7 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 						btnText={project.btnText}
 						btnLink={project.btnLink}
 						selectedTag={selectedTag}
+						toggleTag={toggleTag}
 					/>
 				))}
 			</section>
