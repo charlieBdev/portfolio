@@ -10,6 +10,7 @@ interface ProjectCardProps {
 	tags: string[];
 	btnText: string;
 	btnLink: string;
+	selectedTag: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,9 +20,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	tags,
 	btnText,
 	btnLink,
+	selectedTag,
 }) => {
 	return (
-		<article className="space-y-3 rounded-lg flex flex-col align-center p-3 shadow dark:border dark:border-neutral-800">
+		<article className="space-y-3 rounded-lg flex flex-col align-center p-3 shadow dark:border dark:border-neutral-800 hover:shadow-xl w-full">
 			<div className="flex-grow space-y-3">
 				<Image
 					src={imgURL}
@@ -38,7 +40,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						{tags.map((tag) => (
 							<li
 								key={tag}
-								className="border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1"
+								className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1 select-none ${
+									tag === selectedTag ? "selected" : ""
+								}`}
 							>
 								{tag}
 							</li>
