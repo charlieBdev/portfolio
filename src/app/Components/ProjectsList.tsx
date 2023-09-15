@@ -3,7 +3,6 @@
 import ProjectCard from "./ProjectCard";
 import projectsArr from "../../data/projectsArr";
 import React, { useState } from "react";
-import { String } from "aws-sdk/clients/apigateway";
 
 interface ProjectListProps {
 	showFilters: boolean;
