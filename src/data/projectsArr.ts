@@ -34,6 +34,7 @@ const projectsArr = [
     imgURL: "/NCNews/NCNews.png",
     tags: [
       "CORS",
+      "PERN",
       "React",
       "RESTful API",
       "Tailwind",
@@ -53,6 +54,7 @@ const projectsArr = [
       "Express.js",
       "Jest",
       "MVC",
+      "PERN",
       "PostgreSQL",
       "RESTful API",
       "Supertest",
