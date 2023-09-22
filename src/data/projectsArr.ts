@@ -1,5 +1,15 @@
 const projectsArr = [
   {
+    name: "Tha Web Image Scraper",
+    desc: "A tool made for getting images from a website. Originally made to speed up the process of archiving old websites. The search history shows the last 3 searches and you can go to a random URL from a list I have stored in an array. In development everything worked fine up until deploying on Vercel so I had to make use of browserless. The project also uses Puppeteer and I hope to implement the option to filter tiny images and the ability to download all or a selection of images.",
+    imgURL: "/WebImageScraper/Web-Image-Scraper.png",
+    tags: [
+      "Browserless", "HTML", "JavaScript", "Next.js", "Puppeteer", "react-icons", "Tailwind", "TypeScript"
+    ],
+    btnText: "Scrape images",
+    btnLink: "https://web-img-scraper.vercel.app/"
+  },
+  {
     name: "Portfolio v2",
     desc: "This is my second Next.js app. The icons, skills, and project data are stored in variables and rendered in lists as cards. This makes adding new items easy and the code DRY. I used a frosted navbar and EmailJS for the contact form. Inspiration for the colours was taken from my VS Code theme - oh lucy. Note - there may be a few bugs and I'll be adding more functionality and projects as time passes!",
     imgURL: "/Portfoliov2/Portfoliov2.png",
