@@ -13,7 +13,9 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 		return [...tags, ...project.tags];
 	}, []);
 
-	const uniqueTags = [...new Set(allTags)].sort();
+	const uniqueTags = [...new Set(allTags)].sort((a, b) =>
+		a[0].toLowerCase().localeCompare(b[0].toLowerCase())
+	);
 
 	const [selectedTag, setSelectedTag] = useState("");
 
