@@ -1,6 +1,7 @@
 'use client'
 import { animated, useSpring } from "@react-spring/web";
 import Link from "next/link";
+import Flunderscore from "./Flunderscore";
 
 export const MainText = () => {
   const getRandomDelay = () => Math.floor(Math.random() * 1000) + 500; // Adjust delay range as needed
@@ -50,7 +51,7 @@ export const MainText = () => {
       <animated.p style={flickerAnimation} className="text-9xl relative">
         Hello
       </animated.p>
-      
+			<Flunderscore />
     </div>
   );
 };

@@ -6,7 +6,6 @@ export default function Home() {
 		<section className="h-screen text-center">
 			<Bubbles />
 			<MainText />
-			<Flunderscore />
 		</section>
 	);
 }

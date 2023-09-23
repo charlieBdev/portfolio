@@ -34,7 +34,7 @@ export const Bubbles = () => {
 
   return (
     <div
-      className="bg-inherit fixed top-0 left-0 w-full h-full pointer-events-none"
+      className="bg-inherit mt-24 fixed top-0 left-0 w-full h-full pointer-events-none"
     >
       {bubbles.map((bubble, index) => (
         <div
@@ -47,7 +47,7 @@ export const Bubbles = () => {
             height: bubble.radius,
             borderRadius: "50%",
             backgroundColor: `rgba(${bubble.color}, 0.2)`,
-            border: `1px solid rgba(${bubble.color}, 0.9)`,
+            border: `1px solid rgba(${bubble.color}, 0.8)`,
           }}
         />
       ))}
