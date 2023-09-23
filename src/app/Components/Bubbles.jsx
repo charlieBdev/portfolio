@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 export const Bubbles = () => {
   const [bubbles, setBubbles] = useState([]);
   const currentDate = new Date();
-  const currentYear= currentDate.getFullYear();
+  const currentYear = currentDate.getFullYear();
 
   const getRandomColor = () => {
     const colors = [
@@ -23,6 +23,7 @@ export const Bubbles = () => {
     const initialBubbles = [];
     for (let i = 0; i < currentYear; i++) {
       initialBubbles.push({
+        id: i, // Add an ID to identify each bubble
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         radius: Math.random() * 50,
@@ -32,13 +33,17 @@ export const Bubbles = () => {
     setBubbles(initialBubbles);
   }, []);
 
+  const popBubble = (bubbleId) => {
+    // Filter out the bubble with the specified ID
+    const updatedBubbles = bubbles.filter((bubble) => bubble.id !== bubbleId);
+    setBubbles(updatedBubbles);
+  };
+
   return (
-    <div
-      className="bg-inherit mt-24 fixed top-0 left-0 w-full h-full pointer-events-none"
-    >
-      {bubbles.map((bubble, index) => (
+    <div className="bg-inherit mt-24 fixed top-0 left-0 w-full h-full">
+      {bubbles.map((bubble) => (
         <div
-          key={index}
+          key={bubble.id}
           style={{
             position: "absolute",
             left: bubble.x,
@@ -48,7 +53,11 @@ export const Bubbles = () => {
             borderRadius: "50%",
             backgroundColor: `rgba(${bubble.color}, 0.2)`,
             border: `1px solid rgba(${bubble.color}, 0.8)`,
+            cursor: "pointer", // Add pointer cursor,
+            zIndex: 100,
           }}
+          onClick={() => popBubble(bubble.id)}
+          className="hover:animate-pulse"
         />
       ))}
     </div>
