@@ -3,7 +3,7 @@ import { Bubbles, MainText } from "./Components";
 
 export default function Home() {
 	return (
-		<section className="flex flex-col justify-center items-center min-h-screen relative">
+		<section className="h-screen text-center">
 			<Bubbles />
 			<MainText />
 			<Flunderscore />

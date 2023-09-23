@@ -11,7 +11,7 @@ export default function Flunderscore() {
 	});
 
 	return (
-		<animated.p style={styles} className="text-6xl select-none">
+		<animated.p style={styles} className="text-9xl select-none">
 			_
 		</animated.p>
 	);

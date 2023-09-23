@@ -6,8 +6,8 @@ import Menu from "./Menu";
 
 export default function Navbar() {
 	return (
-		<header>
-			<nav className="px-6 xl:px-24 flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 fixed top-0 w-full h-24 shadow-xl bg-opacity-60 backdrop-blur dark:bg-opacity-60 dark:backdrop-blur">
+		<header className="">
+			<nav className="fixed top-0 left-0 right-0 px-6 h-24 xl:px-24 flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 shadow-xl bg-opacity-60 backdrop-blur dark:bg-opacity-60 dark:backdrop-blur z-10">
 				<Link href="/" className="md:flex md:items-center md:space-x-3">
 					<h1 className="text-2xl font-medium text-cyan-400">CHARLIE BISHOP</h1>
 					<p className="text-lg text-emerald-400">

@@ -13,7 +13,7 @@ export default function Projects() {
 	const [showFilters, setShowFilters] = useState(false);
 
 	return (
-		<div className="mt-24 p-6 xl:px-24 space-y-1 min-h-screen">
+		<div className="p-6 xl:px-24 space-y-1 h-full">
 			<section className="flex justify-between items-center">
 				<h2 className="text-lg text-pink-400">Projects</h2>
 				<div

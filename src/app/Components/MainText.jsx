@@ -1,10 +1,8 @@
-"use client"
-import { animated, useSpring } from "@react-spring/web"
-import Link from "next/link"
-
+'use client'
+import { animated, useSpring } from "@react-spring/web";
+import Link from "next/link";
 
 export const MainText = () => {
-
   const getRandomDelay = () => Math.floor(Math.random() * 1000) + 500; // Adjust delay range as needed
 
   const flickerAnimation = useSpring({
@@ -27,36 +25,32 @@ export const MainText = () => {
     from: { opacity: 1 },
     config: { tension: 200, friction: 10 },
   });
-  
+
   return (
-    <>
-      <p className="text-6xl text-center relative select-none">
-				e
-				<Link href="/about" className="text-purple-300">
-					a
-				</Link>
-				t
-			</p>
-			<p className="text-6xl text-center relative select-none">
-				slee
-				<Link href="/projects" className="text-purple-300">
-					p
-				</Link>
-			</p>
-			<p className="text-6xl text-center relative select-none">
-				<Link href="/contact" className="text-purple-300">
-					c
-				</Link>
-				ode
-			</p>
-			<animated.p className="text-6xl text-center relative select-none" style={flickerAnimation}>
-				repe
-				{/* <Link onClick={handleClick} href="/" className="text-purple-300">
-					e
-				</Link> */}
-				at
-			</animated.p>
-			{/* <p className="text-6xl text-center">repeat</p> */}
-    </>
-  )
-}
+    <div className="flex flex-col items-start gap-2 select-none p-6 xl:px-24">
+      <p className="text-3xl relative">
+        ea
+        {/* <Link href="/about" className="text-purple-300">
+          a
+        </Link> */}
+        t
+      </p>
+      <p className="text-5xl relative">
+        sleep
+        {/* <Link href="/projects" className="text-purple-300">
+          p
+        </Link> */}
+      </p>
+      <p className="text-7xl relative">
+        {/* <Link href="/contact" className="text-purple-300">
+          c
+        </Link> */}
+        code
+      </p>
+      <animated.p style={flickerAnimation} className="text-9xl relative">
+        Hello
+      </animated.p>
+      
+    </div>
+  );
+};

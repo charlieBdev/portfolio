@@ -45,11 +45,10 @@ export default function RootLayout({
 					/>
 					<link rel="manifest" href="/site.webmanifest" />
 				</head>
-				<body className="flex flex-col text-neutral-900 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-900 min-h-screen">
+				<body className="flex flex-col text-neutral-900 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-900 min-h-screen justify-between">
 					<Providers>
-						{children}
 						<Navbar />
-
+						<main className="mt-24 min-h-screen">{children}</main>
 						<Footer />
 					</Providers>
 				</body>

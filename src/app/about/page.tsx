@@ -5,7 +5,7 @@ import IconsList from "../Components/IconsList";
 export default function About() {
 	return (
 		// flex flex-col justify-center items-center min-h-screen relative
-		<div className="flex flex-col mt-24 space-y-3 p-6 xl:px-24 min-h-screen">
+		<div className="flex flex-col space-y-3 p-6 xl:px-24 h-full">
 			<section className="space-y-1">
 				<h2 className="text-lg text-pink-400">About</h2>
 				<p>
