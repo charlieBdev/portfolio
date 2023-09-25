@@ -1,24 +1,27 @@
-'use client'
+"use client";
 
 // import { useEffect, useState } from "react"
-import { ThemeProvider } from "next-themes"
-import { ReactNode } from "react"
+import { ThemeProvider } from "next-themes";
+import { ReactNode } from "react";
 
 interface ProvidersProps {
-    children: ReactNode
+	children: ReactNode;
 }
 
 export function Providers({ children }: ProvidersProps) {
+	// const [mounted, setMounted] = useState<boolean>(false)
 
-    // const [mounted, setMounted] = useState<boolean>(false)
+	// useEffect(() => {
+	//     setMounted(true)
+	// }, [])
 
-    // useEffect(() => {
-    //     setMounted(true)
-    // }, [])
+	// if (!mounted) {
+	//     return <>{children}</>
+	// }
 
-    // if (!mounted) {
-    //     return <>{children}</>
-    // }
-
-    return <ThemeProvider attribute="class" defaultTheme="dark">{children}</ThemeProvider>
+	return (
+		<ThemeProvider attribute="class" defaultTheme="dark">
+			{children}
+		</ThemeProvider>
+	);
 }
