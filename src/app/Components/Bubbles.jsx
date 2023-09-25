@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 
 export const Bubbles = () => {
   const [bubbles, setBubbles] = useState([]);
+	const [bubbleCount, setBubbleCount] = useState(2023);
+  const maxBubbleSize = 83
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
 
@@ -21,12 +23,12 @@ export const Bubbles = () => {
 
   useEffect(() => {
     const initialBubbles = [];
-    for (let i = 0; i < currentYear; i++) {
+    for (let i = 0; i < bubbleCount; i++) {
       initialBubbles.push({
         id: i, // Add an ID to identify each bubble
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
-        radius: Math.random() * 50,
+        radius: Math.random() * maxBubbleSize,
         color: getRandomColor(),
       });
     }
@@ -37,6 +39,7 @@ export const Bubbles = () => {
     // Filter out the bubble with the specified ID
     const updatedBubbles = bubbles.filter((bubble) => bubble.id !== bubbleId);
     setBubbles(updatedBubbles);
+    setBubbleCount((curr) => curr - 1)
   };
 
   return (

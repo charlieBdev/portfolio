@@ -1,4 +1,3 @@
-import Flunderscore from "./Components/Flunderscore";
 import { Bubbles, MainText } from "./Components";
 
 export default function Home() {

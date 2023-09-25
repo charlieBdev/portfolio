@@ -5,9 +5,6 @@ import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 export default function Footer() {
-	const currentDate = new Date();
-	const currentYear = currentDate.getFullYear();
-
 	return (
 		// <footer className={`flex justify-between items-center px-6 xl:px-24 border-t border-neutral-500 fixed bottom-0 left-0 right-0 h-16 text-neutral-700 bg-white dark:text-white dark:bg-black`}>
 		<footer className="h-16 flex justify-between items-center px-6 xl:px-24 border-t border-neutral-200 dark:border-neutral-800 bg-opacity-90 backdrop-blur dark:bg-opacity-90 dark:backdrop-blur">
@@ -27,9 +24,7 @@ export default function Footer() {
 				Charlie Bishop{" "}
 				<span className="hidden md:inline-block">with lots of ☕</span>{" "}
 				<span className="hidden lg:inline-block">and 🍪</span>{" "}
-				<span className="hidden xl:inline-block">
-					Plus {currentYear} bubbles!
-				</span>
+				<span className="hidden xl:inline-block">Plus loads of bubbles!</span>
 			</p>
 		</footer>
 	);

@@ -28,7 +28,7 @@ export const MainText = () => {
   });
 
   return (
-    <div className="flex flex-col items-start gap-2 select-none p-6 xl:px-24">
+    <div className="flex flex-col items-start gap-6 select-none p-6 xl:px-24">
       <p className="text-3xl relative">
         ea
         {/* <Link href="/about" className="text-purple-300">
@@ -37,21 +37,23 @@ export const MainText = () => {
         t
       </p>
       <p className="text-5xl relative">
-        sleep
+        slee
         {/* <Link href="/projects" className="text-purple-300">
           p
         </Link> */}
+        p
       </p>
       <p className="text-7xl relative">
+        c
         {/* <Link href="/contact" className="text-purple-300">
           c
         </Link> */}
-        code
+        ode
       </p>
       <animated.p style={flickerAnimation} className="text-9xl relative">
         Hello
       </animated.p>
-			<Flunderscore />
+			{/* <Flunderscore /> */}
     </div>
   );
 };
