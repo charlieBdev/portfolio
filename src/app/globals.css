@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.light {
+	background-color: #f5f5f5;
+	color: #171717;
+}
+
+.dark {
+	background-color: #171717;
+	color: #f5f5f5;
+}
+
+.themeAnim {
+	transition: 0.5s all ease;
+}
+
 .hideMenuNav {
 	display: none;
 }
@@ -23,8 +37,4 @@
 .selected {
 	color: rgb(34 197 94);
 	border-color: rgb(34 197 94);
-}
-
-.themeAnim {
-	transition: 1s all ease;
 }

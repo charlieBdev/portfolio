@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	toggleTag,
 }) => {
 	return (
-		<article className="space-y-3 rounded-lg flex flex-col align-center p-3 shadow dark:border dark:border-neutral-800 hover:shadow-xl w-full">
+		<article className="space-y-3 rounded-lg flex flex-col align-center p-3 shadow hover:shadow-xl w-full">
 			<div className="flex-grow space-y-3">
 				<Image
 					src={imgURL}

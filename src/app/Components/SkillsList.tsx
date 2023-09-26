@@ -26,7 +26,7 @@ const SkillsList = () => {
 			</div>
 
 			{/* mobile carousel */}
-			<div className="carousel w-full mt-3 sm:hidden rounded-lg shadow dark:border dark:border-neutral-800 overflow-hidden hover:shadow-xl">
+			<div className="carousel w-full mt-3 sm:hidden rounded-lg shadow overflow-hidden hover:shadow-xl">
 				{skillsArr.map((skill, index) => (
 					<div
 						key={skill.topic}
@@ -42,7 +42,7 @@ const SkillsList = () => {
 					</div>
 				))}
 			</div>
-			<div className="flex justify-center w-full py-2 gap-4 sm:hidden">
+			<div className="flex justify-center w-full py-2 gap-4 sm:hidden items-center">
 				{skillsArr.map((skill, index) => (
 					<a
 						key={skill.topic}
@@ -50,7 +50,7 @@ const SkillsList = () => {
 						className={`border rounded text-center ${
 							activeSlide === index
 								? "text-green-500 shadow-xl border-green-500 border-2"
-								: "text-green-500 dark:border-neutral-800"
+								: "text-green-500 border-none"
 						}`}
 						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
 					>

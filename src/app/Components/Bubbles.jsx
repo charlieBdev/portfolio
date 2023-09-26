@@ -4,11 +4,29 @@ import React, { useState, useEffect } from "react";
 
 export const Bubbles = () => {
   const [bubbles, setBubbles] = useState([]);
-	const [bubbleCount, setBubbleCount] = useState(2023);
   const maxBubbleSize = 83
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
+  const [bubbleCount, setBubbleCount] = useState(currentYear)
 
+  const getRandomTooltip = () => {
+    const bubbleTips = [
+      "How could you?",
+      "You animal!",
+      "Nooooo!",
+      "I thought we were friends.",
+      "🥲",
+      "Goodbye, my lover.",
+      "Yes, I really made a list of tooltips for these bubbles.",
+      "I'm too young to die!",
+      "When you least expect it...",
+      "I'm not mad. Just disappointed.",
+      "I'll be back.",
+      "😱",
+    ]
+    const randomIndex = Math.floor(Math.random() * bubbleTips.length);
+    return bubbleTips[randomIndex];
+  }
   const getRandomColor = () => {
     const colors = [
       "244, 114, 182",
@@ -23,7 +41,7 @@ export const Bubbles = () => {
 
   useEffect(() => {
     const initialBubbles = [];
-    for (let i = 0; i < bubbleCount; i++) {
+    for (let i = 0; i < 101; i++) {
       initialBubbles.push({
         id: i, // Add an ID to identify each bubble
         x: Math.random() * window.innerWidth,
@@ -60,7 +78,8 @@ export const Bubbles = () => {
             zIndex: 100,
           }}
           onClick={() => popBubble(bubble.id)}
-          className="hover:animate-pulse"
+          className="hover:animate-pulse tooltip tooltip-top"
+          data-tip={getRandomTooltip()}
         />
       ))}
     </div>
