@@ -93,9 +93,7 @@ export default function Contact() {
 
 						<input
 							className={`${
-								name.length > 0 && name.length < 51
-									? "bg-green-100"
-									: "bg-neutral-100"
+								name.length > 0 && name.length < 51 ? "bg-green-100" : ""
 							} ${name.length === 0 ? "focus:bg-white" : ""} ${
 								name.length > 50 ? "bg-pink-100" : ""
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
@@ -107,7 +105,7 @@ export default function Contact() {
 							onChange={(e) => setName(e.target.value)}
 						/>
 						{errors.user_name && (
-							<p className="text-pink-400 text-xs italic">
+							<p className="text-pink-400 text-xs italic mt-1">
 								Please check your name. Max length is 50 chars.
 							</p>
 						)}
@@ -126,7 +124,7 @@ export default function Contact() {
 								email.length > 0 && emailRegex.test(email)
 									? "bg-green-100"
 									: email.length === 0
-									? "bg-neutral-100"
+									? ""
 									: "bg-pink-100"
 							} ${
 								email.length === 0 ? "focus:bg-white" : ""
@@ -142,7 +140,7 @@ export default function Contact() {
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 						{errors.user_email && (
-							<p className="text-pink-400 text-xs italic">
+							<p className="text-pink-400 text-xs italic mt-1">
 								Please check your e-mail address.
 							</p>
 						)}
@@ -176,7 +174,7 @@ export default function Contact() {
 							onChange={(e) => setMsg(e.target.value)}
 						></textarea>
 						{errors.message && (
-							<p className="text-pink-400 text-xs italic">
+							<p className="text-pink-400 text-xs italic mt-1">
 								Please check your message. Max length is 200 chars.
 							</p>
 						)}

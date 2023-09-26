@@ -12,6 +12,12 @@
 	color: #f5f5f5;
 }
 
+input,
+textarea {
+	background-color: #f5f5f5;
+	color: #171717;
+}
+
 .themeAnim {
 	transition: 0.5s all ease;
 }
