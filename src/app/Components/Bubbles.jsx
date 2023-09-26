@@ -7,22 +7,23 @@ export const Bubbles = () => {
   const maxBubbleSize = 83
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const [bubbleCount, setBubbleCount] = useState(currentYear)
+  // const [bubbleCount, setBubbleCount] = useState(currentYear)
 
   const getRandomTooltip = () => {
     const bubbleTips = [
-      "How could you?",
+      "How could you?!",
       "You animal!",
       "Nooooo!",
       "I thought we were friends.",
       "🥲",
       "Goodbye, my lover.",
       "Yes, I really made a list of tooltips for these bubbles.",
-      "I'm too young to die!",
+      "I'm too young to pop!",
       "When you least expect it...",
       "I'm not mad. Just disappointed.",
       "I'll be back.",
       "😱",
+      "Mama, oooh",
     ]
     const randomIndex = Math.floor(Math.random() * bubbleTips.length);
     return bubbleTips[randomIndex];
@@ -57,7 +58,7 @@ export const Bubbles = () => {
     // Filter out the bubble with the specified ID
     const updatedBubbles = bubbles.filter((bubble) => bubble.id !== bubbleId);
     setBubbles(updatedBubbles);
-    setBubbleCount((curr) => curr - 1)
+    // setBubbleCount((curr) => curr - 1)
   };
 
   return (

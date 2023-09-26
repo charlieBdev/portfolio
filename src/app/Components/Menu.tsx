@@ -24,7 +24,7 @@ export default function Menu() {
 									theme === "light"
 										? "text-neutral-900 bg-neutral-50"
 										: "text-neutral-50 bg-neutral-900"
-							  } `
+							  }`
 							: "hideMenuNav"
 					}
 				>
@@ -37,7 +37,7 @@ export default function Menu() {
 					<ul
 						className={`MENU-LINK-MOBILE-OPEN text-center space-y-12 text-xl`}
 					>
-						<li className="">
+						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
 								href="/"
@@ -50,7 +50,7 @@ export default function Menu() {
 								home
 							</Link>
 						</li>
-						<li className="">
+						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
 								href="/about"
@@ -63,7 +63,7 @@ export default function Menu() {
 								about
 							</Link>
 						</li>
-						<li className="">
+						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
 								href="/projects"
@@ -76,7 +76,7 @@ export default function Menu() {
 								projects
 							</Link>
 						</li>
-						<li className="">
+						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
 								href="/contact"
