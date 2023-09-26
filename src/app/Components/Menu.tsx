@@ -23,7 +23,7 @@ export default function Menu() {
 							? `showMenuNav ${
 									theme === "light"
 										? "text-neutral-900 bg-neutral-50"
-										: "dark:text-neutral-50 dark:bg-neutral-900"
+										: "text-neutral-50 bg-neutral-900"
 							  } `
 							: "hideMenuNav"
 					}
