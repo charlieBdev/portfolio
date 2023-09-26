@@ -82,7 +82,7 @@ export default function Contact() {
 			>
 				<div className="flex flex-wrap -mx-3">
 					<div className="w-full px-2">
-						<div className="flex justify-between text-neutral-500 tracking-wide text-xs mb-2">
+						<div className="flex justify-between text-neutral-400 tracking-wide text-xs mb-1">
 							<label className="font-bold" htmlFor="user_name">
 								Name
 							</label>
@@ -98,7 +98,7 @@ export default function Contact() {
 									: "bg-neutral-100"
 							} ${name.length === 0 ? "focus:bg-white" : ""} ${
 								name.length > 50 ? "bg-pink-100" : ""
-							} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
+							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
 							id="user_name"
 							type="text"
 							placeholder="What's your name?"
@@ -116,7 +116,7 @@ export default function Contact() {
 				<div className="flex flex-wrap -mx-3">
 					<div className="w-full px-2">
 						<label
-							className="text-neutral-500 block tracking-wide text-xs font-bold mb-2"
+							className="text-neutral-400 block tracking-wide text-xs font-bold mb-1"
 							htmlFor="user_email"
 						>
 							e-mail
@@ -130,7 +130,7 @@ export default function Contact() {
 									: "bg-pink-100"
 							} ${
 								email.length === 0 ? "focus:bg-white" : ""
-							} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
+							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
 							id="user_email"
 							type="text"
 							placeholder="What's your e-mail?"
@@ -150,9 +150,9 @@ export default function Contact() {
 				</div>
 				<div className="flex flex-wrap -mx-3">
 					<div className="w-full px-2">
-						<div className="flex justify-between text-neutral-500 tracking-wide text-xs mb-2">
+						<div className="flex justify-between text-neutral-400 tracking-wide text-xs mb-1">
 							<label
-								className="text-neutral-500 block tracking-wide text-xs font-bold"
+								className="block tracking-wide text-xs font-bold"
 								htmlFor="message"
 							>
 								Message
@@ -168,7 +168,7 @@ export default function Contact() {
 									: "bg-neutral-100"
 							} ${msg.length === 0 ? "focus:bg-white" : ""} ${
 								msg.length > 200 ? "bg-pink-100" : ""
-							} appearance-none block w-full text-neutral-900 border border-gray-200 focus:border-gray-300 rounded py-2 px-3 leading-tight focus:outline-none`}
+							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
 							id="message"
 							placeholder="What's your message?"
 							{...register("message", { required: true, maxLength: 200 })}

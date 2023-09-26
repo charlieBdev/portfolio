@@ -17,12 +17,10 @@ export default function Projects() {
 			<section className="flex justify-between items-center">
 				<h2 className="text-lg text-pink-400">Projects</h2>
 				<div
-					className="flex gap-1 items-center hover:cursor-pointer"
+					className="flex gap-1 items-center hover:cursor-pointer text-neutral-400"
 					onClick={() => setShowFilters(!showFilters)}
 				>
-					<p className="text-sm text-neutral-400">
-						{showFilters ? "Hide" : "Show"} filters{" "}
-					</p>
+					<p className="text-sm ">{showFilters ? "Hide" : "Show"} filters </p>
 					{showFilters ? <LuFilterX /> : <LuFilter />}
 				</div>
 			</section>

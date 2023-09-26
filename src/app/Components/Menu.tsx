@@ -6,10 +6,13 @@ import { usePathname } from "next/navigation";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Burger from "./Burger";
 import Cross from "./Cross";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Menu() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const currentRoute = usePathname();
+	const { theme } = useContext(ThemeContext);
 
 	return (
 		<>
@@ -17,7 +20,11 @@ export default function Menu() {
 				<div
 					className={
 						isNavOpen
-							? `showMenuNav text-neutral-900 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-900`
+							? `showMenuNav ${
+									theme === "light"
+										? "text-neutral-900 bg-neutral-50"
+										: "dark:text-neutral-50 dark:bg-neutral-900"
+							  } `
 							: "hideMenuNav"
 					}
 				>
@@ -82,7 +89,7 @@ export default function Menu() {
 								contact
 							</Link>
 						</li>
-						<div className="flex space-x-4 text-3xl text-neutral-950 dark:text-neutral-50">
+						<div className="flex space-x-4 text-3xl">
 							<Link href="https://github.com/charlieBdev" target="_blank">
 								<AiFillLinkedin />
 							</Link>
