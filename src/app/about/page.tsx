@@ -1,6 +1,6 @@
-import Link from "next/link";
-import SkillsList from "../Components/SkillsList";
-import IconsList from "../Components/IconsList";
+import Link from 'next/link';
+import SkillsList from '../Components/SkillsList';
+import IconsList from '../Components/IconsList';
 
 export default function About() {
 	return (
@@ -9,18 +9,19 @@ export default function About() {
 			<section className="space-y-1">
 				<h2 className="text-lg text-pink-400">About</h2>
 				<p>
-					Hello! I have just finished a ten-week intensive{" "}
-					<span className="">Software Engineering</span> bootcamp with{" "}
+					Hello! I have just finished a ten-week intensive{' '}
+					<span className="">Software Engineering</span> bootcamp with{' '}
 					<Link
 						href="https://northcoders.com/"
 						className="underline decoration-purple-300 text-purple-300"
 						target="_blank"
+						aria-label="Northcoders"
 					>
 						Northcoders
-					</Link>{" "}
-					and am looking for <span className="">Junior</span> or{" "}
-					<span className="">Entry-level</span> roles in{" "}
-					<span className="">Sheffield</span> or{" "}
+					</Link>{' '}
+					and am looking for <span className="">Junior</span> or{' '}
+					<span className="">Entry-level</span> roles in{' '}
+					<span className="">Sheffield</span> or{' '}
 					<span className="">Remote</span>.
 				</p>
 				<p>
@@ -28,20 +29,22 @@ export default function About() {
 					language teacher abroad and in the UK.
 				</p>
 				<p>
-					Check out my{" "}
+					Check out my{' '}
 					<Link
 						href="/projects"
 						className="underline decoration-purple-300 text-purple-300"
+						aria-label="Projects"
 					>
 						projects
-					</Link>{" "}
-					or send a message via the{" "}
+					</Link>{' '}
+					or send a message via the{' '}
 					<Link
 						href="/about"
 						className="underline decoration-purple-300 text-purple-300"
+						aria-label="Contact"
 					>
 						contact
-					</Link>{" "}
+					</Link>{' '}
 					page if you would like to discuss a role, career advice, or you'd just
 					like a chat!
 				</p>

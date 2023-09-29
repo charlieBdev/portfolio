@@ -14,7 +14,7 @@ const projectsArr = [
     desc: "This is my second Next.js app. The icons, skills, and project data are stored in variables and rendered in lists as cards. This makes adding new items easy and the code DRY. I used a frosted navbar and EmailJS for the contact form. Inspiration for the colours was taken from my VS Code theme - oh lucy. Note - there may be a few bugs and I'll be adding more functionality and projects as time passes!",
     imgURL: "/Portfoliov2/Portfoliov2.png",
     tags: [
-      "EmailJS", "Next.js", "next-themes", "react-spring", "Tailwind", "TypeScript"
+      "EmailJS", "Next.js", "react-spring", "Tailwind", "TypeScript"
     ],
     btnText: "View the code",
     btnLink: "https://github.com/charlieBdev/portfolio"
@@ -44,6 +44,7 @@ const projectsArr = [
     imgURL: "/NCNews/NCNews.png",
     tags: [
       "CORS",
+      "Notistack",
       "PERN",
       "React",
       "RESTful API",

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import ProjectCard from "./ProjectCard";
-import projectsArr from "../../data/projectsArr";
-import React, { useState } from "react";
+import ProjectCard from './ProjectCard';
+import projectsArr from '../../data/projectsArr';
+import React, { useState } from 'react';
 
 interface ProjectListProps {
 	showFilters: boolean;
@@ -17,12 +17,12 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 		a[0].toLowerCase().localeCompare(b[0].toLowerCase())
 	);
 
-	const [selectedTag, setSelectedTag] = useState("");
+	const [selectedTag, setSelectedTag] = useState('');
 
 	const toggleTag = (tag: string) => {
 		if (selectedTag === tag) {
 			// remove if there
-			setSelectedTag("");
+			setSelectedTag('');
 		} else {
 			// add if not there
 			setSelectedTag(tag);
@@ -30,7 +30,7 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 	};
 
 	const filteredProjects = projectsArr.filter((project) => {
-		if (selectedTag === "") {
+		if (selectedTag === '') {
 			return true;
 		} else {
 			return project.tags.some((tag) => selectedTag === tag);
@@ -47,8 +47,8 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 							onClick={() => {
 								toggleTag(tag);
 							}}
-							className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1 hover:shadow-lg ${
-								selectedTag === tag ? "selected" : ""
+							className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-2 py-1 hover:shadow-lg ${
+								selectedTag === tag ? 'selected' : ''
 							}`}
 						>
 							{tag}

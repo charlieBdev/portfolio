@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import skillsArr from "@/data/skillsArr";
-import { SkillsCard } from ".";
-import { useState, useEffect, useRef } from "react";
+import skillsArr from '@/data/skillsArr';
+import { SkillsCard } from '.';
+import { useState, useEffect, useRef } from 'react';
 
 const SkillsList = () => {
 	const [activeSlide, setActiveSlide] = useState(0);
@@ -49,10 +49,11 @@ const SkillsList = () => {
 						href={`#item${index + 1}`}
 						className={`border rounded text-center ${
 							activeSlide === index
-								? "text-green-500 shadow-xl border-green-500 border-2"
-								: "text-green-500 border-none"
+								? 'text-green-500 shadow-xl border-green-500 border-2'
+								: 'text-green-500 border-none'
 						}`}
 						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
+						aria-label={skill.topic}
 					>
 						{skill.svg}
 					</a>

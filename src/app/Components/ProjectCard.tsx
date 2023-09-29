@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import Button from "./Button";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import Button from './Button';
 
 interface ProjectCardProps {
 	name: string;
@@ -38,24 +38,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				<div className="space-y-3">
 					<h3 className="text-green-500 text-lg">{name}</h3>
 					<p className="">{desc}</p>
-					<ul className="flex flex-wrap gap-1">
+					<div className="flex flex-wrap gap-1">
 						{tags.map((tag) => (
 							<button
 								key={tag}
 								onClick={() => {
 									toggleTag(tag);
 								}}
-								className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-1 hover:shadow-lg ${
-									tag === selectedTag ? "selected" : ""
+								className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-2 py-1 hover:shadow-lg ${
+									tag === selectedTag ? 'selected' : ''
 								}`}
+								aria-label={tag}
 							>
 								{tag}
 							</button>
 						))}
-					</ul>
+					</div>
 				</div>
 			</div>
-			<div className="mx-auto">
+			<div className="mx-auto" aria-label={btnText}>
 				<Link href={btnLink} target="_blank">
 					<Button btnText={btnText} />
 				</Link>
