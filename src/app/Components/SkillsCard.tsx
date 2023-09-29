@@ -17,9 +17,7 @@ export const SkillsCard: React.FC<SkillsCardProps> = ({
 			</div>
 			<ul className="text-md space-y-1 text-center">
 				{skills.map((skill) => (
-					<li key={skill} className="">
-						{skill}
-					</li>
+					<li key={skill}>{skill}</li>
 				))}
 			</ul>
 		</div>

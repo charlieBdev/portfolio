@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 // import Head from 'next/head'
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 
 export const metadata: Metadata = {

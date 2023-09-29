@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import ProjectsList from "../Components/ProjectsList";
+import { useState } from 'react';
+import ProjectsList from '../components/ProjectsList';
 
-import { LuFilter, LuFilterX } from "react-icons/lu";
+import { LuFilter, LuFilterX } from 'react-icons/lu';
 
 interface Tags {
 	tags: string[];
@@ -20,7 +20,7 @@ export default function Projects() {
 					className="flex gap-1 items-center hover:cursor-pointer text-neutral-400"
 					onClick={() => setShowFilters(!showFilters)}
 				>
-					<p className="text-sm ">{showFilters ? "Hide" : "Show"} filters </p>
+					<p className="text-sm ">{showFilters ? 'Hide' : 'Show'} filters </p>
 					{showFilters ? <LuFilterX /> : <LuFilter />}
 				</div>
 			</section>

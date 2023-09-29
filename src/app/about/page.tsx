@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import SkillsList from '../Components/SkillsList';
-import IconsList from '../Components/IconsList';
+import SkillsList from '../components/SkillsList';
+import IconsList from '../components/IconsList';
 
 export default function About() {
 	return (

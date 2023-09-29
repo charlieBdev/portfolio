@@ -1,4 +1,4 @@
-import { Bubbles, MainText } from "./Components";
+import { Bubbles, MainText } from './components';
 
 export default function Home() {
 	return (

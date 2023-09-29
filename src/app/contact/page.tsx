@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react';
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import { Spinner } from '../Components';
+import { Spinner } from '../components';
 
 export default function Contact() {
 	const [name, setName] = useState('');
