@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 // import Head from 'next/head'
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { ThemeProvider } from './context/ThemeContext';
 
 export const metadata: Metadata = {
 	title: 'Charlie B - Jnr Web Dev',

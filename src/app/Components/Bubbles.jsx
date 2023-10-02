@@ -5,8 +5,8 @@ import React, { useState, useEffect } from 'react';
 export const Bubbles = () => {
 	const [bubbles, setBubbles] = useState([]);
 	const maxBubbleSize = 83;
-	const currentDate = new Date();
-	const currentYear = currentDate.getFullYear();
+	// const currentDate = new Date();
+	// const currentYear = currentDate.getFullYear();
 	// const [bubbleCount, setBubbleCount] = useState(currentYear)
 
 	// const getRandomTooltip = () => {
