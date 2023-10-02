@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import ProjectsList from '../components/ProjectsList';
+import ProjectsList from '../Components/ProjectsList';
 
 import { LuFilter, LuFilterX } from 'react-icons/lu';
 
