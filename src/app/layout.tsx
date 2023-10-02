@@ -45,7 +45,7 @@ export default function RootLayout({
 			<body className="flex flex-col min-h-screen justify-between">
 				<ThemeProvider>
 					<Navbar />
-					<main className="mt-24 min-h-screen">{children}</main>
+					<main className="flex-grow mt-24 flex flex-col">{children}</main>
 					<Footer />
 				</ThemeProvider>
 			</body>

@@ -124,6 +124,7 @@ export default function Menu() {
 					<Burger />
 				</button>
 			</div>
+
 			<ul className="DESKTOP-MENU hidden mr-3 space-x-12 lg:flex text-purple-300">
 				<li>
 					<Link
