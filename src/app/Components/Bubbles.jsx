@@ -73,8 +73,8 @@ export const Bubbles = () => {
 						width: bubble.radius,
 						height: bubble.radius,
 						borderRadius: '50%',
-						backgroundColor: `rgba(${bubble.color}, 0.2)`,
-						border: `1px solid rgba(${bubble.color}, 0.8)`,
+						backgroundColor: `rgba(${bubble.color}, 0.3)`,
+						border: `1px solid rgba(${bubble.color}, 1)`,
 						cursor: 'pointer', // Add pointer cursor,
 						zIndex: 100,
 					}}
