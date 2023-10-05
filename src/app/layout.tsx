@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
 	title: 'Charlie B - Jnr Web Dev',
@@ -47,6 +48,7 @@ export default function RootLayout({
 					<Navbar />
 					<main className="flex-grow mt-24 flex flex-col">{children}</main>
 					<Footer />
+					<Toaster richColors />
 				</ThemeProvider>
 			</body>
 		</html>

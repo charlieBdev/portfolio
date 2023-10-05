@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { Spinner } from '../Components';
+import { toast } from 'sonner';
 
 export default function Contact() {
 	const [name, setName] = useState('');
@@ -44,12 +45,14 @@ export default function Contact() {
 				.sendForm(serviceID!, templateID, form.current, userID)
 				.then((result) => {
 					// console.log('Email sent: ', result.text);
+					toast.success('Message sent!');
 					setIsSent(true);
 					clearForm();
 					// reset();
 				})
 				.catch((error) => {
 					// console.log('Email error: ', error.text);
+					toast.error('Please try again!');
 				})
 				.finally(() => {
 					setIsSending(false);
@@ -188,16 +191,6 @@ export default function Contact() {
 					>
 						{isSending ? <Spinner /> : 'Send'}
 					</button>
-					{errors.user_name || errors.user_email || errors.message ? (
-						<p className="text-pink-400 text-xs italic">
-							Oops! Please try again.
-						</p>
-					) : isSent ? (
-						<p className="text-green-500 text-xs italic">
-							Message sent! Thanks and I'll be in touch as soon as possible.
-							Please check your spam for an auto-response.
-						</p>
-					) : null}
 				</div>
 			</form>
 		</section>
