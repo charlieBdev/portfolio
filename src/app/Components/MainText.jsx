@@ -27,7 +27,7 @@ export const MainText = () => {
 	});
 
 	return (
-		<div className="flex flex-col items-start gap-3 select-none p-6 xl:px-24 xl:items-center hover:cursor-pointer min-h-full overflow-hidden">
+		<div className="h-full flex flex-col items-start gap-3 select-none p-6 xl:px-24 xl:items-center hover:cursor-pointer overflow-hidden">
 			<motion.p drag className="text-3xl relative">
 				eat
 				{/* <Link href="/about" className="text-purple-300">

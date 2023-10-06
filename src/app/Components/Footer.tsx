@@ -14,7 +14,12 @@ export default function Footer() {
 					target="_blank"
 					aria-label="Github"
 				>
-					<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.1 }}>
+					<motion.div
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.5 }}
+						initial={{ scale: 0 }}
+						animate={{ scale: 1 }}
+					>
 						<AiFillGithub />
 					</motion.div>
 				</Link>
@@ -24,7 +29,12 @@ export default function Footer() {
 					target="_blank"
 					aria-label="LinkedIn"
 				>
-					<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.1 }}>
+					<motion.div
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.5 }}
+						initial={{ scale: 0 }}
+						animate={{ scale: 1 }}
+					>
 						<AiFillLinkedin />
 					</motion.div>
 				</Link>

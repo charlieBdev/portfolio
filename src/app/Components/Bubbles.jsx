@@ -60,11 +60,13 @@ export const Bubbles = () => {
 						}}
 						onClick={() => popBubble(bubble.id)}
 						className="hover:animate-pulse"
-						initial={{
-							opacity: 0,
-							scale: 0,
-						}}
-						animate={{ opacity: 1, scale: 1 }}
+						// initial={{
+						// 	opacity: 0,
+						// 	scale: 0,
+						// }}
+						initial={{ scale: 0 }}
+						animate={{ scale: 1 }}
+						// animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 1.3 }}
 					></motion.div>
 				))}

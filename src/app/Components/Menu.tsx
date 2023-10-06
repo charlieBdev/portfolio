@@ -36,7 +36,7 @@ export default function Menu() {
 						aria-label="Close Mobile Navigation"
 					>
 						<motion.div
-							whileTap={{ scale: 0 }}
+							whileTap={{ scale: 0.5 }}
 							initial={{ scale: 0 }}
 							animate={{ scale: 1 }}
 						>
@@ -113,7 +113,7 @@ export default function Menu() {
 							>
 								<motion.div
 									whileHover={{ scale: 1.1 }}
-									whileTap={{ scale: 0.1 }}
+									whileTap={{ scale: 0.5 }}
 								>
 									<AiFillGithub />
 								</motion.div>
@@ -125,7 +125,7 @@ export default function Menu() {
 							>
 								<motion.div
 									whileHover={{ scale: 1.1 }}
-									whileTap={{ scale: 0.1 }}
+									whileTap={{ scale: 0.5 }}
 								>
 									<AiFillLinkedin />
 								</motion.div>
@@ -141,7 +141,7 @@ export default function Menu() {
 					<motion.div
 						initial={{ scale: 0 }}
 						animate={{ scale: 1 }}
-						whileTap={{ scale: 0 }}
+						whileTap={{ scale: 0.5 }}
 					>
 						<Burger />
 					</motion.div>
