@@ -48,9 +48,9 @@ const SkillsList = () => {
 					<a
 						key={skill.topic}
 						href={`#item${index + 1}`}
-						className={`border rounded text-center ${
+						className={`text-center ${
 							activeSlide === index
-								? 'text-green-500 shadow-xl border-green-500 border-2 animate-pulse'
+								? 'text-green-500 shadow-xl  animate-pulse'
 								: 'border-none'
 						}`}
 						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
