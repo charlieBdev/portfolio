@@ -107,7 +107,7 @@ export default function Contact() {
 							value={name}
 							onChange={(e) => setName(e.target.value)}
 						/>
-						{errors.user_name && (
+						{errors.user_name && (name.length === 0 || name.length > 50) && (
 							<p className="text-pink-400 text-xs italic mt-1">
 								Please check your name. Max length is 50 chars.
 							</p>
@@ -142,7 +142,7 @@ export default function Contact() {
 							value={email}
 							onChange={(e) => setEmail(e.target.value)}
 						/>
-						{errors.user_email && (
+						{errors.user_email && !emailRegex.test(email) && (
 							<p className="text-pink-400 text-xs italic mt-1">
 								Please check your e-mail address.
 							</p>
@@ -176,7 +176,7 @@ export default function Contact() {
 							value={msg}
 							onChange={(e) => setMsg(e.target.value)}
 						></textarea>
-						{errors.message && (
+						{errors.message && (msg.length === 0 || msg.length > 200) && (
 							<p className="text-pink-400 text-xs italic mt-1">
 								Please check your message. Max length is 200 chars.
 							</p>

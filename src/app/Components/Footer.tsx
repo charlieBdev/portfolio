@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
@@ -11,16 +12,21 @@ export default function Footer() {
 				<Link
 					href="https://github.com/charlieBdev"
 					target="_blank"
-					aria-label="LinkedIn"
+					aria-label="Github"
 				>
-					<AiFillLinkedin />
+					<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.1 }}>
+						<AiFillGithub />
+					</motion.div>
 				</Link>
+
 				<Link
 					href="https://www.linkedin.com/in/charlie-bishop-4a897314a/"
 					target="_blank"
-					aria-label="Github"
+					aria-label="LinkedIn"
 				>
-					<AiFillGithub />
+					<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.1 }}>
+						<AiFillLinkedin />
+					</motion.div>
 				</Link>
 			</div>
 			<p className="text-xs ml-auto font-light select-none">

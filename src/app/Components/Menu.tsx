@@ -8,6 +8,7 @@ import Burger from './Burger';
 import Cross from './Cross';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import { motion } from 'framer-motion';
 
 export default function Menu() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
@@ -29,13 +30,19 @@ export default function Menu() {
 					}
 					aria-label="Mobile Navigation"
 				>
-					<div
+					<motion.div
 						className="CROSS-ICON absolute top-0 right-0 px-6 py-8"
 						onClick={() => setIsNavOpen(false)}
 						aria-label="Close Mobile Navigation"
 					>
-						<Cross />
-					</div>
+						<motion.div
+							whileTap={{ scale: 0 }}
+							initial={{ scale: 0 }}
+							animate={{ scale: 1 }}
+						>
+							<Cross />
+						</motion.div>
+					</motion.div>
 					<ul
 						className={`MENU-LINK-MOBILE-OPEN text-center space-y-12 text-xl`}
 					>
@@ -104,14 +111,24 @@ export default function Menu() {
 								target="_blank"
 								aria-label="GitHub"
 							>
-								<AiFillLinkedin />
+								<motion.div
+									whileHover={{ scale: 1.1 }}
+									whileTap={{ scale: 0.1 }}
+								>
+									<AiFillGithub />
+								</motion.div>
 							</Link>
 							<Link
 								href="https://www.linkedin.com/in/charlie-bishop-4a897314a/"
 								target="_blank"
 								aria-label="LinkedIn"
 							>
-								<AiFillGithub />
+								<motion.div
+									whileHover={{ scale: 1.1 }}
+									whileTap={{ scale: 0.1 }}
+								>
+									<AiFillLinkedin />
+								</motion.div>
 							</Link>
 						</div>
 					</ul>
@@ -121,7 +138,13 @@ export default function Menu() {
 					onClick={() => setIsNavOpen((prev) => !prev)}
 					aria-label="Mobile Menu"
 				>
-					<Burger />
+					<motion.div
+						initial={{ scale: 0 }}
+						animate={{ scale: 1 }}
+						whileTap={{ scale: 0 }}
+					>
+						<Burger />
+					</motion.div>
 				</button>
 			</div>
 
