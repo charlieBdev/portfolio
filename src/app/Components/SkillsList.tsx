@@ -3,6 +3,7 @@
 import skillsArr from '@/data/skillsArr';
 import { SkillsCard } from '.';
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const SkillsList = () => {
 	const [activeSlide, setActiveSlide] = useState(0);
@@ -44,19 +45,21 @@ const SkillsList = () => {
 			</div>
 			<div className="flex justify-center w-full py-2 gap-4 sm:hidden items-center">
 				{skillsArr.map((skill, index) => (
-					<a
+					<motion.a
 						key={skill.topic}
 						href={`#item${index + 1}`}
 						className={`border rounded text-center ${
 							activeSlide === index
-								? 'text-green-500 shadow-xl border-green-500 border-2'
-								: 'text-green-500 border-none'
+								? 'text-green-500 shadow-xl border-green-500 border-2 animate-pulse'
+								: 'border-none'
 						}`}
 						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
 						aria-label={skill.topic}
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.5 }}
 					>
 						{skill.svg}
-					</a>
+					</motion.a>
 				))}
 			</div>
 		</>

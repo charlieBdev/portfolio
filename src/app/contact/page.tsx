@@ -64,7 +64,7 @@ export default function Contact() {
 	const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
 
 	return (
-		<section className="h-[calc(100vh-10rem)] p-6 xl:px-24 flex flex-col lg:flex-row xl:flex-col lg:justify-between xl:justify-start xl:mx-auto xl:items-center space-y-6">
+		<section className="min-h-[calc(100vh-10rem)] p-6 xl:px-24 flex flex-col lg:flex-row xl:flex-col lg:justify-between xl:justify-start xl:mx-auto xl:items-center space-y-6">
 			<div className="space-y-1">
 				<h2 className="text-lg text-pink-400">Contact</h2>
 				<p>
@@ -158,27 +158,27 @@ export default function Contact() {
 							>
 								Message
 							</label>
-							<p className={msg.length > 200 ? 'text-pink-400' : ''}>
-								{200 - msg.length}
+							<p className={msg.length > 300 ? 'text-pink-400' : ''}>
+								{300 - msg.length}
 							</p>
 						</div>
 						<textarea
 							className={`no-resize h-36 ${
-								msg.length > 0 && msg.length < 201
+								msg.length > 0 && msg.length < 301
 									? 'bg-green-100'
 									: 'bg-neutral-100'
 							} ${msg.length === 0 ? 'focus:bg-white' : ''} ${
-								msg.length > 200 ? 'bg-pink-100' : ''
+								msg.length > 300 ? 'bg-pink-100' : ''
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
 							id="message"
 							placeholder="What's your message?"
-							{...register('message', { required: true, maxLength: 200 })}
+							{...register('message', { required: true, maxLength: 300 })}
 							value={msg}
 							onChange={(e) => setMsg(e.target.value)}
 						></textarea>
-						{errors.message && (msg.length === 0 || msg.length > 200) && (
+						{errors.message && (msg.length === 0 || msg.length > 300) && (
 							<p className="text-pink-400 text-xs italic mt-1">
-								Please check your message. Max length is 200 chars.
+								Please check your message. Max length is 300 chars.
 							</p>
 						)}
 					</div>

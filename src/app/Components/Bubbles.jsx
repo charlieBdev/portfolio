@@ -10,9 +10,11 @@ export const Bubbles = () => {
 	const getRandomColor = () => {
 		const colors = [
 			'244, 114, 182',
+			// cyan
 			'34, 211, 238',
-			'52, 211, 153',
-			'253, 224, 71',
+			// emerald
+			'16, 185, 129',
+			'250, 204, 21',
 			'251, 146, 60',
 		];
 		const randomIndex = Math.floor(Math.random() * colors.length);
@@ -37,7 +39,6 @@ export const Bubbles = () => {
 		// Filter out the bubble with the specified ID
 		const updatedBubbles = bubbles.filter((bubble) => bubble.id !== bubbleId);
 		setBubbles(updatedBubbles);
-		// setBubbleCount((curr) => curr - 1)
 	};
 
 	return (
@@ -60,13 +61,8 @@ export const Bubbles = () => {
 						}}
 						onClick={() => popBubble(bubble.id)}
 						className="hover:animate-pulse"
-						// initial={{
-						// 	opacity: 0,
-						// 	scale: 0,
-						// }}
 						initial={{ scale: 0 }}
 						animate={{ scale: 1 }}
-						// animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 1.3 }}
 					></motion.div>
 				))}
