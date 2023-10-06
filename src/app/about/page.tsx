@@ -29,7 +29,7 @@ export default function About() {
 				<p>
 					Before reigniting my interest in tech, I was an English language
 					teacher abroad and mostly online in the UK but I've had a range of
-					other roles in areas - Network Installation and QA to name a few.
+					other roles in Network Installation and QA to name a few.
 				</p>
 				<p>
 					Check out my{' '}

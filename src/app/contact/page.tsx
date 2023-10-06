@@ -64,7 +64,7 @@ export default function Contact() {
 	const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
 
 	return (
-		<section className="min-h-screen p-6 xl:px-24 flex flex-col lg:flex-row xl:flex-col lg:justify-between xl:justify-start xl:mx-auto xl:items-center space-y-6">
+		<section className="h-[calc(100vh-10rem)] p-6 xl:px-24 flex flex-col lg:flex-row xl:flex-col lg:justify-between xl:justify-start xl:mx-auto xl:items-center space-y-6">
 			<div className="space-y-1">
 				<h2 className="text-lg text-pink-400">Contact</h2>
 				<p>

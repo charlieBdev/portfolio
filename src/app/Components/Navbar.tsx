@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import ThemeButton from "./ThemeButton";
-import Menu from "./Menu";
+import Link from 'next/link';
+import ThemeButton from './ThemeButton';
+import Menu from './Menu';
 
 export default function Navbar() {
 	return (
