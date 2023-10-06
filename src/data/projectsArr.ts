@@ -1,6 +1,6 @@
 const projectsArr = [
   {
-    name: "Tha Web Image Scraper",
+    name: "Web Image Scraper",
     desc: "A tool made for getting images from a website. Originally made to speed up the process of archiving old websites. The search history shows the last 3 searches and you can go to a random URL from a list I have stored in an array. In development everything worked fine up until deploying on Vercel so I had to make use of Browserless. The project also uses Puppeteer and I hope to implement the option to filter small images and the ability to download all or a selection of images.",
     imgURL: "/WebImageScraper/Web-Image-Scraper.png",
     tags: [

@@ -45,7 +45,7 @@ const SkillsList = () => {
 			</div>
 			<div className="flex justify-center w-full py-2 gap-4 sm:hidden items-center">
 				{skillsArr.map((skill, index) => (
-					<motion.a
+					<a
 						key={skill.topic}
 						href={`#item${index + 1}`}
 						className={`border rounded text-center ${
@@ -55,11 +55,11 @@ const SkillsList = () => {
 						}`}
 						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
 						aria-label={skill.topic}
-						whileHover={{ scale: 1.1 }}
-						whileTap={{ scale: 0.5 }}
 					>
-						{skill.svg}
-					</motion.a>
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.5 }}>
+							{skill.svg}
+						</motion.div>
+					</a>
 				))}
 			</div>
 		</>
