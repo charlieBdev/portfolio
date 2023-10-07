@@ -5,7 +5,6 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import { Toaster } from 'sonner';
 import Head from 'next/head';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
 	title: 'Charlie B - Jnr Web Dev',
@@ -46,11 +45,11 @@ export default function RootLayout({
 				<link rel="manifest" href="/site.webmanifest" />
 
 				{/* Google tag (gtag.js) */}
-				<Script
+				<script
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-				></Script>
-				<Script
+				></script>
+				<script
 					dangerouslySetInnerHTML={{
 						__html: `
 							window.dataLayer = window.dataLayer || [];
@@ -63,7 +62,7 @@ export default function RootLayout({
 							});
 						`,
 					}}
-				></Script>
+				></script>
 			</Head>
 			{/* </head> */}
 			<body className="flex flex-col min-h-screen justify-between">
