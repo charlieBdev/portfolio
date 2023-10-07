@@ -44,7 +44,7 @@ export default function Footer() {
 				Charlie Bishop{' '}
 				<span className="hidden md:inline-block">with lots of ☕</span>{' '}
 				<span className="hidden lg:inline-block">and 🍪</span>{' '}
-				<span className="hidden xl:inline-block">Plus loads of bubbles!</span>
+				<span className="hidden xl:inline-block">Plus loads of 🫧</span>
 			</p>
 		</footer>
 	);
