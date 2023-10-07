@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
-// import Head from 'next/head'
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import { Toaster } from 'sonner';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
 	title: 'Charlie B - Jnr Web Dev',
@@ -18,8 +18,8 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			{/* <Head> */}
-			<head>
+			<Head>
+				{/* <head> */}
 				<link
 					rel="stylesheet"
 					href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
@@ -43,8 +43,24 @@ export default function RootLayout({
 					href="/favicon-16x16.png"
 				/>
 				<link rel="manifest" href="/site.webmanifest" />
-				{/* </Head> */}
-			</head>
+
+				{/* Google tag (gtag.js) */}
+				<script
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+						`,
+					}}
+				></script>
+			</Head>
+			{/* </head> */}
 			<body className="flex flex-col min-h-screen justify-between">
 				<ThemeProvider>
 					<Navbar />

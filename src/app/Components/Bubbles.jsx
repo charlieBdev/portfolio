@@ -16,6 +16,8 @@ export const Bubbles = () => {
 			'16, 185, 129',
 			'250, 204, 21',
 			'251, 146, 60',
+			// purple
+			'216, 180, 254',
 		];
 		const randomIndex = Math.floor(Math.random() * colors.length);
 		return colors[randomIndex];
