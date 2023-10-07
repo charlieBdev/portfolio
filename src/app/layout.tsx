@@ -4,7 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import { Toaster } from 'sonner';
-import Head from 'next/head';
+// import Head from 'next/head';
 
 export const metadata: Metadata = {
 	title: 'Charlie B - Jnr Web Dev',
@@ -18,8 +18,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<Head>
-				{/* <head> */}
+			<head>
 				<link
 					rel="stylesheet"
 					href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
@@ -63,8 +62,7 @@ export default function RootLayout({
 						`,
 					}}
 				></script>
-			</Head>
-			{/* </head> */}
+			</head>
 			<body className="flex flex-col min-h-screen justify-between">
 				<ThemeProvider>
 					<Navbar />
