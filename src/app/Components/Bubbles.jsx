@@ -29,7 +29,7 @@ export const Bubbles = () => {
 
 	useEffect(() => {
 		const initialBubbles = [];
-		for (let i = 0; i < 101; i++) {
+		for (let i = 0; i < 48; i++) {
 			initialBubbles.push({
 				id: i, // Add an ID to identify each bubble
 				x: Math.random() * window.innerWidth,
@@ -68,6 +68,7 @@ export const Bubbles = () => {
 						className="hover:animate-pulse"
 						initial={{ scale: 0 }}
 						animate={{ scale: 1 }}
+						whileHover={{ scale: 0.9 }}
 						exit={{ opacity: 0, scale: 1.3 }}
 					></motion.div>
 				))}
