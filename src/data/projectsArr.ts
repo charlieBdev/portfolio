@@ -13,7 +13,7 @@ const projectsArr = [
 			'JavaScript',
 			'Next.js',
 			'NextUI',
-			'Progress Data Fetching',
+			'Progressive Data Fetching',
 			'Sonner',
 			'Tailwind',
 		],
