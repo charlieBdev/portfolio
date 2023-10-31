@@ -91,7 +91,7 @@ const projectsArr = [
 			'May 2023 Cohort',
 		],
 		btnText: 'Go to NC News',
-		btnLink: 'https://euphonious-scone-36cbae.netlify.app/',
+		btnLink: 'https://fabulous-nc-news.netlify.app/',
 	},
 	{
 		name: 'NC News API',
@@ -129,7 +129,7 @@ const projectsArr = [
 			'May 2023 Cohort',
 		],
 		btnText: 'Check out space stuff',
-		btnLink: 'https://precious-madeleine-f3b23d.netlify.app/',
+		btnLink: 'https://nasa-meteorites.netlify.app/',
 	},
 	{
 		name: 'myDictionary',
