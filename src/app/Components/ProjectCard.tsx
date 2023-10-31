@@ -25,20 +25,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	toggleTag,
 }) => {
 	return (
-		<article className="space-y-3 rounded-lg flex flex-col align-center p-3 shadow hover:shadow-xl w-full">
-			<div className="flex-grow space-y-3">
+		<article className='space-y-3 rounded-lg flex flex-col align-center p-3 shadow hover:shadow-xl w-full'>
+			<div className='flex-grow space-y-3'>
 				<Image
 					src={imgURL}
 					width={150}
 					height={300}
 					alt={name}
-					loading="lazy"
-					className="rounded-lg shadow-lg w-2/4 mx-auto max-w-64"
+					loading='lazy'
+					className='rounded-lg shadow-lg w-2/4 mx-auto max-w-64'
 				/>
-				<div className="space-y-3">
-					<h3 className="text-green-500 text-lg">{name}</h3>
-					<p className="">{desc}</p>
-					<div className="flex flex-wrap gap-1">
+				<div className='space-y-3'>
+					<h3 className='text-green-500 text-lg'>{name}</h3>
+					{/* <p className="">{desc}</p> */}
+					<div className='flex flex-wrap gap-1'>
 						{tags.map((tag) => (
 							<button
 								key={tag}
@@ -56,8 +56,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					</div>
 				</div>
 			</div>
-			<div className="mx-auto" aria-label={btnText}>
-				<Link href={btnLink} target="_blank">
+			<div className='mx-auto' aria-label={btnText}>
+				<Link href={btnLink} target='_blank'>
 					<Button btnText={btnText} />
 				</Link>
 			</div>
