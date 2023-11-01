@@ -27,27 +27,9 @@ export const MainText = () => {
 	});
 
 	return (
-		<div className="h-full flex flex-col items-start gap-3 select-none p-6 xl:px-24 xl:items-center hover:cursor-pointer overflow-hidden">
-			<motion.p drag className="text-3xl relative">
-				eat
-				{/* <Link href="/about" className="text-purple-300">
-          a
-        </Link> */}
-			</motion.p>
-			<motion.p drag className="text-5xl relative">
-				sleep
-				{/* <Link href="/projects" className="text-purple-300">
-          p
-        </Link> */}
-			</motion.p>
-			<motion.p drag className="text-7xl relative">
-				code
-				{/* <Link href="/contact" className="text-purple-300">
-          c
-        </Link> */}
-			</motion.p>
+		<div className='h-[calc(100dvh-10rem)] flex flex-col items-center justify-center gap-3 select-none p-6 xl:px-24 xl:items-center hover:cursor-pointer overflow-hidden'>
 			<motion.div drag>
-				<animated.p style={flickerAnimation} className="text-9xl relative">
+				<animated.p style={flickerAnimation} className='text-9xl relative'>
 					Hello
 				</animated.p>
 			</motion.div>
