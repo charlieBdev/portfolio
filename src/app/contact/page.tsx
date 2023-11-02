@@ -66,7 +66,7 @@ export default function Contact() {
 	return (
 		<section
 			id='contact'
-			className='h-[calc(100vh-10rem)] p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
+			className='h-[calc(100dvh-9rem)] p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
 		>
 			<div className='gap-1'>
 				<h2 className='text-lg text-pink-400'>Contact</h2>

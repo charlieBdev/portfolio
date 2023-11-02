@@ -7,7 +7,7 @@ export default function About() {
 		// flex flex-col justify-center items-center min-h-screen relative
 		<section
 			id='about'
-			className='h-[calc(100vh-6rem)] flex flex-col justify-center gap-3 p-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
+			className='h-[calc(100dvh-5rem)] flex flex-col justify-center gap-3 p-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
 		>
 			<div className='gap-3'>
 				<h2 className='text-lg text-pink-400'>About</h2>
@@ -30,18 +30,16 @@ export default function About() {
 				</p> */}
 				<div className='flex flex-col gap-3'>
 					<p>
-						Hi, I'm Charlie. Before reigniting my interest in tech, I was an
-						English language teacher abroad and mostly online in the UK but I've
-						had a range of other roles in Network Installation and QA to name a
-						few.
+						Before reigniting my interest in tech, I was an English language
+						teacher abroad and online in the UK. I've had a range of other roles
+						in Network Installation and QA to name a few.
 					</p>
 					<p>
-						Having finished my second bootcamp in August, this time with
-						Northcoders, I'm looking for <span className=''>Junior</span> or{' '}
+						In August I finished my second bootcamp and I'm looking for{' '}
+						<span className=''>Junior</span> or{' '}
 						<span className=''>Entry-level</span> roles in{' '}
 						<span className=''>Sheffield</span> or{' '}
-						<span className=''>Remote</span>. I'd be open to hybrid work also in
-						the surrounding area.
+						<span className=''>Remote/Hybrid</span>.
 					</p>
 				</div>
 
@@ -67,11 +65,11 @@ export default function About() {
 				</p> */}
 			</div>
 			<div className='flex flex-col justify-center gap-3'>
-				{/* <h3 className='text-lg text-pink-400'>Skills</h3>
+				<h3 className='text-lg text-pink-400'>Skills</h3>
 				<p>
-					Here are some of the technologies I have used and hope to keep
-					learning more about plus a little more about me.
-				</p> */}
+					Some of the technologies I have used and hope to keep learning more
+					about plus a little more about me.
+				</p>
 				<IconsList />
 				<SkillsList />
 			</div>

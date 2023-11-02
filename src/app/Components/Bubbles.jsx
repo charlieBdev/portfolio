@@ -47,7 +47,7 @@ export const Bubbles = () => {
 	};
 
 	return (
-		<div className='bg-inherit mt-24 fixed top-0 left-0 w-full h-full'>
+		<div className='bg-inherit mt-20 mb-16 fixed top-0 left-0 w-full h-full'>
 			<AnimatePresence>
 				{bubbles.map((bubble) => (
 					<motion.div
