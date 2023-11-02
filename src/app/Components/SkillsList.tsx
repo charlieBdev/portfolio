@@ -27,7 +27,7 @@ const SkillsList = () => {
 			</div>
 
 			{/* mobile carousel */}
-			<div className='carousel carousel-center sm:hidden rounded-lg shadow hover:shadow-xl'>
+			<div className='carousel carousel-center sm:hidden py-6 gap-3'>
 				{skillsArr.map((skill, index) => (
 					<div
 						key={skill.topic}

@@ -25,9 +25,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	toggleTag,
 }) => {
 	return (
-		<div className='carousel-item w-4/5 max-w-xl'>
+		<div className='carousel-item w-4/5 max-w-xl rounded-lg shadow hover:shadow-xl p-3'>
 			{/* <article className='gap-3 rounded-lg p-3 shadow hover:shadow-xl flex-col items-center justify-center'> */}
-			<div className='flex flex-col justify-between gap-3'>
+			<div className='flex flex-col justify-between gap-3 w-full'>
 				<div className='flex flex-col gap-1'>
 					<Image
 						src={imgURL}
