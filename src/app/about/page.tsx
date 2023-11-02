@@ -7,7 +7,7 @@ export default function About() {
 		// flex flex-col justify-center items-center min-h-screen relative
 		<section
 			id='about'
-			className='h-[calc(100dvh-5rem)] flex flex-col justify-center gap-3 p-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
+			className='h-[calc(100vh-5rem)] flex flex-col justify-center gap-3 p-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
 			<div className='gap-3'>
 				<h2 className='text-lg text-pink-400'>About</h2>
@@ -65,11 +65,11 @@ export default function About() {
 				</p> */}
 			</div>
 			<div className='flex flex-col justify-center gap-3'>
-				<h3 className='text-lg text-pink-400'>Skills</h3>
+				{/* <h3 className='text-lg text-pink-400'>Skills</h3>
 				<p>
 					Some of the technologies I have used and hope to keep learning more
 					about plus a little more about me.
-				</p>
+				</p> */}
 				<IconsList />
 				<SkillsList />
 			</div>
