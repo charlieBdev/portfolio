@@ -40,14 +40,14 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 	return (
 		<div>
 			{showFilters && (
-				<ul className="flex flex-wrap gap-1 mb-3">
+				<ul className='flex gap-1 mb-3 items-center justify-start carousel carousel-center'>
 					{uniqueTags.map((tag) => (
 						<button
 							key={tag}
 							onClick={() => {
 								toggleTag(tag);
 							}}
-							className={`border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-2 py-1 hover:shadow-lg ${
+							className={`carousel-item border border-neutral-400 rounded-lg text-neutral-400 font-light text-sm px-2 py-1 hover:shadow-lg ${
 								selectedTag === tag ? 'selected' : ''
 							}`}
 						>
@@ -57,22 +57,24 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 				</ul>
 			)}
 
-			<section className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-				{/* <section className="flex justify-center flex-wrap gap-3"> */}
-				{filteredProjects.map((project) => (
-					<ProjectCard
-						key={project.name}
-						name={project.name}
-						desc={project.desc}
-						imgURL={project.imgURL}
-						tags={project.tags}
-						btnText={project.btnText}
-						btnLink={project.btnLink}
-						selectedTag={selectedTag}
-						toggleTag={toggleTag}
-					/>
-				))}
-			</section>
+			{/* <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3"> */}
+			<div className='flex items-center justify-center'>
+				<div className='carousel carousel-center space-x-3 bg-inherit'>
+					{filteredProjects.map((project) => (
+						<ProjectCard
+							key={project.name}
+							name={project.name}
+							desc={project.desc}
+							imgURL={project.imgURL}
+							tags={project.tags}
+							btnText={project.btnText}
+							btnLink={project.btnLink}
+							selectedTag={selectedTag}
+							toggleTag={toggleTag}
+						/>
+					))}
+				</div>
+			</div>
 		</div>
 	);
 };

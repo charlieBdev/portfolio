@@ -17,7 +17,7 @@ export default function Menu() {
 
 	return (
 		<>
-			<div className="MOBILE-MENU flex lg:hidden">
+			<div className='MOBILE-MENU flex lg:hidden'>
 				<div
 					className={
 						isNavOpen
@@ -28,12 +28,12 @@ export default function Menu() {
 							  }`
 							: 'hideMenuNav'
 					}
-					aria-label="Mobile Navigation"
+					aria-label='Mobile Navigation'
 				>
 					<motion.div
-						className="CROSS-ICON absolute top-0 right-0 px-6 py-8"
+						className='CROSS-ICON absolute top-0 right-0 px-6 py-8'
 						onClick={() => setIsNavOpen(false)}
-						aria-label="Close Mobile Navigation"
+						aria-label='Close Mobile Navigation'
 					>
 						<motion.div
 							whileTap={{ scale: 0.5 }}
@@ -49,13 +49,13 @@ export default function Menu() {
 						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
-								href="/"
+								href='/'
 								className={
 									currentRoute === '/'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
-								aria-label="Home"
+								aria-label='Home'
 							>
 								home
 							</Link>
@@ -63,13 +63,13 @@ export default function Menu() {
 						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
-								href="/about"
+								href='/#about'
 								className={
-									currentRoute === '/about'
+									currentRoute === '/#about'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
-								aria-label="About"
+								aria-label='About'
 							>
 								about
 							</Link>
@@ -77,13 +77,13 @@ export default function Menu() {
 						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
-								href="/projects"
+								href='/#projects'
 								className={
-									currentRoute === '/projects'
+									currentRoute === '/#projects'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
-								aria-label="Projects"
+								aria-label='Projects'
 							>
 								projects
 							</Link>
@@ -91,25 +91,25 @@ export default function Menu() {
 						<li>
 							<Link
 								onClick={() => setIsNavOpen(false)}
-								href="/contact"
+								href='/#contact'
 								className={
-									currentRoute === '/contact'
+									currentRoute === '/#contact'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
-								aria-label="Contact"
+								aria-label='Contact'
 							>
 								contact
 							</Link>
 						</li>
 						<div
-							className="flex space-x-4 text-3xl"
-							aria-label="Social Media Links"
+							className='flex space-x-4 text-3xl'
+							aria-label='Social Media Links'
 						>
 							<Link
-								href="https://github.com/charlieBdev"
-								target="_blank"
-								aria-label="GitHub"
+								href='https://github.com/charlieBdev'
+								target='_blank'
+								aria-label='GitHub'
 							>
 								<motion.div
 									whileHover={{ scale: 1.1 }}
@@ -119,9 +119,9 @@ export default function Menu() {
 								</motion.div>
 							</Link>
 							<Link
-								href="https://www.linkedin.com/in/charlie-bishop-4a897314a/"
-								target="_blank"
-								aria-label="LinkedIn"
+								href='https://www.linkedin.com/in/charlie-bishop-4a897314a/'
+								target='_blank'
+								aria-label='LinkedIn'
 							>
 								<motion.div
 									whileHover={{ scale: 1.1 }}
@@ -134,9 +134,9 @@ export default function Menu() {
 					</ul>
 				</div>
 				<button
-					className="MENU-ICON"
+					className='MENU-ICON'
 					onClick={() => setIsNavOpen((prev) => !prev)}
-					aria-label="Mobile Menu"
+					aria-label='Mobile Menu'
 				>
 					<motion.div
 						initial={{ scale: 0 }}
@@ -148,10 +148,10 @@ export default function Menu() {
 				</button>
 			</div>
 
-			<ul className="DESKTOP-MENU hidden mr-3 space-x-12 lg:flex text-purple-300">
+			<ul className='DESKTOP-MENU hidden mr-3 space-x-12 lg:flex text-purple-300'>
 				<li>
 					<Link
-						href="/"
+						href='/'
 						className={
 							currentRoute === '/'
 								? 'text-pink-400 border-b border-pink-400'
@@ -163,9 +163,9 @@ export default function Menu() {
 				</li>
 				<li>
 					<Link
-						href="/about"
+						href='/#about'
 						className={
-							currentRoute === '/about'
+							currentRoute === '/#about'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
@@ -175,9 +175,9 @@ export default function Menu() {
 				</li>
 				<li>
 					<Link
-						href="/projects"
+						href='/#projects'
 						className={
-							currentRoute === '/projects'
+							currentRoute === '/#projects'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
@@ -187,9 +187,9 @@ export default function Menu() {
 				</li>
 				<li>
 					<Link
-						href="/contact"
+						href='/#contact'
 						className={
-							currentRoute === '/contact'
+							currentRoute === '/#contact'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}

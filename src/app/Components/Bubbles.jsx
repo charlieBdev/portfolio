@@ -47,7 +47,7 @@ export const Bubbles = () => {
 	};
 
 	return (
-		<div className="bg-inherit mt-24 fixed top-0 left-0 w-full h-full">
+		<div className='bg-inherit mt-24 fixed top-0 left-0 w-full h-full'>
 			<AnimatePresence>
 				{bubbles.map((bubble) => (
 					<motion.div
@@ -59,13 +59,13 @@ export const Bubbles = () => {
 							width: bubble.radius,
 							height: bubble.radius,
 							borderRadius: '50%',
-							backgroundColor: `rgba(${bubble.color}, 0.3)`,
+							backgroundColor: `rgba(${bubble.color}, 0.1)`,
 							border: `1px solid rgba(${bubble.color}, 1)`,
 							cursor: 'pointer',
 							zIndex: 100,
 						}}
 						onClick={() => popBubble(bubble.id)}
-						className="hover:animate-pulse"
+						className='hover:animate-pulse'
 						initial={{ scale: 0 }}
 						animate={{ scale: 1 }}
 						whileHover={{ scale: 0.9 }}

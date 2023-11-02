@@ -17,7 +17,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
+		<html
+			lang='en'
+			className='!scroll-smooth overflow-x-hidden transition-all duration-500 ease-in-out'
+		>
 			<head>
 				<link
 					rel='stylesheet'
@@ -63,10 +66,10 @@ export default function RootLayout({
 					}}
 				></script>
 			</head>
-			<body className='flex flex-col min-h-screen justify-between'>
+			<body className='flex flex-col justify-between'>
 				<ThemeProvider>
 					<Navbar />
-					<main className='flex-grow mt-24 flex flex-col'>{children}</main>
+					<main className='flex flex-col'>{children}</main>
 					<Footer />
 					<Toaster richColors />
 				</ThemeProvider>

@@ -1,10 +1,16 @@
 import { Bubbles, MainText } from './Components';
+import About from './about/page';
+import Contact from './contact/page';
+import Projects from './projects/page';
 
 export default function Home() {
 	return (
-		<section className="h-[calc(100vh-10rem)] text-center">
+		<div>
 			<Bubbles />
 			<MainText />
-		</section>
+			<About />
+			<Projects />
+			<Contact />
+		</div>
 	);
 }

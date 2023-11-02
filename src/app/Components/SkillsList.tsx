@@ -2,7 +2,7 @@
 
 import skillsArr from '@/data/skillsArr';
 import { SkillsCard } from '.';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const SkillsList = () => {
@@ -15,7 +15,7 @@ const SkillsList = () => {
 	return (
 		<>
 			{/* small plus screens */}
-			<div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3 hidden">
+			<div className='sm:grid sm:grid-cols-3 gap-3 mt-3 hidden'>
 				{skillsArr.map((skill) => (
 					<SkillsCard
 						key={skill.topic}
@@ -27,12 +27,12 @@ const SkillsList = () => {
 			</div>
 
 			{/* mobile carousel */}
-			<div className="carousel w-full mt-3 sm:hidden rounded-lg shadow overflow-hidden hover:shadow-xl">
+			<div className='carousel carousel-center sm:hidden rounded-lg shadow hover:shadow-xl'>
 				{skillsArr.map((skill, index) => (
 					<div
 						key={skill.topic}
 						id={`item${index + 1}`}
-						className="carousel-item w-full"
+						className='carousel-item w-4/5'
 					>
 						<SkillsCard
 							key={skill.topic}
@@ -43,17 +43,18 @@ const SkillsList = () => {
 					</div>
 				))}
 			</div>
-			<div className="flex justify-center w-full py-2 gap-4 sm:hidden items-center">
+			{/* <div className='flex justify-center w-full py-2 gap-4 md:hidden items-center'>
 				{skillsArr.map((skill, index) => (
 					<a
 						key={skill.topic}
-						href={`#item${index + 1}`}
+						// href={`#item${index + 1}`}
+						href='#about'
 						className={`text-center ${
 							activeSlide === index
 								? 'text-green-500 shadow-xl animate-pulse'
 								: 'border-none'
 						}`}
-						onClick={(event) => handleAnchorClick(index)} // Update activeSlide when the link is clicked
+						onClick={(event) => handleAnchorClick(index)}
 						aria-label={skill.topic}
 					>
 						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.5 }}>
@@ -61,7 +62,7 @@ const SkillsList = () => {
 						</motion.div>
 					</a>
 				))}
-			</div>
+			</div> */}
 		</>
 	);
 };

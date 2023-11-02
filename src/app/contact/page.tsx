@@ -64,29 +64,32 @@ export default function Contact() {
 	const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
 
 	return (
-		<section className="min-h-[calc(100vh-10rem)] p-6 xl:px-24 flex flex-col lg:flex-row xl:flex-col lg:justify-between xl:justify-start xl:mx-auto xl:items-center space-y-6">
-			<div className="space-y-1">
-				<h2 className="text-lg text-pink-400">Contact</h2>
+		<section
+			id='contact'
+			className='h-[calc(100vh-10rem)] p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
+		>
+			<div className='gap-1'>
+				<h2 className='text-lg text-pink-400'>Contact</h2>
 				<p>
-					Please <span className="">feel free</span> to leave a message. I'd{' '}
-					<span className="">love</span> to hear from you{' '}
-					<span className="">regardless</span> of what it's about!
+					Please <span className=''>feel free</span> to leave a message. I'd{' '}
+					<span className=''>love</span> to hear from you{' '}
+					<span className=''>regardless</span> of what it's about!
 				</p>
-				<p>
-					If you have any <span className="">accessibility issues</span> with
-					the site, please <span className="">let me know</span>.
-				</p>
+				{/* <p>
+					If you have any <span className=''>accessibility issues</span> with
+					the site, please <span className=''>let me know</span>.
+				</p> */}
 			</div>
 			{/* <ContactForm /> */}
 			<form
-				className="w-full max-w-xl mx-auto px-1 lg:mr-0 lg:ml-8 space-y-3"
+				className='w-full max-w-xl flex flex-col gap-3'
 				ref={form}
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<div className="flex flex-wrap -mx-3">
-					<div className="w-full px-2">
-						<div className="flex justify-between text-neutral-400 tracking-wide text-xs mb-1">
-							<label className="font-bold" htmlFor="user_name">
+				<div className='flex flex-wrap -mx-3'>
+					<div className='w-full px-2'>
+						<div className='flex justify-between text-neutral-400 tracking-wide text-xs mb-1'>
+							<label className='font-bold' htmlFor='user_name'>
 								Name
 							</label>
 							<p className={name.length > 50 ? 'text-pink-400' : ''}>
@@ -100,25 +103,25 @@ export default function Contact() {
 							} ${name.length === 0 ? 'focus:bg-white' : ''} ${
 								name.length > 50 ? 'bg-pink-100' : ''
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
-							id="user_name"
-							type="text"
+							id='user_name'
+							type='text'
 							placeholder="What's your name?"
 							{...register('user_name', { required: true, maxLength: 50 })}
 							value={name}
 							onChange={(e) => setName(e.target.value)}
 						/>
 						{errors.user_name && (name.length === 0 || name.length > 50) && (
-							<p className="text-pink-400 text-xs italic mt-1">
+							<p className='text-pink-400 text-xs italic mt-1'>
 								Please check your name. Max length is 50 chars.
 							</p>
 						)}
 					</div>
 				</div>
-				<div className="flex flex-wrap -mx-3">
-					<div className="w-full px-2">
+				<div className='flex flex-wrap -mx-3'>
+					<div className='w-full px-2'>
 						<label
-							className="text-neutral-400 block tracking-wide text-xs font-bold mb-1"
-							htmlFor="user_email"
+							className='text-neutral-400 block tracking-wide text-xs font-bold mb-1'
+							htmlFor='user_email'
 						>
 							e-mail
 						</label>
@@ -132,8 +135,8 @@ export default function Contact() {
 							} ${
 								email.length === 0 ? 'focus:bg-white' : ''
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
-							id="user_email"
-							type="text"
+							id='user_email'
+							type='text'
 							placeholder="What's your e-mail?"
 							{...register('user_email', {
 								required: true,
@@ -143,18 +146,18 @@ export default function Contact() {
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 						{errors.user_email && !emailRegex.test(email) && (
-							<p className="text-pink-400 text-xs italic mt-1">
+							<p className='text-pink-400 text-xs italic mt-1'>
 								Please check your e-mail address.
 							</p>
 						)}
 					</div>
 				</div>
-				<div className="flex flex-wrap -mx-3">
-					<div className="w-full px-2">
-						<div className="flex justify-between text-neutral-400 tracking-wide text-xs mb-1">
+				<div className='flex flex-wrap -mx-3'>
+					<div className='w-full px-2'>
+						<div className='flex justify-between text-neutral-400 tracking-wide text-xs mb-1'>
 							<label
-								className="block tracking-wide text-xs font-bold"
-								htmlFor="message"
+								className='block tracking-wide text-xs font-bold'
+								htmlFor='message'
 							>
 								Message
 							</label>
@@ -170,24 +173,24 @@ export default function Contact() {
 							} ${msg.length === 0 ? 'focus:bg-white' : ''} ${
 								msg.length > 300 ? 'bg-pink-100' : ''
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
-							id="message"
+							id='message'
 							placeholder="What's your message?"
 							{...register('message', { required: true, maxLength: 300 })}
 							value={msg}
 							onChange={(e) => setMsg(e.target.value)}
 						></textarea>
 						{errors.message && (msg.length === 0 || msg.length > 300) && (
-							<p className="text-pink-400 text-xs italic mt-1">
+							<p className='text-pink-400 text-xs italic mt-1'>
 								Please check your message. Max length is 300 chars.
 							</p>
 						)}
 					</div>
 				</div>
-				<div className="-mx-1 space-y-3">
+				<div className='-mx-1'>
 					<button
-						className="text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse"
-						type="submit"
-						aria-label="Submit"
+						className='text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse'
+						type='submit'
+						aria-label='Submit'
 					>
 						{isSending ? <Spinner /> : 'Send'}
 					</button>
