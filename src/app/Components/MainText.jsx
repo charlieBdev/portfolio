@@ -29,7 +29,7 @@ export const MainText = () => {
 	return (
 		<div className='h-[calc(100dvh-10rem)] flex flex-col items-center justify-center gap-3 select-none p-6 xl:px-24 xl:items-center hover:cursor-pointer overflow-hidden'>
 			<motion.div drag>
-				<animated.p style={flickerAnimation} className='text-9xl relative'>
+				<animated.p style={flickerAnimation} className='text-8xl relative'>
 					Hello
 				</animated.p>
 			</motion.div>
