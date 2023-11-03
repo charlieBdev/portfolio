@@ -3,8 +3,9 @@
 import Link from 'next/link';
 import ThemeButton from './ThemeButton';
 import Menu from './Menu';
+import { MenuProps } from '../interfaces/MenuProps';
 
-export default function Navbar(props) {
+export default function Navbar(props: MenuProps) {
 	return (
 		<header className=''>
 			<nav className='fixed top-0 left-0 right-0 px-6 h-20 xl:px-24 flex items-center justify-between shadow-xl bg-opacity-90 backdrop-blur dark:bg-opacity-90 dark:backdrop-blur z-10'>
@@ -17,7 +18,7 @@ export default function Navbar(props) {
 				</Link>
 				<div className='flex items-center justify-center space-x-3 lg:space-x-12'>
 					<ThemeButton />
-					<Menu props={props} />
+					<Menu {...props} />
 				</div>
 			</nav>
 		</header>

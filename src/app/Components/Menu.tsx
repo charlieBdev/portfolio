@@ -8,12 +8,11 @@ import Cross from './Cross';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
+import { MenuProps } from '../interfaces/MenuProps';
 
-export default function Menu({
-	props: { activeLink, setActiveLink, handleSetActiveLink },
-}) {
+export default function Menu(props: MenuProps) {
+	const { activeLink, setActiveLink } = props;
 	const [isNavOpen, setIsNavOpen] = useState(false);
-	const [currNav, setCurrNav] = useState('Home');
 	const { theme } = useContext(ThemeContext);
 
 	const handleClick = (navLink: string) => {
