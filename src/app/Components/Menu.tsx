@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import Burger from './Burger';
 import Cross from './Cross';
@@ -12,8 +11,14 @@ import { motion } from 'framer-motion';
 
 export default function Menu() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
-	const currentRoute = usePathname();
+	const [currNav, setCurrNav] = useState('Home');
 	const { theme } = useContext(ThemeContext);
+
+	const handleClick = (navLink) => {
+		if (isNavOpen) setIsNavOpen(false);
+		setCurrNav(navLink);
+		console.log(navLink);
+	};
 
 	return (
 		<>
@@ -31,7 +36,7 @@ export default function Menu() {
 					aria-label='Mobile Navigation'
 				>
 					<motion.div
-						className='CROSS-ICON absolute top-0 right-0 px-6 py-8'
+						className='CROSS-ICON absolute top-0 right-0 px-6 py-6'
 						onClick={() => setIsNavOpen(false)}
 						aria-label='Close Mobile Navigation'
 					>
@@ -48,58 +53,58 @@ export default function Menu() {
 					>
 						<li>
 							<Link
-								onClick={() => setIsNavOpen(false)}
+								onClick={() => handleClick('Home')}
 								href='/'
 								className={
-									currentRoute === '/'
+									currNav === 'Home'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
 								aria-label='Home'
 							>
-								home
+								Home
 							</Link>
 						</li>
 						<li>
 							<Link
-								onClick={() => setIsNavOpen(false)}
-								href='/#about'
+								onClick={() => handleClick('About')}
+								href='#about'
 								className={
-									currentRoute === '/#about'
+									currNav === 'About'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
 								aria-label='About'
 							>
-								about
+								About
 							</Link>
 						</li>
 						<li>
 							<Link
-								onClick={() => setIsNavOpen(false)}
-								href='/#projects'
+								onClick={() => handleClick('Projects')}
+								href='#projects'
 								className={
-									currentRoute === '/#projects'
+									currNav === 'Projects'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
 								aria-label='Projects'
 							>
-								projects
+								Projects
 							</Link>
 						</li>
 						<li>
 							<Link
-								onClick={() => setIsNavOpen(false)}
-								href='/#contact'
+								onClick={() => handleClick('Contact')}
+								href='#contact'
 								className={
-									currentRoute === '/#contact'
+									currNav === 'Contact'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
 								aria-label='Contact'
 							>
-								contact
+								Contact
 							</Link>
 						</li>
 						<div
@@ -153,48 +158,52 @@ export default function Menu() {
 					<Link
 						href='/'
 						className={
-							currentRoute === '/'
+							currNav === 'Home'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
+						onClick={() => handleClick('Home')}
 					>
-						home
+						Home
 					</Link>
 				</li>
 				<li>
 					<Link
-						href='/#about'
+						href='#about'
 						className={
-							currentRoute === '/#about'
+							currNav === 'About'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
+						onClick={() => handleClick('About')}
 					>
-						about
+						About
 					</Link>
 				</li>
 				<li>
 					<Link
-						href='/#projects'
+						href='#projects'
 						className={
-							currentRoute === '/#projects'
+							currNav === 'Projects'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
+						onClick={() => handleClick('Projects')}
 					>
-						projects
+						Projects
 					</Link>
 				</li>
 				<li>
 					<Link
-						href='/#contact'
+						href='#contact'
 						className={
-							currentRoute === '/#contact'
+							currNav === 'Contact'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
+						onClick={() => handleClick('Contact')}
 					>
-						contact
+						Contact
 					</Link>
 				</li>
 			</ul>

@@ -17,7 +17,7 @@ export default function Navbar() {
 				</Link>
 				<div className='flex items-center justify-center space-x-3 lg:space-x-12'>
 					<ThemeButton />
-					{/* <Menu /> */}
+					<Menu />
 				</div>
 			</nav>
 		</header>
