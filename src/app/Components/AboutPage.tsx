@@ -1,11 +1,24 @@
-import Link from 'next/link';
-import SkillsList from '../Components/SkillsList';
-import IconsList from '../Components/IconsList';
+'use client';
 
-export default function About() {
+import SkillsList from './SkillsList';
+import IconsList from './IconsList';
+import { useEffect, useRef } from 'react';
+import { useInView } from 'framer-motion';
+import { SectionProps } from '../interfaces/SectionProps';
+
+export const AboutPage = (props: SectionProps) => {
+	const { setActiveLink } = props;
+	const ref = useRef(null);
+	const isInViewAbout = useInView(ref, { amount: 0.9 });
+
+	useEffect(() => {
+		if (isInViewAbout) setActiveLink('About');
+	}, [isInViewAbout, setActiveLink]);
+
 	return (
 		// flex flex-col justify-center items-center min-h-screen relative
 		<section
+			ref={ref}
 			id='about'
 			className='min-h-[calc(100vh)] pt-20 flex flex-col justify-start gap-3 p-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
@@ -75,4 +88,4 @@ export default function About() {
 			</div>
 		</section>
 	);
-}
+};

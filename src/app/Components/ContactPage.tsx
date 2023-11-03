@@ -1,12 +1,23 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import { Spinner } from '../Components';
+import { Spinner } from '.';
 import { toast } from 'sonner';
+import { useInView } from 'framer-motion';
+import { SectionProps } from '../interfaces/SectionProps';
 
-export default function Contact() {
+export const ContactPage = (props: SectionProps) => {
+	const { setActiveLink } = props;
+
+	const ref = useRef(null);
+	const isInViewContact = useInView(ref, { amount: 0.9 });
+
+	useEffect(() => {
+		if (isInViewContact) setActiveLink('Contact');
+	}, [isInViewContact, setActiveLink]);
+
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [msg, setMsg] = useState('');
@@ -65,6 +76,7 @@ export default function Contact() {
 
 	return (
 		<section
+			ref={ref}
 			id='contact'
 			className='min-h-[calc(100vh-4rem)] pt-20 p-6 xl:px-24 gap-6 flex flex-col items-center justify-start bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
@@ -198,4 +210,4 @@ export default function Contact() {
 			</form>
 		</section>
 	);
-}
+};

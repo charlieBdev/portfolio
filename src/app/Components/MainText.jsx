@@ -1,8 +1,9 @@
 'use client';
 import { animated, useSpring } from '@react-spring/web';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
-export const MainText = () => {
+export const MainText = ({ setActiveLink }) => {
 	const getRandomDelay = () => Math.floor(Math.random() * 1000) + 500; // Adjust delay range as needed
 
 	const flickerAnimation = useSpring({
@@ -26,8 +27,18 @@ export const MainText = () => {
 		config: { tension: 200, friction: 10 },
 	});
 
+	const ref = useRef(null);
+	const isInViewMainText = useInView(ref, { amount: 0.9 });
+
+	useEffect(() => {
+		if (isInViewMainText) setActiveLink('Home');
+	}, [isInViewMainText, setActiveLink]);
+
 	return (
-		<div className='min-h-[calc(100svh-5rem)] mt-20 flex flex-col items-center justify-center gap-3 select-none p-6 xl:px-24 xl:items-center hover:cursor-pointer overflow-hidden'>
+		<div
+			ref={ref}
+			className='min-h-[calc(100svh-5rem)] mt-20 flex flex-col items-center justify-center gap-3 select-none p-6 xl:px-24 xl:items-center hover:cursor-pointer overflow-hidden'
+		>
 			<motion.div drag>
 				<animated.p style={flickerAnimation} className='text-8xl relative'>
 					Hello
