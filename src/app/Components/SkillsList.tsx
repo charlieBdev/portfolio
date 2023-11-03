@@ -15,7 +15,7 @@ const SkillsList = () => {
 	return (
 		<>
 			{/* small plus screens */}
-			<div className='sm:grid sm:grid-cols-3 gap-3 mt-3 hidden'>
+			<div className='sm:grid sm:grid-cols-3 gap-3 hidden'>
 				{skillsArr.map((skill) => (
 					<SkillsCard
 						key={skill.topic}
@@ -27,7 +27,7 @@ const SkillsList = () => {
 			</div>
 
 			{/* mobile carousel */}
-			<div className='carousel carousel-center sm:hidden py-6 gap-3'>
+			<div className='carousel carousel-center sm:hidden gap-3 rounded-lg py-6'>
 				{skillsArr.map((skill, index) => (
 					<div
 						key={skill.topic}

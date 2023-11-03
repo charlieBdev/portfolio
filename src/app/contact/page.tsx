@@ -66,7 +66,7 @@ export default function Contact() {
 	return (
 		<section
 			id='contact'
-			className='h-[calc(100vh-9rem)] p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
+			className='min-h-[calc(100vh-9rem)] p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
 			<div className='gap-1'>
 				<h2 className='text-lg text-pink-400'>Contact</h2>
@@ -86,7 +86,7 @@ export default function Contact() {
 				ref={form}
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<div className='flex flex-wrap -mx-3'>
+				<div className='flex flex-col -mx-2'>
 					<div className='w-full px-2'>
 						<div className='flex justify-between text-neutral-400 tracking-wide text-xs mb-1'>
 							<label className='font-bold' htmlFor='user_name'>
@@ -105,7 +105,7 @@ export default function Contact() {
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
 							id='user_name'
 							type='text'
-							placeholder="What's your name?"
+							placeholder='Mr. Musk'
 							{...register('user_name', { required: true, maxLength: 50 })}
 							value={name}
 							onChange={(e) => setName(e.target.value)}
@@ -117,7 +117,7 @@ export default function Contact() {
 						)}
 					</div>
 				</div>
-				<div className='flex flex-wrap -mx-3'>
+				<div className='flex flex-wrap -mx-2'>
 					<div className='w-full px-2'>
 						<label
 							className='text-neutral-400 block tracking-wide text-xs font-bold mb-1'
@@ -137,7 +137,7 @@ export default function Contact() {
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
 							id='user_email'
 							type='text'
-							placeholder="What's your e-mail?"
+							placeholder='elon@spaceX.com'
 							{...register('user_email', {
 								required: true,
 								pattern: emailRegex,
@@ -152,7 +152,7 @@ export default function Contact() {
 						)}
 					</div>
 				</div>
-				<div className='flex flex-wrap -mx-3'>
+				<div className='flex flex-wrap -mx-2'>
 					<div className='w-full px-2'>
 						<div className='flex justify-between text-neutral-400 tracking-wide text-xs mb-1'>
 							<label
@@ -174,7 +174,7 @@ export default function Contact() {
 								msg.length > 300 ? 'bg-pink-100' : ''
 							} appearance-none block w-full text-neutral-950 border border-gray-200 focus:border-cyan-400 rounded py-2 px-3 leading-tight focus:outline-none`}
 							id='message'
-							placeholder="What's your message?"
+							placeholder='You are great! Can I hire you?'
 							{...register('message', { required: true, maxLength: 300 })}
 							value={msg}
 							onChange={(e) => setMsg(e.target.value)}
@@ -186,7 +186,7 @@ export default function Contact() {
 						)}
 					</div>
 				</div>
-				<div className='-mx-1'>
+				<div className='mx-auto'>
 					<button
 						className='text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse'
 						type='submit'

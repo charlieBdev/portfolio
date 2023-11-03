@@ -15,7 +15,7 @@ export default function Projects() {
 	return (
 		<section
 			id='projects'
-			className='h-[calc(100vh-5rem)] flex flex-col justify-center p-6 xl:px-24 gap-1 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
+			className='min-h-[calc(100vh-5rem)] flex flex-col justify-center p-6 xl:px-24 gap-1 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
 			<div className='flex justify-between items-center'>
 				<h2 className='text-lg text-pink-400'>Projects</h2>
