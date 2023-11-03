@@ -6,7 +6,7 @@ interface IconCardProps {
 const IconCard: React.FC<IconCardProps> = ({ name, svg }) => {
 	return (
 		<div
-			className='carousel-item text-2xl md:text-3xl lg:text-4xl'
+			className='carousel-item text-2xl md:text-3xl lg:text-4xl tooltip tooltip-top'
 			data-tip={name}
 		>
 			<span className={svg} aria-label={name} role='img'></span>

@@ -40,7 +40,7 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 	return (
 		<div>
 			{showFilters && (
-				<ul className='flex gap-1 mb-3 items-center justify-start carousel carousel-center py-3'>
+				<ul className='flex gap-1 items-center justify-start carousel carousel-center pb-3 rounded-lg'>
 					{uniqueTags.map((tag) => (
 						<button
 							key={tag}
@@ -59,7 +59,7 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 
 			{/* <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3"> */}
 			<div className='flex items-center justify-center'>
-				<div className='carousel carousel-center gap-3 py-6'>
+				<div className='carousel carousel-center gap-3 pb-6 rounded-lg'>
 					{filteredProjects.map((project) => (
 						<ProjectCard
 							key={project.name}

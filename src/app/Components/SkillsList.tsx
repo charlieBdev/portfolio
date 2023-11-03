@@ -27,7 +27,7 @@ const SkillsList = () => {
 			</div>
 
 			{/* mobile carousel */}
-			<div className='carousel carousel-center sm:hidden gap-3 rounded-lg py-6'>
+			<div className='carousel carousel-center sm:hidden gap-3 rounded-lg pb-6'>
 				{skillsArr.map((skill, index) => (
 					<div
 						key={skill.topic}
@@ -43,7 +43,7 @@ const SkillsList = () => {
 					</div>
 				))}
 			</div>
-			{/* <div className='flex justify-center w-full py-2 gap-4 md:hidden items-center'>
+			{/* <div className='flex justify-center w-full gap-4 md:hidden items-center'>
 				{skillsArr.map((skill, index) => (
 					<a
 						key={skill.topic}
