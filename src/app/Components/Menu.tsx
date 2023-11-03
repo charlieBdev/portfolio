@@ -14,7 +14,7 @@ export default function Menu() {
 	const [currNav, setCurrNav] = useState('Home');
 	const { theme } = useContext(ThemeContext);
 
-	const handleClick = (navLink) => {
+	const handleClick = (navLink: string) => {
 		if (isNavOpen) setIsNavOpen(false);
 		setCurrNav(navLink);
 		console.log(navLink);
