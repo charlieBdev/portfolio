@@ -68,7 +68,7 @@ export default function RootLayout({
 			</head>
 			<body className='flex flex-col justify-between'>
 				<ThemeProvider>
-					<Navbar />
+					{/* <Navbar /> */}
 					<main className='flex flex-col'>{children}</main>
 					<Footer />
 					<Toaster richColors />

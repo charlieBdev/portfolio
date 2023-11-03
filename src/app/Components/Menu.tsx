@@ -9,15 +9,16 @@ import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
 
-export default function Menu() {
+export default function Menu({
+	props: { activeLink, setActiveLink, handleSetActiveLink },
+}) {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const [currNav, setCurrNav] = useState('Home');
 	const { theme } = useContext(ThemeContext);
 
 	const handleClick = (navLink: string) => {
 		if (isNavOpen) setIsNavOpen(false);
-		setCurrNav(navLink);
-		console.log(navLink);
+		setActiveLink(navLink);
 	};
 
 	return (
@@ -56,7 +57,7 @@ export default function Menu() {
 								onClick={() => handleClick('Home')}
 								href='/'
 								className={
-									currNav === 'Home'
+									activeLink === 'Home'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
@@ -70,7 +71,7 @@ export default function Menu() {
 								onClick={() => handleClick('About')}
 								href='#about'
 								className={
-									currNav === 'About'
+									activeLink === 'About'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
@@ -84,7 +85,7 @@ export default function Menu() {
 								onClick={() => handleClick('Projects')}
 								href='#projects'
 								className={
-									currNav === 'Projects'
+									activeLink === 'Projects'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
@@ -98,7 +99,7 @@ export default function Menu() {
 								onClick={() => handleClick('Contact')}
 								href='#contact'
 								className={
-									currNav === 'Contact'
+									activeLink === 'Contact'
 										? 'text-pink-400 border-b border-pink-400'
 										: 'border-b border-purple-300 text-purple-300'
 								}
@@ -158,7 +159,7 @@ export default function Menu() {
 					<Link
 						href='/'
 						className={
-							currNav === 'Home'
+							activeLink === 'Home'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
@@ -171,7 +172,7 @@ export default function Menu() {
 					<Link
 						href='#about'
 						className={
-							currNav === 'About'
+							activeLink === 'About'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
@@ -184,7 +185,7 @@ export default function Menu() {
 					<Link
 						href='#projects'
 						className={
-							currNav === 'Projects'
+							activeLink === 'Projects'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
@@ -197,7 +198,7 @@ export default function Menu() {
 					<Link
 						href='#contact'
 						className={
-							currNav === 'Contact'
+							activeLink === 'Contact'
 								? 'text-pink-400 border-b border-pink-400'
 								: 'border-b border-purple-300'
 						}
