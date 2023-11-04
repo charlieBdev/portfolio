@@ -7,7 +7,7 @@ interface SkillsCardProps {
 	topic: string;
 	skills: string[];
 	svg: JSX.Element;
-	setActiveSlide: React.Dispatch<React.SetStateAction<string>>;
+	setActiveSlide?: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const SkillsCard: React.FC<SkillsCardProps> = ({
@@ -20,8 +20,8 @@ export const SkillsCard: React.FC<SkillsCardProps> = ({
 	const isInView = useInView(ref, { amount: 0.9 });
 
 	useEffect(() => {
-		if (isInView) setActiveSlide(topic);
-	}, [isInView, setActiveSlide]);
+		if (isInView && setActiveSlide) setActiveSlide(topic);
+	}, [isInView, setActiveSlide, topic]);
 
 	return (
 		<div
