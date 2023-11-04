@@ -4,6 +4,8 @@ const projectsArr = [
 		desc: 'Not done yet',
 		imgURL: '/Strasse/StrasseGym.png',
 		tags: [
+			'Formik',
+			'Yup',
 			'BAAS',
 			'CMS',
 			'Firebase',

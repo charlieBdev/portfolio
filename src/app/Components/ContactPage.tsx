@@ -204,7 +204,7 @@ export const ContactPage = (props: SectionProps) => {
 						type='submit'
 						aria-label='Submit'
 					>
-						{isSending ? <Spinner /> : 'Send'}
+						{isSending ? <Spinner /> : 'Submit'}
 					</button>
 				</div>
 			</form>

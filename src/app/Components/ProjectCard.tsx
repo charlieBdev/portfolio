@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Button from './Button';
+import sortAZ from '@/utils/sortAZ';
 
 interface ProjectCardProps {
 	name: string;
@@ -40,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					<h3 className='text-green-500 text-lg'>{name}</h3>
 					{/* <p className="">{desc}</p> */}
 					<div className='flex flex-wrap gap-1'>
-						{tags.map((tag) => (
+						{sortAZ(tags).map((tag) => (
 							<button
 								key={tag}
 								onClick={() => {

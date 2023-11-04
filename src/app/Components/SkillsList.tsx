@@ -3,14 +3,14 @@
 import skillsArr from '@/data/skillsArr';
 import { SkillsCard } from '.';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 const SkillsList = () => {
-	const [activeSlide, setActiveSlide] = useState(0);
+	const [activeSlide, setActiveSlide] = useState('Frontend');
 
-	const handleAnchorClick = (index: number) => {
-		setActiveSlide(index);
-	};
+	// const handleAnchorClick = (index: number) => {
+	// 	setActiveSlide(index);
+	// };
 
 	return (
 		<>
@@ -27,7 +27,7 @@ const SkillsList = () => {
 			</div>
 
 			{/* mobile carousel */}
-			<div className='carousel carousel-center sm:hidden gap-3 rounded-lg pb-6'>
+			<div className='carousel carousel-center sm:hidden rounded-lg pb-6'>
 				{skillsArr.map((skill, index) => (
 					<div
 						key={skill.topic}
@@ -39,30 +39,30 @@ const SkillsList = () => {
 							topic={skill.topic}
 							skills={skill.skills}
 							svg={skill.svg}
+							setActiveSlide={setActiveSlide}
 						/>
 					</div>
 				))}
 			</div>
-			{/* <div className='flex justify-center w-full gap-4 md:hidden items-center'>
+			<div className='flex justify-center w-full gap-4 md:hidden items-center'>
 				{skillsArr.map((skill, index) => (
-					<a
+					<p
 						key={skill.topic}
 						// href={`#item${index + 1}`}
-						href='#about'
 						className={`text-center ${
-							activeSlide === index
-								? 'text-green-500 shadow-xl animate-pulse'
+							activeSlide === skill.topic
+								? 'text-green-500 shadow-xl'
 								: 'border-none'
 						}`}
-						onClick={(event) => handleAnchorClick(index)}
+						// onClick={(event) => handleAnchorClick(index)}
 						aria-label={skill.topic}
 					>
-						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.5 }}>
-							{skill.svg}
-						</motion.div>
-					</a>
+						{/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.5 }}> */}
+						{skill.svg}
+						{/* </motion.div> */}
+					</p>
 				))}
-			</div> */}
+			</div>
 		</>
 	);
 };
