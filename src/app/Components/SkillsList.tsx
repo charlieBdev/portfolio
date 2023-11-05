@@ -32,7 +32,7 @@ const SkillsList = () => {
 					<div
 						key={skill.topic}
 						id={`item${index + 1}`}
-						className='carousel-item w-[90%]'
+						className='carousel-item w-full'
 					>
 						<SkillsCard
 							key={skill.topic}
