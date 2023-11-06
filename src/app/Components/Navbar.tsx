@@ -5,8 +5,7 @@ import ThemeButton from './ThemeButton';
 import Menu from './Menu';
 import { MenuProps } from '../interfaces/MenuProps';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { unsubscribe } from 'diagnostics_channel';
+import { useState } from 'react';
 
 export default function Navbar(props: MenuProps) {
 	const { scrollY } = useScroll();

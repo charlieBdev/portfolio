@@ -78,7 +78,7 @@ export const ContactPage = (props: SectionProps) => {
 		<section
 			ref={ref}
 			id='contact'
-			className='min-h-[calc(100vh-4rem)] pt-20 p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
+			className='min-h-[calc(100vh)] pt-20 p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
 			<div className='gap-1'>
 				<h2 className='text-lg text-pink-400'>Contact</h2>

@@ -1,13 +1,32 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, scroll, useMotionValueEvent, useScroll } from 'framer-motion';
 import Link from 'next/link';
+import { useState } from 'react';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 export default function Footer() {
+	const [hidden, setHidden] = useState(true);
+
+	scroll((progress) => {
+		if (progress >= 0.99) {
+			setHidden(false);
+		} else {
+			setHidden(true);
+		}
+	});
+
 	return (
 		// <footer className={`flex justify-between items-center px-6 xl:px-24 border-t border-neutral-500 fixed bottom-0 left-0 right-0 h-16 text-neutral-700 bg-white dark:text-white dark:bg-black`}>
-		<footer className='h-16 flex justify-between items-center px-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'>
+		<motion.footer
+			variants={{
+				visible: { y: 0 },
+				hidden: { y: '100%' },
+			}}
+			animate={hidden ? 'hidden' : 'visible'}
+			transition={{ duration: 0.35, ease: 'easeInOut' }}
+			className='fixed bottom-0 w-full h-16 flex justify-between items-center px-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
+		>
 			<div className='flex space-x-4 text-3xl'>
 				<Link
 					href='https://github.com/charlieBdev'
@@ -44,8 +63,8 @@ export default function Footer() {
 				Charlie Bishop{' '}
 				<span className='hidden md:inline-block'>with lots of ☕️</span>{' '}
 				<span className='hidden lg:inline-block'>and 🍪</span>{' '}
-				<span className='hidden xl:inline-block'>Plus a little bit of 💜</span>
+				<span className='hidden xl:inline-block'>Plus ☕️ & 🍪</span>
 			</p>
-		</footer>
+		</motion.footer>
 	);
 }
