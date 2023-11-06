@@ -1,15 +1,16 @@
 'use client';
 
-import { motion, scroll, useMotionValueEvent, useScroll } from 'framer-motion';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 export default function Footer() {
 	const [hidden, setHidden] = useState(true);
+	const { scrollYProgress } = useScroll();
 
-	scroll((progress) => {
-		if (progress >= 0.99) {
+	useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+		if (latest >= 0.99) {
 			setHidden(false);
 		} else {
 			setHidden(true);
@@ -36,8 +37,8 @@ export default function Footer() {
 					<motion.div
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.5 }}
-						initial={{ scale: 0 }}
-						animate={{ scale: 1 }}
+						// initial={{ scale: 0 }}
+						// animate={{ scale: 1 }}
 					>
 						<AiFillGithub />
 					</motion.div>
@@ -51,8 +52,8 @@ export default function Footer() {
 					<motion.div
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.5 }}
-						initial={{ scale: 0 }}
-						animate={{ scale: 1 }}
+						// initial={{ scale: 0 }}
+						// animate={{ scale: 1 }}
 					>
 						<AiFillLinkedin />
 					</motion.div>
