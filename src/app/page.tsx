@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Bubbles, MainText } from './Components';
+import { Bubbles } from './Components';
 import Navbar from './Components/Navbar';
 import { AboutPage } from './Components/AboutPage';
 import { ContactPage } from './Components/ContactPage';
@@ -13,9 +13,8 @@ export default function Home() {
 	return (
 		<div>
 			<Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
-			<Bubbles />
 
-			<MainText setActiveLink={setActiveLink} />
+			<Bubbles setActiveLink={setActiveLink} />
 
 			<AboutPage setActiveLink={setActiveLink} />
 

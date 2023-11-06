@@ -10,6 +10,5 @@ import Navbar from './Navbar';
 import ProjectCard from './ProjectCard';
 import ProjectsList from './ProjectsList';
 import SkillsList from './SkillsList';
-export { MainText } from './MainText';
 export { Spinner } from './Spinner';
 export { SkillsCard } from './SkillsCard';
