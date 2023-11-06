@@ -31,10 +31,10 @@ export const Bubbles = ({ setActiveLink }) => {
 
 	useEffect(() => {
 		const initialBubbles = [];
-		const windowHeight = window.innerHeight * 3.5;
+		const windowHeight = window.innerHeight;
 		const windowWidth = window.innerWidth;
 
-		for (let i = 0; i < 83; i++) {
+		for (let i = 0; i < 36; i++) {
 			initialBubbles.push({
 				id: i,
 				x: Math.random() * (windowWidth - maxBubbleSize),

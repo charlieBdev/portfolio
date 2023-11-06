@@ -75,13 +75,11 @@ export const ContactPage = (props: SectionProps) => {
 	const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
 
 	return (
-		<section
-			ref={ref}
-			id='contact'
-			className='min-h-[calc(100vh)] pt-20 p-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
-		>
-			<div className='gap-1'>
-				<h2 className='text-lg text-pink-400'>Contact</h2>
+		<section className='min-h-[calc(100vh)] px-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'>
+			<div>
+				<h2 ref={ref} id='contact' className='text-lg text-pink-400'>
+					Contact
+				</h2>
 				<p>
 					Please <span className=''>feel free</span> to leave a message. I'd{' '}
 					<span className=''>love</span> to hear from you{' '}

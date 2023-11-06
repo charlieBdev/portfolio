@@ -20,9 +20,9 @@ export const AboutPage = (props: SectionProps) => {
 		<section
 			ref={ref}
 			id='about'
-			className='min-h-[calc(100vh)] pt-20 flex flex-col justify-center gap-3 p-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
+			className='min-h-[calc(100vh)] flex flex-col justify-center gap-3 px-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
-			<div className='gap-3'>
+			<div>
 				<h2 className='text-lg text-pink-400'>About</h2>
 				{/* <p>
 					Hi, I'm Charlie. I finished a thirteen-week intensive{' '}

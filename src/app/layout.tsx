@@ -16,7 +16,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en' className='!scroll-smooth overflow-x-hidden max-w-screen'>
+		<html lang='en' className='!scroll-smooth overflow-x-hidden'>
 			<head>
 				<link
 					rel='stylesheet'
@@ -62,7 +62,7 @@ export default function RootLayout({
 					}}
 				></script>
 			</head>
-			<body className='flex flex-col justify-between'>
+			<body>
 				<ThemeProvider>
 					<NavProvider>
 						{/* <Navbar /> */}
