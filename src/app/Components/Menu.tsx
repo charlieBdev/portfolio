@@ -26,7 +26,7 @@ export default function Menu(props: MenuProps) {
 				<div
 					className={
 						isNavOpen
-							? `showMenuNav ${
+							? `showMenuNav  bg-opacity-90 backdrop-blur dark:bg-opacity-90 dark:backdrop-blur ${
 									theme === 'light'
 										? 'text-neutral-900 bg-neutral-50'
 										: 'text-neutral-50 bg-neutral-900'

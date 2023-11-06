@@ -31,11 +31,14 @@ export const Bubbles = ({ setActiveLink }) => {
 
 	useEffect(() => {
 		const initialBubbles = [];
-		for (let i = 0; i < 48; i++) {
+		const windowHeight = window.innerHeight * 3.5;
+		const windowWidth = window.innerWidth;
+
+		for (let i = 0; i < 83; i++) {
 			initialBubbles.push({
 				id: i,
-				x: Math.random() * window.innerWidth,
-				y: Math.random() * window.innerHeight,
+				x: Math.random() * (windowWidth - maxBubbleSize),
+				y: Math.random() * (windowHeight - maxBubbleSize),
 				radius: Math.random() * maxBubbleSize,
 				color: getRandomColor(),
 			});

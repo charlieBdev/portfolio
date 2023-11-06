@@ -26,7 +26,7 @@ export default function Footer() {
 			}}
 			animate={hidden ? 'hidden' : 'visible'}
 			transition={{ duration: 0.35, ease: 'easeInOut' }}
-			className='fixed bottom-0 w-full h-16 flex justify-between items-center px-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur z-10'
+			className='fixed bottom-0 w-full h-16 flex justify-between items-center px-6 xl:px-24'
 		>
 			<div className='flex space-x-4 text-3xl'>
 				<Link
