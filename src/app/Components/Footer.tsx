@@ -4,16 +4,23 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import { useNav } from '../context/NavContext';
 
 export default function Footer() {
+	const { isNavOpen } = useNav();
 	const [hidden, setHidden] = useState(true);
 	const { scrollYProgress } = useScroll();
 
 	useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-		if (latest >= 0.99) {
-			setHidden(false);
-		} else {
+		console.log(isNavOpen, '<<< nav');
+		console.log(latest, '<<< latest');
+		if (!isNavOpen) {
 			setHidden(true);
+			if (latest > 0.95) {
+				setHidden(false);
+			} else if (latest <= 0.95) {
+				setHidden(true);
+			}
 		}
 	});
 
@@ -26,7 +33,7 @@ export default function Footer() {
 			}}
 			animate={hidden ? 'hidden' : 'visible'}
 			transition={{ duration: 0.35, ease: 'easeInOut' }}
-			className='fixed bottom-0 w-full h-16 flex justify-between items-center px-6 xl:px-24'
+			className='fixed left-0 bottom-0 w-full h-16 flex justify-between items-center px-6 xl:px-24 bg-opacity-90 backdrop-blur dark:bg-opacity-90 dark:backdrop-blur z-10'
 		>
 			<div className='flex space-x-4 text-3xl'>
 				<Link

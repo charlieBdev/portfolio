@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from './context/ThemeContext';
-// import Navbar from './Components/Navbar';
+import { NavProvider } from './context/NavContext';
 import Footer from './Components/Footer';
 import { Toaster } from 'sonner';
-// import Head from 'next/head';
 
 export const metadata: Metadata = {
 	title: 'Charlie B - Jnr Web Dev',
@@ -17,10 +16,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html
-			lang='en'
-			className='!scroll-smooth overflow-x-hidden transition-all duration-500 ease-in-out'
-		>
+		<html lang='en' className='!scroll-smooth overflow-x-hidden max-w-screen'>
 			<head>
 				<link
 					rel='stylesheet'
@@ -68,10 +64,12 @@ export default function RootLayout({
 			</head>
 			<body className='flex flex-col justify-between'>
 				<ThemeProvider>
-					{/* <Navbar /> */}
-					<main className='flex flex-col'>{children}</main>
-					<Footer />
-					<Toaster richColors />
+					<NavProvider>
+						{/* <Navbar /> */}
+						<main className='flex flex-col'>{children}</main>
+						<Footer />
+						<Toaster richColors />
+					</NavProvider>
 				</ThemeProvider>
 			</body>
 		</html>

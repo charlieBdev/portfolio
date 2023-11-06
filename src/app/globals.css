@@ -29,7 +29,7 @@ textarea {
 .showMenuNav {
 	display: block;
 	position: absolute;
-	width: 100%;
+	width: 100vw;
 	height: calc(100vh + 5rem);
 	top: 0;
 	left: 0;

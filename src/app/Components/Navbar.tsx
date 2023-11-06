@@ -6,18 +6,22 @@ import Menu from './Menu';
 import { MenuProps } from '../interfaces/MenuProps';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
+import { useNav } from '../context/NavContext';
 
 export default function Navbar(props: MenuProps) {
+	const { isNavOpen } = useNav();
 	const { scrollY } = useScroll();
 	const [hidden, setHidden] = useState(false);
 
 	useMotionValueEvent(scrollY, 'change', (latest) => {
 		const previous = scrollY.getPrevious();
 		// latest > 150 is padding at top to prevent immediate hiding on scroll down
-		if (latest > previous && latest > 150) {
-			setHidden(true);
-		} else {
-			setHidden(false);
+		if (!isNavOpen) {
+			if (latest > previous && latest > 150) {
+				setHidden(true);
+			} else {
+				setHidden(false);
+			}
 		}
 	});
 

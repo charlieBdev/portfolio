@@ -54,12 +54,12 @@ export const Bubbles = ({ setActiveLink }) => {
 	return (
 		<div
 			ref={ref}
-			className='relative w-full min-h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center items-center'
+			className='relative min-h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center items-center'
 		>
 			<motion.div style={{ y: textY }}>
 				<p className='text-8xl relative select-none z-10'>Hello</p>
 			</motion.div>
-			<div className='mt-20 w-full'>
+			<div className='mt-20'>
 				<AnimatePresence>
 					{bubbles.map((bubble) => (
 						<motion.div
