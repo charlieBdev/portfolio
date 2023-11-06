@@ -17,7 +17,7 @@ export const SkillsCard: React.FC<SkillsCardProps> = ({
 	setActiveSlide,
 }) => {
 	const ref = useRef<HTMLDivElement | null>(null);
-	const isInView = useInView(ref, { amount: 'all' });
+	const isInView = useInView(ref, { amount: 0.9 });
 
 	useEffect(() => {
 		if (isInView && setActiveSlide) setActiveSlide(topic);
