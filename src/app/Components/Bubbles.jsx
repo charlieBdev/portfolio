@@ -83,8 +83,8 @@ export const Bubbles = ({ setActiveLink }) => {
 								width: bubble.radius,
 								height: bubble.radius,
 								borderRadius: '50%',
-								backgroundColor: `rgba(${bubble.color}, 0.1)`,
-								border: `1px solid rgba(${bubble.color}, 1)`,
+								backgroundColor: `rgba(${bubble.color}, ${0.2 - opacity})`,
+								border: `1px solid rgba(${bubble.color}, ${1 - opacity})`,
 								cursor: 'pointer',
 								zIndex: 0,
 							}}
