@@ -5,6 +5,7 @@ import {
 	AnimatePresence,
 	motion,
 	useInView,
+	useMotionValueEvent,
 	useScroll,
 	useTransform,
 } from 'framer-motion';
@@ -13,6 +14,7 @@ import { useState, useEffect, useRef } from 'react';
 export const Bubbles = ({ setActiveLink }) => {
 	const ref = useRef(null);
 	const isInViewMainText = useInView(ref, { amount: 0.9 });
+	const [opacity, setOpacity] = useState(0);
 
 	useEffect(() => {
 		if (isInViewMainText) setActiveLink('Home');
@@ -51,12 +53,21 @@ export const Bubbles = ({ setActiveLink }) => {
 		setBubbles(updatedBubbles);
 	};
 
+	useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+		setOpacity(latest);
+	});
+
 	return (
 		<div
 			ref={ref}
 			className='relative min-h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center items-center'
 		>
-			<motion.div style={{ y: textY }}>
+			<motion.div
+				style={{
+					y: textY,
+					opacity: 1 - opacity,
+				}}
+			>
 				<p className='text-8xl relative select-none z-10'>Hello</p>
 			</motion.div>
 			<div className='mt-20'>

@@ -12,8 +12,6 @@ export default function Footer() {
 	const { scrollYProgress } = useScroll();
 
 	useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-		console.log(isNavOpen, '<<< nav');
-		console.log(latest, '<<< latest');
 		if (!isNavOpen) {
 			setHidden(true);
 			if (latest > 0.95) {
