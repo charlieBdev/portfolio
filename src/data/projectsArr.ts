@@ -1,9 +1,31 @@
 const projectsArr = [
 	{
-		name: 'Strasse Gym',
+		name: 'Redux Toolkit Todo List',
 		desc: 'Not done yet',
+		imgURL: '/Todo/Todo.png',
+		tags: [
+			'Personal',
+			'Redux Toolkit',
+			'Vite',
+			'framer-motion',
+			'Hero Icons',
+			'HTML',
+			'JavaScript',
+			'React',
+			'Sonner',
+			'Tailwind',
+			'Netlify',
+			'canvas-confetti',
+		],
+		btnText: 'Use the Todo',
+		btnLink: 'https://totallyoriginaltodolist.netlify.app/',
+	},
+	{
+		name: 'Strasse Gym',
+		desc: 'Made for the gym I go to and also an opportunity to learn Firebase.',
 		imgURL: '/Strasse/StrasseGym.png',
 		tags: [
+			'Freelance',
 			'Formik',
 			'Yup',
 			'BAAS',
@@ -27,6 +49,7 @@ const projectsArr = [
 	// 	desc: 'A tool made for getting images from a website. Originally made to speed up the process of archiving old websites. The search history shows the last 3 searches and you can go to a random URL from a list I have stored in an array. In development everything worked fine up until deploying on Vercel so I had to make use of Browserless. The project also uses Puppeteer and I hope to implement the option to filter small images and the ability to download all or a selection of images.',
 	// 	imgURL: '/WebImageScraper/Web-Image-Scraper.png',
 	// 	tags: [
+	// 		'Personal',
 	// 		'Browserless',
 	// 		'HTML',
 	// 		'JavaScript',
@@ -44,6 +67,7 @@ const projectsArr = [
 	// 	desc: "This is my second Next.js app. The icons, skills, and project data are stored in variables and rendered in lists as cards. This makes adding new items easy and the code DRY. I used a frosted navbar and EmailJS for the contact form. Inspiration for the colours was taken from my VS Code theme - oh lucy. Note - there may be a few bugs and I'll be adding more functionality and projects as time passes!",
 	// 	imgURL: '/Portfoliov2/Portfoliov2.png',
 	// 	tags: [
+	//		'Personal',
 	// 		'EmailJS',
 	// 		'framer-motion',
 	// 		'HTML',
@@ -63,6 +87,7 @@ const projectsArr = [
 		desc: "A full stack team project made in under two weeks. SoundWaves is a more accessible Twitter experience that allows users to record 'waves', which are then transcribed. We spiked the project before commencing and made wireframes and component trees as part of our planning. We also held standups daily and tracked progress using Trello.",
 		imgURL: '/SoundWaves/SoundWaves.png',
 		tags: [
+			'Bootcamp',
 			'AssemblyAI',
 			'Express.js',
 			'Kanban',
@@ -82,6 +107,7 @@ const projectsArr = [
 		desc: "NC News is a minimalistic Reddit clone. I'm currently working on this to improve on the current functionality and a few more features I'd like to add are user accounts, the ability to up or down vote articles and comments, and the ability to post an article. Having used Tailwind in more recent projects, I'm also now adding that as, while the styling with Vanilla CSS was great in my opinion, it was a pain having to edit or add more styling.",
 		imgURL: '/NCNews/NCNews.png',
 		tags: [
+			'Bootcamp',
 			'CORS',
 			'Notistack',
 			'PERN',
@@ -100,6 +126,7 @@ const projectsArr = [
 		desc: 'The backend for NC News was developed using Test-Driven Development with Jest and Supertest and the Model View Controller design pattern. There are currently nine endpoints to handle GET, POST, PATCH, and DELETE requests, but I will be adding more soon as more features are required on the frontend. The database is hosted by ElephantSQL.',
 		imgURL: '/NCNews/NCNewsAPI.png',
 		tags: [
+			'Bootcamp',
 			'ElephantSQL',
 			'Express.js',
 			'Jest',
@@ -120,6 +147,7 @@ const projectsArr = [
 	// 	desc: 'A solo frontend project that connects to the NASA Meteorite Landings API to get data on meteorites in a given year. I hope to add a visualisation of a world map showing where each meteor hit and also a single meteor page. This was my first experience with React, connecting to an API, and using pagination. Times misspelt meteroites - 42,000,001!',
 	// 	imgURL: '/Meteorites/Meteorites.png',
 	// 	tags: [
+	// 		'Bootcamp',
 	// 		'Axios',
 	// 		'Express.js',
 	// 		'Jest',
@@ -146,6 +174,7 @@ const projectsArr = [
 		desc: "This was a solo project made while on my first part-time Software Development bootcamp at Sheffield College. Prior to this I hadn't used VS Code or C# but loved the opportunity to work on a simulation of a real-world project. The project was managed using Monday. The app is a calculator of sorts, which helps staff calculate the costs of surfboard and wetsuit rentals.",
 		imgURL: '/FillerGoodVibesSign.png',
 		tags: [
+			'Bootcamp',
 			'C#',
 			'Monday',
 			'VS Code',
