@@ -27,7 +27,13 @@ const skillsArr = [
 	},
 	{
 		topic: 'Backend',
-		skills: ['REST APIs', 'Express.js', 'Postgres', 'Flask & SQLite', 'BAAS'],
+		skills: [
+			'REST APIs',
+			'Express.js',
+			'Postgres',
+			'Flask & SQLite',
+			'BaaS - Firebase',
+		],
 		svg: (
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
@@ -95,7 +101,7 @@ const skillsArr = [
 		topic: 'Qualities',
 		skills: [
 			'Team player',
-			'Detail-obsessed',
+			'Good eye for detail',
 			'Goes the extra mile',
 			'Resourceful',
 			'Always learning',
@@ -121,10 +127,10 @@ const skillsArr = [
 		topic: 'Interests',
 		skills: [
 			'Non-fiction books',
-			'Music production',
-			'Gaming',
-			"James O'Brien",
-			'BJJ Black Belt',
+			'Music production & DJing',
+			'Gaming on various platforms',
+			'Podcasts - TRIP, News Agents',
+			'Brazilian Jiu Jitsu',
 		],
 		svg: (
 			<svg
