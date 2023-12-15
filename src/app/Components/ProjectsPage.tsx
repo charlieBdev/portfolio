@@ -25,8 +25,12 @@ export const ProjectsPage = (props: SectionProps) => {
 			className='min-h-[calc(100vh)] flex flex-col justify-center items-between px-6 xl:px-24 gap-1 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
 			<div className='flex justify-between items-center'>
-				<h2 ref={ref} id='projects' className='text-lg text-pink-400'>
-					Projects
+				<h2
+					ref={ref}
+					id='projects'
+					className='text-4xl tracking-wide text-pink-400 font-bold mb-3'
+				>
+					Projects.
 				</h2>
 				<div
 					className='flex gap-1 items-center hover:cursor-pointer text-neutral-400'

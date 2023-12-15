@@ -23,7 +23,9 @@ export const AboutPage = (props: SectionProps) => {
 			className='min-h-[calc(100vh)] flex flex-col justify-center gap-3 px-6 xl:px-24 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
 			<div>
-				<h2 className='text-lg text-pink-400'>About</h2>
+				<h2 className='text-4xl tracking-wide text-pink-400 font-bold mb-3'>
+					About.
+				</h2>
 				{/* <p>
 					Hi, I'm Charlie. I finished a thirteen-week intensive{' '}
 					<span className=''>Software Engineering</span> bootcamp with{' '}
