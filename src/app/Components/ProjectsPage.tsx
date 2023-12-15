@@ -25,13 +25,16 @@ export const ProjectsPage = (props: SectionProps) => {
 			className='min-h-[calc(100vh)] flex flex-col justify-center items-between px-6 xl:px-24 gap-1 bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
 		>
 			<div className='flex justify-between items-center'>
-				<h2
-					ref={ref}
-					id='projects'
+				<motion.h2
 					className='text-4xl tracking-wide text-pink-400 font-bold mb-3'
+					initial={{ opacity: 0 }}
+					animate={isInViewProjects ? { opacity: 1 } : {}}
+					transition={{
+						duration: 0.5,
+					}}
 				>
 					Projects.
-				</h2>
+				</motion.h2>
 				<div
 					className='flex gap-1 items-center hover:cursor-pointer text-neutral-400'
 					onClick={() => setShowFilters(!showFilters)}

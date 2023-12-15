@@ -5,7 +5,7 @@ import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { Spinner } from '.';
 import { toast } from 'sonner';
-import { useInView } from 'framer-motion';
+import { useInView, motion } from 'framer-motion';
 import { SectionProps } from '../interfaces/SectionProps';
 
 export const ContactPage = (props: SectionProps) => {
@@ -85,15 +85,22 @@ export const ContactPage = (props: SectionProps) => {
 	const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
 
 	return (
-		<section className='min-h-[calc(100vh)] px-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'>
+		<section
+			ref={ref}
+			id='contact'
+			className='min-h-[calc(100vh)] px-6 xl:px-24 gap-6 flex flex-col items-center justify-center bg-opacity-90 dark:bg-opacity-90 backdrop-blur dark:backdrop-blur'
+		>
 			<div>
-				<h2
-					ref={ref}
-					id='contact'
+				<motion.h2
 					className='text-4xl tracking-wide text-pink-400 font-bold mb-3'
+					initial={{ opacity: 0 }}
+					animate={isInViewContact ? { opacity: 1 } : {}}
+					transition={{
+						duration: 0.5,
+					}}
 				>
 					Contact.
-				</h2>
+				</motion.h2>
 				<p>
 					Please <span className=''>feel free</span> to leave a message. I'd{' '}
 					<span className=''>love</span> to hear from you{' '}
