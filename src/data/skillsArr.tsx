@@ -32,7 +32,7 @@ const skillsArr = [
 			'Express.js',
 			'Postgres',
 			'Flask & SQLite',
-			'BaaS - Firebase',
+			'Firebase',
 		],
 		svg: (
 			<svg
@@ -101,10 +101,10 @@ const skillsArr = [
 		topic: 'Qualities',
 		skills: [
 			'Team player',
-			'Good eye for detail',
-			'Goes the extra mile',
+			'User focused',
+			'Creative',
 			'Resourceful',
-			'Always learning',
+			'Life-long learner',
 		],
 		svg: (
 			<svg
