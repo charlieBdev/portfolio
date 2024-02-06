@@ -26,7 +26,7 @@ export const ProjectsPage = (props: SectionProps) => {
 		>
 			<div className='flex justify-between items-center'>
 				<motion.h2
-					className='text-4xl tracking-wide text-pink-400 font-bold mb-3'
+					className='text-4xl tracking-wide text-cyan-400 font-bold mb-3'
 					initial={{ opacity: 0 }}
 					animate={isInViewProjects ? { opacity: 1 } : {}}
 					transition={{

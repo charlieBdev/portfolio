@@ -25,7 +25,7 @@ export const AboutPage = (props: SectionProps) => {
 		>
 			<div>
 				<motion.h2
-					className='text-4xl tracking-wide text-pink-400 font-bold mb-3'
+					className='text-4xl tracking-wide text-cyan-400 font-bold mb-3'
 					initial={{ opacity: 0 }}
 					animate={isInViewAbout ? { opacity: 1 } : {}}
 					transition={{

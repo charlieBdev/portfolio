@@ -7,7 +7,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ btnText }) => {
 	return (
 		<button
-			className='text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse'
+			className='text-center border-2 border-cyan-400 text-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse'
 			type='submit'
 		>
 			{btnText}

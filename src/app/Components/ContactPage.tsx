@@ -92,7 +92,7 @@ export const ContactPage = (props: SectionProps) => {
 		>
 			<div>
 				<motion.h2
-					className='text-4xl tracking-wide text-pink-400 font-bold mb-3'
+					className='text-4xl tracking-wide text-cyan-400 font-bold mb-3'
 					initial={{ opacity: 0 }}
 					animate={isInViewContact ? { opacity: 1 } : {}}
 					transition={{
@@ -222,7 +222,7 @@ export const ContactPage = (props: SectionProps) => {
 				</div>
 				<div className='mx-auto'>
 					<button
-						className='text-center border-2 border-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse'
+						className='text-center border-2 border-cyan-400 text-cyan-400 py-2 px-4 rounded-full shadow hover:shadow-lg hover:animate-pulse'
 						type='submit'
 						aria-label='Submit'
 					>
