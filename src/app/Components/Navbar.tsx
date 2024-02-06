@@ -37,10 +37,10 @@ export default function Navbar(props: MenuProps) {
 			className='fixed top-0 w-full px-6 h-20 xl:px-24 flex items-center justify-between shadow-xl bg-opacity-90 backdrop-blur dark:bg-opacity-90 dark:backdrop-blur z-10'
 		>
 			<Link href='/' className='md:flex md:items-end md:space-x-3'>
-				<h1 className='text-2xl font-medium text-cyan-400'>Charlie Bishop</h1>
-				<p className='text-lg text-emerald-500'>
+				<h1 className='text-2xl font-medium text-cyan-400'>Charlie B</h1>
+				<p className='text-lg text-pink-400'>
 					Junior
-					<span className='text-yellow-400'> Web Developer</span>
+					<span className='text-pink-400'> Web Developer</span>
 				</p>
 			</Link>
 			<div className='flex items-center justify-center space-x-3 lg:space-x-12'>

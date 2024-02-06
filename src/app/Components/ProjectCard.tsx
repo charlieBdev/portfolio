@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						loading='lazy'
 						className='rounded-lg shadow-lg mx-auto'
 					/>
-					<h3 className='text-green-500 text-lg'>{name}</h3>
+					<h3 className='text-cyan-400 text-lg'>{name}</h3>
 					{/* <p className="">{desc}</p> */}
 					<div className='flex flex-wrap gap-1'>
 						{sortAZ(tags).map((tag) => (

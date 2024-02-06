@@ -51,7 +51,7 @@ const SkillsList = () => {
 						// href={`#item${index + 1}`}
 						className={`text-center ${
 							activeSlide === skill.topic
-								? 'text-green-500 shadow-xl'
+								? 'text-cyan-400 shadow-xl'
 								: 'border-none'
 						}`}
 						// onClick={(event) => handleAnchorClick(index)}
