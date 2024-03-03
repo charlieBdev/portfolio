@@ -44,7 +44,7 @@ const SkillsList = () => {
 					</div>
 				))}
 			</div>
-			<div className='flex justify-center w-full gap-4 md:hidden items-center'>
+			<div className='flex justify-center w-full gap-4 sm:hidden items-center'>
 				{skillsArr.map((skill, index) => (
 					<p
 						key={skill.topic}
