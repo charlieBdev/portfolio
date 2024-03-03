@@ -33,7 +33,7 @@ export const ProjectsPage = (props: SectionProps) => {
 						duration: 0.5,
 					}}
 				>
-					Projects.
+					Projects<span className="text-pink-400">.</span>
 				</motion.h2>
 				<div
 					className='flex gap-1 items-center hover:cursor-pointer text-neutral-400'
