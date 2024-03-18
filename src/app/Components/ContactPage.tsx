@@ -99,7 +99,7 @@ export const ContactPage = (props: SectionProps) => {
 						duration: 0.5,
 					}}
 				>
-					Contact<span className="text-pink-400">.</span>
+					Contact<span className="text-pink-400">_</span>
 				</motion.h2>
 				<p>
 					Please <span className=''>feel free</span> to leave a message. I'd{' '}
