@@ -68,7 +68,7 @@ export const Bubbles = ({ setActiveLink }) => {
 					opacity: 1 - opacity,
 				}}
 			>
-				<p className='text-8xl relative select-none z-10'>Hello</p>
+				<p className='text-8xl relative select-none z-10'>Hello!</p>
 			</motion.div>
 			<div className='mt-20'>
 				<AnimatePresence>
