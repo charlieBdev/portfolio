@@ -17,10 +17,13 @@ export default function Navbar(props: MenuProps) {
 		const previous = scrollY.getPrevious();
 		// latest > 150 is padding at top to prevent immediate hiding on scroll down
 		if (!isNavOpen) {
-			if (latest > previous && latest > 150) {
-				setHidden(true);
-			} else {
-				setHidden(false);
+			if (!isNavOpen) {
+				// Check that previous exists before comparing
+				if (previous !== undefined && latest > previous && latest > 150) {
+					setHidden(true);
+				} else {
+					setHidden(false);
+				}
 			}
 		}
 	});

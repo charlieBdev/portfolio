@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
 interface SkillsCardProps {
 	topic: string;
 	skills: string[];
-	svg: JSX.Element;
+	svg: React.ReactNode;
 	setActiveSlide?: React.Dispatch<React.SetStateAction<string>>;
 }
 
