@@ -1,4 +1,22 @@
 const projectsArr = [
+		{
+		name: 'cbToast',
+		desc: 'A toast notification library.',
+		imgURL: '/CBToast/cbToast.png',
+		tags: [
+			'personal',
+			'html',
+			'css',
+			'javascript',
+			'netlify',
+			'bootstrap',
+			'vanilla',
+			'svg',
+			'toast',
+		],
+		btnText: 'Try it out',
+		btnLink: 'https://cbtoast-monster.netlify.app/',
+	},
 	{
 		name: 'Pokéquiz',
 		desc: 'Not done yet',
