@@ -40,7 +40,7 @@ const ProjectsList: React.FC<ProjectListProps> = ({ showFilters }) => {
 	return (
 		<div>
 			{showFilters && (
-				<ul className='flex gap-1 items-center justify-start carousel carousel-center pb-3 rounded-lg'>
+				<ul className='carousel carousel-center gap-1 pb-6 rounded-lg w-full'>
 					{uniqueTags.map((tag) => (
 						<button
 							key={tag}

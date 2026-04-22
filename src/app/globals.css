@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+@source "../**/*.{js,ts,jsx,tsx,mdx}";
 
 .light {
 	background-color: #f5f5f5;

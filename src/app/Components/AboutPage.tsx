@@ -35,7 +35,7 @@ export const AboutPage = (props: SectionProps) => {
 					About<span className="text-pink-400">_</span>
 				</motion.h2>
 				<div className='flex flex-col gap-3'>
-					<motion.p variants={slideIn('left', 'spring', 0.25, 0.75)}>
+					<motion.p variants={slideIn('left', 'spring', 0.25, 0.75) as any}>
 						Before reigniting my interest in tech, I was an English language
 						teacher abroad and online in the UK. I've had a range of other roles
 						in Network Installation and QA to name a few.

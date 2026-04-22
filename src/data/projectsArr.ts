@@ -13,6 +13,7 @@ const projectsArr = [
 			'vanilla',
 			'svg',
 			'toast',
+			'2026'
 		],
 		btnText: 'Try it out',
 		btnLink: 'https://cbtoast-monster.netlify.app/',
