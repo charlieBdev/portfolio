@@ -1,5 +1,27 @@
 const projectsArr = [
 		{
+			name: 'doSelecta',
+			desc: 'A simple select dropdown library.',
+			imgURL: '/doSelecta/doSelecta.png',
+			tags: [
+				'personal',
+				'html',
+				'css',
+				'javascript',
+				'netlify',
+				'bootstrap',
+				'vanilla',
+				'svg',
+				'toast',
+				'2026',
+				'select',
+				'dropdown',
+				'custom'
+			],
+			btnText: 'Open doSelecta',
+			btnLink: 'https://do-selecta.netlify.app/',
+		},
+		{
 		name: 'cbToast',
 		desc: 'A toast notification library.',
 		imgURL: '/CBToast/cbToast.png',
